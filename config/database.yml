@@ -11,7 +11,7 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: framgia_training2
+  database: framgia_training
   pool: 5
   username: root
   password: "123456"

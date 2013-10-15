@@ -3,7 +3,7 @@
   <component name="DataSourceManagerImpl" format="xml" hash="4263193267">
     <data-source source="LOCAL" name="Rails framgia_training: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="44da7163-7948-4ce1-b2f1-4fc7cc790974">
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1/framgia_training2</jdbc-url>
+      <jdbc-url>jdbc:mysql://127.0.0.1/framgia_training</jdbc-url>
       <user-name>root</user-name>
       <user-password>df9bdf98df99df9edf9fdf9c</user-password>
       <libraries>
