@@ -15,6 +15,11 @@ development:
   pool: 5
   username: root
   password: "123456"
+#  adapter: postgresql
+#  database: framgia_training
+#  host: localhost
+#  username: tuanca
+#  password: "tuanca"
   #socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and

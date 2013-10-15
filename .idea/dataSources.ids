@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="Rails framgia_training: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="44da7163-7948-4ce1-b2f1-4fc7cc790974">
+  <data-source source="LOCAL" name="Rails framgia_training: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="d35df9ad-ee6c-4fed-90a0-6728d94c7bfc">
     <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-    <jdbc-url>jdbc:mysql://127.0.0.1:3306/framgia_training</jdbc-url>
+    <jdbc-url>jdbc:mysql://127.0.0.1/framgia_training</jdbc-url>
     <user-name>root</user-name>
     <user-password>df9bdf98df99df9edf9fdf9c</user-password>
     <libraries>
@@ -10,7 +10,7 @@
         <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/mysql-connector-license.txt</url>
       </library>
       <library>
-        <url>jar://$USER_HOME$/.RubyMine50/config/jdbc-drivers/mysql-connector-java-5.1.26-bin.jar!/</url>
+        <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/mysql-connector-java-5.1.26-bin.jar</url>
       </library>
     </libraries>
   </data-source>

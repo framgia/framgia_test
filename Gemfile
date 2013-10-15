@@ -11,10 +11,11 @@ gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 gem 'websocket-rails'
 gem 'pry-debugger'
+#gem 'pg', '0.15.1'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 group :development, :test do
-  gem 'sqlite3', '1.3.8'
+  #gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'
 end
 

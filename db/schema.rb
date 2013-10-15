@@ -110,7 +110,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.integer  "answer_type"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "active_flag",       limit: 45
+    t.integer   "active_flag"
   end
 
   create_table "training_question_group", primary_key: "question_group_id", force: true do |t|
