@@ -70,6 +70,7 @@
     <orderEntry type="library" scope="PROVIDED" name="multi_test (v0.0.2, RVM: ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mysql2 (v0.3.13, RVM: ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.0, RVM: ruby-2.0.0-p247) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pg (v0.15.1, RVM: ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.3, RVM: ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry (v0.9.12.2, RVM: ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry-debugger (v0.2.2, RVM: ruby-2.0.0-p247) [gem]" level="application" />
