@@ -1,0 +1,8 @@
+<li>
+  <%= link_to examination.created_at, examination_path(examination) + "?examination[status]=2", :method => :put %>
+  <%= examination.user.full_name %>
+  <%= examination_status examination.status %>
+  <% if examination.conclusion %>
+  <%= examination.conclusion.conclusion_name %>
+  <% end %>
+</li>

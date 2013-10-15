@@ -1,0 +1,42 @@
+<% if status == 1 %>
+<li id="<%= answer.answer_id %>">
+  <% if answer_type == 1 %>
+      <%= f.radio_button :answer_id, answer.answer_id %>
+      <% if !answer.answer_content.nil? %>
+      <%= answer.answer_content %>
+      <% else %>
+      <%= image_tag "question/" + answer.answer_file %>
+      <% end %>
+  <% end %>
+  <% if answer_type == 2 %>
+      <%= f.text_field :answer_content %>
+  <% end %>
+  <% if answer_type == 3 %>
+      <%= f.text_area :answer_content %>
+  <% end %>
+</li>
+<% end %>
+<% if status == 2 %>
+    <li id="<%= answer.answer_id %>">
+      <% if answer_type == 1 %>
+          <%= f.radio_button :answer_id, answer.answer_id, {:disabled => "disabled"} %>
+          <% if answer.answer_correct == 1 %>
+          <span style="background-color: gray;">
+          <% end %>
+          <% if !answer.answer_content.nil? %>
+              <%= answer.answer_content %>
+          <% else %>
+              <%= image_tag "question/" + answer.answer_file %>
+          <% end %>
+          <% if answer.answer_id == answer_sheet_detail.answer_id %>
+          </span>
+          <% end %>
+      <% end %>
+      <% if answer_type == 2 %>
+          <%= f.text_field :answer_content %>
+      <% end %>
+      <% if answer_type == 3 %>
+          <%= f.text_area :answer_content %>
+      <% end %>
+    </li>
+<% end %>

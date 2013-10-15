@@ -1,0 +1,7 @@
+<li>
+  <%= link_to examination.created_at, examination_answer_sheet_path(examination, examination.first_answer_sheet) %>
+  <%= examination_status examination.status %>
+  <% if examination.conclusion %>
+  <%= examination.conclusion.conclusion_name %>
+  <% end %>
+</li>

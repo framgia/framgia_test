@@ -1,0 +1,16 @@
+<li id="<%= f.object.question.question_id %>" style="">
+  <span>
+    <% if f.object.question.question_content.nil? %>
+    <%= image_tag "question/" + f.object.question.question_file %>
+    <% else %>
+    <pre><%= f.object.question.question_content %></pre>
+    <% end %>
+  </span>
+  <span>
+    <ul>
+      <% f.object.question.answers.each do |answer| %>
+          <%= render partial: 'shared/answer', :locals => {:f => f, :answer_sheet_detail => f.object, :answer => answer, :answer_type => f.object.question.answer_type, :status => status} %>
+      <% end %>
+    </ul>
+  </span>
+</li>

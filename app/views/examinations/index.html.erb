@@ -1,0 +1,16 @@
+<% provide(:title, 'All examinations') %>
+<h1>All examinations</h1>
+
+<%= will_paginate @examinations %>
+
+<ul class="users">
+  <%= render @examinations %>
+</ul>
+
+<%= will_paginate @examinations %>
+
+<%= form_for(Examination.new(user_id: @user.user_id)) do |f| %>
+    <%= select_tag "subject_id", options_from_collection_for_select(@subjects, "subject_id", "subject_name"), style: "display: inline-block; width: 200px;" %>
+    <%= select_tag "level_id", options_from_collection_for_select(@levels, "level_id", "level_name"), style: "display: inline-block; width: 200px;" %>
+    <%= f.submit "Start new", class: "btn btn-large btn-primary" %>
+<% end %>

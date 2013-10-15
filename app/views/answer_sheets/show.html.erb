@@ -1,0 +1,23 @@
+<div class="">
+  <div><%= @examination.created_at %></div>
+  <% if !@answer_sheet.exam_result.nil? %>
+  <%
+     total = 0
+     @answer_sheet.exam_question.exam_question_details.each do |exam_question_detail|
+       total = total + exam_question_detail.number_question
+     end
+  %>
+  <div>Exam result: <%= @answer_sheet.exam_result %>/<%= total %></div>
+  <% end %>
+  <%= form_for([@examination, @answer_sheet]) do |f| %>
+    <div style="text-align: center; font-size: 24px; font-weight: bold; margin: 10px 0 20px 0;"><%= @answer_sheet.subject.subject_name %></div>
+    <ul>
+    <%= f.fields_for :answer_sheet_details do |builder| %>
+      <%= render 'shared/question',:f => builder, :status => @examination.status %>
+    <% end %>
+    </ul>
+    <% if @examination.status == 1 %>
+    <p><%= f.submit "Submit" %></p>
+    <% end %>
+  <% end %>
+</div>

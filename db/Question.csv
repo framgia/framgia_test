@@ -1,0 +1,231 @@
+question_id,subject_id,question_group_id,question_content,question_file,answer_type,created_at,updated_at,active_flag
+1,1,1,Which SQL function is used to count the number of rows in a SQL query?,"",1,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
+2,1,1,The FROM SQL clause is used to…,,1,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
+3,1,2,How do you get the number of rows affected by query?,,2,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
+4,1,2,"If the value in the column is repeatable, how do you find out the unique values?",,2,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
+5,1,3,,1/exercise1.jpg,3,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
+6,2,4,Hãy chọn lệnh đúng để khởi động server Rails.,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+7,2,4,Hãy chọn rake task thích hợp dùng để xuất ra các routing được định nghĩa trong config/routes.rb.,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+8,2,4,Hãy chọn rake task thích hợp dùng để tạo database được chỉ định trong config/databases.yml,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+9,2,4,"Đưa ra kết quả khi chạy lệnh sau đây:
+{'foo' => 'bar'}.symbolize_keys.merge(:foo => 'hoge')",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+10,2,4,"Điền vào (1) dòng code để validate độ dài xâu của trường title trong bảng Article nằm trong 20 ký tự.
+ class Article < ActiveRecord::Base
+　　__(1)__
+end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+11,2,4,"Khi validate trường age của bảng User là số nguyên không âm, điền vào (1) đoạn code thích hợp.
+ 
+ class User < ActiveRecord::Base
+  　 __(1)__
+  end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+12,2,4,Chọn một đáp án đúng khi nói về sự khác nhau giữa ActiveRecord::Base#update_attributes!và ActiveRecord::Base#update_attributes,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+13,2,4,"Điền vào (1) dòng code để định nghĩa một scope tên là administrator lấy ra các record có trường admin bằng true.
+ 
+class User < ActiveRecord::Base
+　__(1)__
+end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+14,2,4,"Hai model Company và Employer có quan hệ 1 nhiều (has_many). Điền vào (1) đoạn code để khi xoá một record trong model Company thì những record phụ thuộc của model Employer cũng bị xoá theo.
+ 
+            class Company < ActiveRecord::Base
+              __(1)__
+            end
+            class Employee < ActiveRecord::Base
+              belongs_to :company
+            end
+",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+15,2,4,"Điền vào (1) dòng code để đánh index cho trường name của bảng user.
+ 
+class CreateUsers < ActiveRecord::Migration
+　def self.up
+  　create_table :users do |t|
+    　t.string :name
+    　t.timestamps
+  　end
+  　__(1)__
+　end
+　def self.down
+　　drop_table :users
+ 　end
+ end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+16,2,5,"Điền vào (1) dòng code để định nghĩa routing, khi truy cập vào “/” thì action “welcome#index” được gọi.
+ 
+Rails3::Application.routes.draw do
+ 　__(1)__
+ end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+17,2,5,"Điền vào (1) từ thích hợp để định nghĩa routing, khi truy cập vào “/users/1/preview” thì action “users#preview” được gọi.
+ 
+Rails3::Application.routes.draw do
+　resources :users do
+  　__(1)__ do
+         get :preview
+     end
+   end
+             end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+18,2,5,"Điền vào (1) dòng code khi muốn tất cả các action không được chạy khi kết quả thực hiện của current_user.admin? là false
+ 
+class Admin::UsersController < ApplicationController
+　__(1)__
+　def index
+  　@users = Users.all
+　end
+  private
+  def require_admin
+  　redirect_to welcome_path unless current_user.admin?
+  end
+end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+19,2,5,"Điền vào (1) đoạn code để truyền đoạn message “Book was successfully created.
+” vào flash và thực hiện redirect.
+ 
+class BooksController < ApplicationController
+  def create
+    @book = Book.new(params[:book])
+    if @book.save
+      __(1)__
+    else
+      render :action => :new
+    end
+  end
+end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+20,2,5,"Điền vào (1) code thích hợp để tạo link dẫn đến trang của từng user
+            
+Code 1:
+class User < ActiveRecord::Base
+end
+ 
+Code 2:
+ <% User.all.each do |user| %>
+ <%= __(1)__ user.name, user %>
+ <% end %>",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+21,2,5,"Đoạn code bên dưới muốn định nghĩa title của trang là “Hello world”. Điền vào (1) đoạn code thích hợp
+ 
+Code 1:
+<html>
+　<head>
+     __(1)__
+   </head>
+   <body>
+     <%= yield %>
+   </body>
+ </html>
+ 
+Code 2:
+<% content_for :head do %>
+　<title>Hello world</title>
+<% end %>",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+22,2,5,"File config/routes.rb được định nghĩa như Code 1 bên dưới. Đoạn code ở file 2 sẽ sinh ra string nào? Chọn đáp án thích hợp.
+ 
+Code 1:
+Rails3::Application.routes.draw do
+　resources :users
+end
+
+Code 2:
+<%= url_for User.find(1) %>",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+23,2,5,"Điền vào (1) code để cài đặt địa chỉ người gửi mặc định.
+ 
+class NotifierMailer < ActionMailer::Base
+　　__(1)__
+  　def welcome(recipient)
+     　mail :to => recipient.email
+    end
+ end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+24,2,5,"Lệnh để khởi tạo một project rails mới tên là “ittrain” là gì?
+ 
+1.     rails create ittrain
+2.     rails project ittrain
+3.     rails new ittrain
+4.     rails ittrain",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+25,2,5,Lựa chọn nào dưới đây không phải là thành phần cơ bản của Rails 3?,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+26,2,5,"Kết quả khi chạy lệnh ""Person"".tableize  là gì?",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+27,2,5,"Kết quả trả về khi chạy lệnh save ở đoạn code thứ 2 là gì?
+ 
+  Code 1
+  class User < ActiveRecord::Base
+    validates :login, :length => {:minimum => 5}
+  end
+  Code 2
+  user = User.new(:login => ""foo"")
+  user.save",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+28,2,5,"Chọn dòng code để lấy ra tất cả các record có giá trị trường login là “foo”
+ 
+class User < ActiveRecord::Base
+　validates :login, :presence => true
+end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+29,2,5,"Điền vào (1) từ thích hợp để khi tạo và update instace của model User thì màn hình log in ra chữ “debug”
+ 
+class User < ActiveRecord::Base
+  ___(1)__ :logging
+  private
+    def logging
+    logger.debug ""debug""
+  end
+end
+",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+30,2,5,"Điền vào (1) dòng code thích hợp để xoá trường email trong bảng users
+ 
+class RemoveEmailToUsers < ActiveRecord::Migration
+  def self.up
+    __(1)__
+  end
+  def self.down
+  end
+end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+31,2,5,"Sau khi chạy rake db:migrate thì trường nào của bảng users không được định nghĩa?
+ 
+class CreateUsers < ActiveRecord::Migration
+  def self.up
+    create_table :users do |t|
+    　t.string :login
+    　t.timestamps
+  　end
+  end
+  def self.down
+    drop_table :users
+  end
+end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+32,2,5,"Nếu định nghĩa resource :user thì sẽ tạo ra cac route nào?
+ 
+ 
+Rails3::Application.routes.draw do
+  Resource :user
+end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+33,2,5,"Điền vào (1) dòng code để gán giá trị cho session.
+ 
+class SessionsController < ApplicationController
+  def create
+    if @user = User.authenticate(params[:login], params[:password])
+      __(1)__
+      redirect_to root_path
+    else
+    　render :action => :new
+　　end
+   end
+end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+34,2,5,"File routes.rb được định nghĩa như bên dưới. Helper method nào dùng để gọi đến action “comments#show”?
+ 
+Rails3::Application.routes.draw do
+  resources :message_boards do
+    resources :comments
+  end
+end
+ 
+1.     comment_url(@message_board, @comment)
+2.     comments_url(@message_board)
+3.     message_board_comment_url(@message_board, @comment)
+4.     message_board_comments_url(@message_board)",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+35,2,5,"Điền vào (1) từ thích hợp để trả về respond dự liệu.
+ 
+class UsersController < ApplicationController
+  def index
+    @users = User.all
+    __(1)__ do |format|
+      format.html
+      format.xml { render :xml => @users }
+    end
+  end
+end
+ 
+1.     request_from
+2.     request_to
+3.     respond_from
+4.     respond_to",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
