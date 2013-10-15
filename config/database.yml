@@ -30,10 +30,16 @@ test:
   socket: /var/run/mysqld/mysqld.sock
 
 production:
-  adapter: mysql2
-  encoding: utf8
+#  adapter: mysql2
+#  encoding: utf8
+#  database: framgia_training_production
+#  pool: 5
+#  username: root
+#  password: 123456
+#  socket: /var/run/mysqld/mysqld.sock
+  adapter: postgresql
+  encoding: unicode
   database: framgia_training_production
   pool: 5
-  username: root
-  password: 123456
-  socket: /var/run/mysqld/mysqld.sock
+  username: framgia_training
+  password:
