@@ -1,6 +1,7 @@
 class AnswerSheet < ActiveRecord::Base
   self.table_name = 'training_answer_sheet'
   self.primary_key = 'answer_sheet_id'
+  default_scope -> { order('answer_sheet_id') }
 
   before_create :default_active_values
 
