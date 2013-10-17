@@ -1,15 +1,8 @@
 <% provide(:title, 'All examinations') %>
 <h1>All examinations</h1>
 
+<%= will_paginate @examinations %>
 <ul class="users">
   <%= render partial: "admin/examination", :collection => @examinations %>
 </ul>
-
-<p>
-  Download:
-  <%= link_to "CSV", exports_path(format: "csv") %>
-</p>
-<p>
-  <%= link_to "Upload", imports_path %>
-</p>
-
+<%= will_paginate @examinations %>

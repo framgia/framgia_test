@@ -3,18 +3,14 @@ class ExaminationsController < ApplicationController
 
   def index
     @user = current_user
-    if params[:admin]
-      @examinations = Examination.from_users
-      redirect_to exam_admin_path
-    else
-      @examinations = Examination.paginate(page: params[:page], per_page: 10, :conditions => { :user_id => @user.user_id})
-      @subjects = Subject.where(active_flag: 1)
-      @levels = Level.where(active_flag: 1)
-    end
+    @examinations = Examination.paginate(page: params[:page], per_page: 10, :conditions => { :user_id => @user.user_id})
+    @subjects = Subject.where(active_flag: 1)
+    @levels = Level.where(active_flag: 1)
   end
 
   def show
     @examination = Examination.find(params[:id])
+    redirect_to examination_answer_sheet_path(@examination, @examination.first_answer_sheet)
   end
 
   def new
@@ -49,21 +45,20 @@ class ExaminationsController < ApplicationController
   end
 
   def update
-    logger.info "---------------------------------"
-    logger.info params
     @examination = Examination.find(params[:id])
     if @examination.update_attributes(examination_update_params)
-      flash[:success] = "Examination updated"
-      @examination.answer_sheets.each do |answer_sheet|
-        total = 0
-        answer_sheet.answer_sheet_details.each do |answer_sheet_detail|
-          if answer_sheet_detail.question.answer_type == 1 && !answer_sheet_detail.answer.nil? && answer_sheet_detail.answer.answer_correct == 1
-            total = total + 1
-          end
-        end
-        answer_sheet.update_attributes(:exam_result => total)
-      end
-      redirect_to examination_answer_sheet_path(@examination, @examination.first_answer_sheet) + "?admin=1"
+      #flash[:success] = "Examination updated"
+      #@examination.answer_sheets.each do |answer_sheet|
+      #  total = 0
+      #  answer_sheet.answer_sheet_details.each do |answer_sheet_detail|
+      #    if answer_sheet_detail.question.answer_type == 1 && !answer_sheet_detail.answer.nil? && answer_sheet_detail.answer.answer_correct == 1
+      #      total = total + 1
+      #      answer_sheet_detail.update_attributes(:answer_correct => 1)
+      #    end
+      #  end
+      #  answer_sheet.update_attributes(:exam_result => total)
+      #end
+      redirect_to examination_answer_sheet_path(@examination, @examination.first_answer_sheet)
     else
       render 'edit'
     end

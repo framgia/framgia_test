@@ -22,6 +22,10 @@ class User < ActiveRecord::Base
     Digest::SHA1.hexdigest(token.to_s)
   end
 
+  def admin_user?
+    self.user_admin == 1
+  end
+
   private
 
   def create_remember_token
@@ -30,6 +34,10 @@ class User < ActiveRecord::Base
 
   def default_active_values
     self.active_flag ||= 1
+  end
+
+  def admin_user
+    redirect_to(root_url) unless current_user.user_admin == 1
   end
 
 end

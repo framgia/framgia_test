@@ -1,0 +1,33 @@
+2013-10-02 14:48:45 ERROR  : Error connecting to the server: FATAL:  password authentication failed for user "postgres"
+FATAL:  password authentication failed for user "postgres"
+
+2013-10-02 14:59:05 ERROR  : Error connecting to the server: FATAL:  password authentication failed for user "postgres"
+FATAL:  password authentication failed for user "postgres"
+
+2013-10-02 14:59:35 ERROR  : Error connecting to the server: FATAL:  password authentication failed for user "postgres"
+FATAL:  password authentication failed for user "postgres"
+
+2013-10-02 14:59:41 ERROR  : Error connecting to the server: fe_sendauth: no password supplied
+
+2013-10-02 14:59:47 ERROR  : Error connecting to the server: FATAL:  password authentication failed for user "postgres"
+FATAL:  password authentication failed for user "postgres"
+
+2013-10-02 14:59:53 ERROR  : Error connecting to the server: FATAL:  password authentication failed for user "postgres"
+FATAL:  password authentication failed for user "postgres"
+
+2013-10-02 15:05:30 ERROR  : Error connecting to the server: FATAL:  password authentication failed for user "postgres"
+FATAL:  password authentication failed for user "postgres"
+
+2013-10-02 15:05:40 ERROR  : Error connecting to the server: FATAL:  password authentication failed for user "postgres"
+FATAL:  password authentication failed for user "postgres"
+
+2013-10-02 15:17:17 ERROR  : Error connecting to the server: FATAL:  password authentication failed for user "postgres"
+FATAL:  password authentication failed for user "postgres"
+
+2013-10-04 10:12:42 ERROR  : ERROR:  must be superuser to signal the postmaster
+2013-10-04 10:15:43 ERROR  : FATAL:  terminating connection due to administrator command
+SSL connection has been closed unexpectedly
+2013-10-04 10:18:27 ERROR  : FATAL:  terminating connection due to administrator command
+SSL connection has been closed unexpectedly
+2013-10-07 14:23:23 ERROR  : ERROR:  duplicate key value violates unique constraint "users_pkey"
+DETAIL:  Key (id)=(3) already exists.

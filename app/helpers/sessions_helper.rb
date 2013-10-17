@@ -10,6 +10,10 @@ module SessionsHelper
     !current_user.nil?
   end
 
+  def admin_user?
+    !current_user.nil? && current_user.user_admin == 1
+  end
+
   def current_user=(user)
     @current_user = user
   end
@@ -25,6 +29,13 @@ module SessionsHelper
 
   def signed_in_user
     unless signed_in?
+      store_location
+      redirect_to signin_url, notice: "Please sign in."
+    end
+  end
+
+  def signed_in_user_admin
+    unless admin_user?
       store_location
       redirect_to signin_url, notice: "Please sign in."
     end

@@ -1,5 +1,12 @@
 <div class="">
-  <div><%= @examination.created_at %></div>
+  <div>
+    <span><%= I18n.l(@examination.created_at) %></span>
+    <% if current_user.admin_user? %>
+    <span style="float: right;"><%= @examination.user.full_name %></span>
+    <% else %>
+    <span style="float: right;">Duration: 20 minutes</span>
+    <% end %>
+  </div>
   <% if !@answer_sheet.exam_result.nil? %>
   <%
      total = 0
@@ -7,7 +14,9 @@
        total = total + exam_question_detail.number_question
      end
   %>
+  <% if @examination.status != 1 %>
   <div>Exam result: <%= @answer_sheet.exam_result %>/<%= total %></div>
+  <% end %>
   <% end %>
   <%= form_for([@examination, @answer_sheet]) do |f| %>
     <div style="text-align: center; font-size: 24px; font-weight: bold; margin: 10px 0 20px 0;"><%= @answer_sheet.subject.subject_name %></div>
@@ -16,7 +25,7 @@
       <%= render 'shared/question',:f => builder, :status => @examination.status %>
     <% end %>
     </ul>
-    <% if @examination.status == 1 %>
+    <% if @examination.status == 1 || current_user.admin_user? %>
     <p><%= f.submit "Submit" %></p>
     <% end %>
   <% end %>

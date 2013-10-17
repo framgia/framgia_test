@@ -1,0 +1,11 @@
+<% provide(:title, 'Monitor') %>
+<h1>Monitor</h1>
+
+<p>
+  Download:
+  <%= link_to "CSV", exports_path(format: "csv") %>
+</p>
+<p>
+  <%= link_to "Upload", imports_path %>
+</p>
+

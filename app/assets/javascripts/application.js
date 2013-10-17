@@ -15,3 +15,14 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+function ajaxDownload(url){
+    $.ajax({
+        type: 'POST',
+        url: url,
+        success: function(data){
+            alert(data);
+        }
+    });
+    return false;
+}

@@ -1,0 +1,2 @@
+user_id,full_name,email,password_digest,remember_token,user_admin,created_at,updated_at,active_flag
+1,Administrator,admin@framgia.com,$2a$10$QI10ERVMmVJAU5RSjI6/e.U4qMtGY3O64EpuBTlUiTi0AH8dT/JnC,ed2d1a82a1417d8786edcdec20b8c7bb8c60c33b,1,"2013-10-16 07:23:24","2013-10-16 11:38:42",1

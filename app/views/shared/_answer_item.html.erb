@@ -1,0 +1,5 @@
+<% if !answer.answer_content.nil? %>
+<%= answer.answer_content %>
+<% else %>
+<%= image_tag "question/" + answer.answer_file %>
+<% end %>

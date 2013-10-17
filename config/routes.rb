@@ -2,14 +2,17 @@ FramgiaTraining::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :examinations do
-    resources :answer_sheets  do
-      resources :answer_sheet_details
+    resources :answer_sheets do
+      resources :answer_sheet_details, only: [:show] do
+      end
     end
   end
   resources :exports
   resources :imports
   root  'static_pages#home'
-  match '/exam_admin',  to: 'admin#index',            via: 'get'
+  match 'examinations/:examination_id/answer_sheets/:answer_sheet_id/answer_sheet_details/:id/:attachment', to: 'answer_sheet_details#show', as: "download", via: 'get'
+  match '/admin',  to: 'admin#index',            via: 'get'
+  match '/monitor',  to: 'monitor#index',            via: 'get'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'

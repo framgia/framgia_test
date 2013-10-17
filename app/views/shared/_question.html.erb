@@ -1,12 +1,13 @@
-<li id="<%= f.object.question.question_id %>" style="">
+<li id="<%= f.object.question.question_id %>" style="margin-bottom: 10px;">
   <span>
+    <label style="float: left;"><%= f.index + 1 %>.&nbsp;</label>
     <% if f.object.question.question_content.nil? %>
-    <%= image_tag "question/" + f.object.question.question_file %>
+    <%= image_tag "question/" + f.object.question.question_file, style: "float: left; width: 98%;" %>
     <% else %>
-    <pre><%= f.object.question.question_content %></pre>
+    <pre style="float: left;width: 95%; padding: 0 0 0 0; border: none; background-color: transparent!important; font: inherit;"><%= f.object.question.question_content %></pre>
     <% end %>
   </span>
-  <span>
+  <span style="display: inline-block; width: 98%;">
     <ul>
       <% f.object.question.answers.each do |answer| %>
           <%= render partial: 'shared/answer', :locals => {:f => f, :answer_sheet_detail => f.object, :answer => answer, :answer_type => f.object.question.answer_type, :status => status} %>

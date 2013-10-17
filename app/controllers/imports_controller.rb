@@ -2,7 +2,7 @@ class ImportsController < ApplicationController
   def index
 
     file_names = ["Answer", "Conclusion", "ExamQuestion", "ExamQuestionDetail", "Level",
-                  "Question", "QuestionGroup", "Subject", "SubjectQuestionGroup"]
+                  "Question", "QuestionGroup", "Subject", "SubjectQuestionGroup", "User"]
     file_names.each do |file|
       import file
     end
@@ -36,6 +36,9 @@ class ImportsController < ApplicationController
       end
       if file == "SubjectQuestionGroup"
         SubjectQuestionGroup.create! row.to_hash
+      end
+      if file == "User"
+        User.create! row.to_hash
       end
     end
   end

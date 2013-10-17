@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.integer  "no"
     t.text     "answer_content"
     t.string   "answer_file",     limit: 512
+    t.integer  "answer_correct"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "active_flag"
@@ -70,7 +71,6 @@ ActiveRecord::Schema.define(version: 0) do
     t.integer  "question_group_id"
     t.integer  "number_question"
     t.integer  "no"
-    t.integer  "number_correct"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "active_flag"
@@ -96,10 +96,10 @@ ActiveRecord::Schema.define(version: 0) do
   end
 
   create_table "training_level", primary_key: "level_id", force: true do |t|
-    t.string  "level_name",  limit: 128
+    t.string   "level_name",  limit: 128
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer "active_flag"
+    t.integer  "active_flag"
   end
 
   create_table "training_question", primary_key: "question_id", force: true do |t|
@@ -110,7 +110,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.integer  "answer_type"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer   "active_flag"
+    t.integer  "active_flag"
   end
 
   create_table "training_question_group", primary_key: "question_group_id", force: true do |t|
@@ -140,6 +140,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.string   "email",           limit: 256, null: false
     t.string   "password_digest", limit: 64
     t.string   "remember_token",  limit: 256
+    t.integer  "user_admin"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "active_flag"

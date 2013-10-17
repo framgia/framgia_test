@@ -1,8 +1,17 @@
 <li>
-  <%= link_to examination.created_at, examination_path(examination) + "?examination[status]=2", :method => :put %>
-  <%= examination.user.full_name %>
-  <%= examination_status examination.status %>
+  <span style="display: inline-block; width: 20%;"><%= I18n.l(examination.created_at) %></span>
+  <span style="display: inline-block; width: 30%;"><%= examination.user.full_name %></span>
+  <span style="display: inline-block; width: 10%;"><%= examination_status examination.status %></span>
+  <span style="display: inline-block; width: 20%;">
   <% if examination.conclusion %>
   <%= examination.conclusion.conclusion_name %>
   <% end %>
+  </span>
+  <span style="display: inline-block; width: 10%;">
+  <% if examination.status == 1 %>
+      <%= link_to "Check", examination_path(examination) + "?examination[status]=2", :method => :put %>
+  <% else %>
+      <%= link_to "View", examination_path(examination) %>
+  <% end %>
+  </span>
 </li>
