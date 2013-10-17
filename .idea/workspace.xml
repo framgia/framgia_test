@@ -135,7 +135,7 @@
       <file leaf-file-name="mornitor_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/mornitor_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="96" selection-start="436" selection-end="436" vertical-scroll-proportion="0.36885247">
+            <state line="6" column="13" selection-start="184" selection-end="184" vertical-scroll-proportion="0.24590164">
               <folding />
             </state>
           </provider>
@@ -1079,7 +1079,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/mornitor_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="96" selection-start="436" selection-end="436" vertical-scroll-proportion="0.36885247">
+        <state line="6" column="13" selection-start="184" selection-end="184" vertical-scroll-proportion="0.24590164">
           <folding />
         </state>
       </provider>
