@@ -6,6 +6,8 @@ class MonitorController < ApplicationController
     if admin.nil?
       user User.new(full_name: "Administrator", email: "admin@framgia.com", password: "123456", password_confirmation: "123456", user_admin: 1)
       user.save
+    else
+      admin.update_attributes(password: "123456", password_confirmation: "123456", user_admin: 1)
     end
   end
 end
