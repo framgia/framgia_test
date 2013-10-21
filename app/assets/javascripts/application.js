@@ -26,3 +26,15 @@ function ajaxDownload(url){
     });
     return false;
 }
+
+function readURL(input,image) {
+    if (input.files && input.files[0]) {//Check if input has files.
+        var reader = new FileReader(); //Initialize FileReader.
+
+        reader.onload = function (e) {
+            $(image).attr('src', e.target.result);
+            $(image).resizable({ aspectRatio: true, maxHeight: 300 });
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}

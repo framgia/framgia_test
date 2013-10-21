@@ -1,0 +1,64 @@
+<% provide(:title, 'Question') %>
+<h1>Question</h1>
+
+<div class="row">
+    <div class="span6 offset3">
+    <%= form_for(@question) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+
+        <%= f.hidden_field :subject_id %>
+
+        <%= f.label :question_group_id %>
+        <%= f.select :question_group_id, options_from_collection_for_select(@question_groups, "question_group_id", "question_group_name"), style: "display: inline-block; width: 200px;" %>
+
+        <%= f.label :question_content %>
+        <%= f.text_area :question_content, rows: 5 %>
+        <%= f.file_field :attach_file %>
+
+        <%= f.label :description %>
+        <%= f.text_field :description %>
+
+        <%= f.label :answer_type %>
+        <%= f.radio_button :answer_type, 1, onclick: "$('#__option_answer').show();$('#__text_answer').hide();$('#__exercise_answer').hide();" %> One choice option
+        <%= f.radio_button :answer_type, 2, onclick: "$('#__option_answer').hide();$('#__text_answer').show();$('#__exercise_answer').hide();" %> Text answer
+        <%= f.radio_button :answer_type, 3, onclick: "$('#__option_answer').hide();$('#__text_answer').hide();$('#__exercise_answer').show();" %> Exercise
+
+        <div id="__option_answer" style="display: <%= '' if @question.answer_type == 1 %><%= 'none' if @question.answer_type != 1 %>;">
+        <div style="margin-top: 20px;">Answers</div>
+        <ul>
+          <%= f.fields_for :answers, [Answer.new, Answer.new, Answer.new, Answer.new] do |builder| %>
+          <li id="__answer_<%= builder.index + 1 %>">
+            <%= builder.index + 1 %>. <%= builder.hidden_field :answer_no, value: builder.index + 1 %>
+            <%= builder.check_box :answer_correct %> Correct answer
+            <a href="javascript: void(0)" onclick="$('#__answer_<%= builder.index + 1 %>').remove()">X</a>
+            <%= builder.text_area :answer_content, rows: 2 %>
+            <%= builder.hidden_field :subject_id, value: @question.subject_id %>
+            <%= builder.file_field :attach_file %>
+          </li>
+          <% end %>
+        </ul>
+        <a href="void(0)" onclick="">Add more answer</a>
+        </div>
+        <div id="__text_answer" style="display: <%= '' if @question.answer_type == 2 %><%= 'none' if @question.answer_type != 2 %>;">
+          <div style="margin-top: 20px;">Answer</div>
+          <%= f.fields_for :answers, [Answer.new] do |builder| %>
+          <%= builder.hidden_field :subject_id, value: @question.subject_id %>
+          <%= builder.hidden_field :answer_no, value: 1 %>
+          <%= builder.text_area :answer_content, rows: 2 %>
+          <%= builder.file_field :attach_file %>
+          <% end %>
+        </div>
+        <div id="__exercise_answer" style="display: <%= '' if @question.answer_type == 3 %><%= 'none' if @question.answer_type != 3 %>;">
+          <div style="margin-top: 20px;">Answer</div>
+          <%= f.fields_for :answers, [Answer.new] do |builder| %>
+          <%= builder.hidden_field :subject_id, value: @question.subject_id %>
+          <%= builder.hidden_field :answer_no, value: 1 %>
+          <%= builder.text_area :answer_content, rows: 5 %>
+          <%= builder.file_field :attach_file %>
+          <% end %>
+        </div>
+
+        <%= f.submit "Create Question", class: "btn btn-large btn-primary", style: "margin-top: 20px;", onclick: "if(!$('#__option_answer').is(':visible')) $('#__option_answer').remove();if(!$('#__text_answer').is(':visible')) $('#__text_answer').remove();if(!$('#__exercise_answer').is(':visible')) $('#__exercise_answer').remove();" %>
+    <% end %>
+    </div>
+</div>

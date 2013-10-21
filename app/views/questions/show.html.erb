@@ -1,0 +1,67 @@
+<% provide(:title, 'Question') %>
+<h1>Question</h1>
+
+<div class="row">
+  Subject: <%= @question.subject.subject_name %>
+  <br>
+  Question group: <%= @question.question_group.question_group_name %>
+  <br>
+  Question content:
+  <%= text_area_tag "", @question.question_content, rows: 5, disabled: "disabled" %>
+  <% if !@question.question_file.nil? %>
+  <%= image_tag "question/" + @question.question_file %>
+  Description:
+  <%= text_field_tag "", @question.description, disabled: "disabled" %>
+
+  Answer type:
+  <%= radio_button_tag "", "", @question.answer_type == 1, disabled: "disabled" %> One choice option
+  <%= radio_button_tag "", "", @question.answer_type == 2, disabled: "disabled" %> Text answer
+  <%= radio_button_tag "", "", @question.answer_type == 3, disabled: "disabled" %> Exercise
+
+  <% if @question.answer_type == 1 %>
+  <div id="__option_answer">
+    <div style="margin-top: 20px;">Answers</div>
+    <ul>
+      <% @question.answers.each do |answer| %>
+      <li>
+        <%= answer.answer_no %>.
+        <%= check_box_tag "", "", answer.answer_correct == 1, disabled: "disabled" %> Correct answer
+        <%= text_area_tag "", answer.answer_content, rows: 2, disabled: "disabled" %>
+        <% if !answer.answer_file.nil? %>
+        <%= image_tag "question/" + answer.answer_file %>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+      </div>
+  <% end %>
+  <% if @question.answer_type == 2 %>
+  <div id="__text_answer">
+    <div style="margin-top: 20px;">Answer</div>
+    <% @question.answers.each do |answer| %>
+        <%= text_area_tag "", answer.answer_content, rows: 2, disabled: "disabled" %>
+        <% if !answer.answer_file.nil? %>
+          <%= image_tag "question/" + answer.answer_file %>
+        <% end %>
+    <% end %>
+  </div>
+  <% end %>
+  <% if @question.answer_type == 3 %>
+  <div id="__exercise_answer">
+    <div style="margin-top: 20px;">Answer</div>
+    <% @question.answers.each do |answer| %>
+        <%= text_area_tag "", answer.answer_content, rows: 2, disabled: "disabled" %>
+        <% if !answer.answer_file.nil? %>
+            <%= image_tag "question/" + answer.answer_file %>
+        <% end %>
+    <% end %>
+  </div>
+  <% end %>
+  <% end %>
+</div>
+<br>
+<br>
+<%= form_for(@question, method: "put") do |f| %>
+<%= f.select :subject_id, options_from_collection_for_select(@subjects, "subject_id", "subject_name"), {}, {style: "display: inline-block; width: 200px!important;"} %>
+<%= f.submit "Move", class: "btn btn-large btn-primary", style: "display: inline-block;", title: "Move to other Subject" %>
+<% end %>

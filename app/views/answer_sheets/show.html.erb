@@ -2,31 +2,50 @@
   <div>
     <span><%= I18n.l(@examination.created_at) %></span>
     <% if current_user.admin_user? %>
-    <span style="float: right;"><%= @examination.user.full_name %></span>
+        <span style="float: right;"><%= @examination.user.full_name %></span>
     <% else %>
-    <span style="float: right;">Duration: 20 minutes</span>
+        <span style="float: right;">Time left: <%= exam_time_s(@answer_sheet.limit_time) %></span>
     <% end %>
   </div>
   <% if !@answer_sheet.exam_result.nil? %>
-  <%
-     total = 0
-     @answer_sheet.exam_question.exam_question_details.each do |exam_question_detail|
-       total = total + exam_question_detail.number_question
-     end
-  %>
-  <% if @examination.status != 1 %>
-  <div>Exam result: <%= @answer_sheet.exam_result %>/<%= total %></div>
-  <% end %>
+      <% if @examination.status != 1 %>
+          <div>Exam result: <%= @answer_sheet.exam_result %>/<%= @answer_sheet.exam_question.number_question %></div>
+      <% end %>
   <% end %>
   <%= form_for([@examination, @answer_sheet]) do |f| %>
-    <div style="text-align: center; font-size: 24px; font-weight: bold; margin: 10px 0 20px 0;"><%= @answer_sheet.subject.subject_name %></div>
-    <ul>
-    <%= f.fields_for :answer_sheet_details do |builder| %>
-      <%= render 'shared/question',:f => builder, :status => @examination.status %>
-    <% end %>
-    </ul>
-    <% if @examination.status == 1 || current_user.admin_user? %>
-    <p><%= f.submit "Submit" %></p>
-    <% end %>
+      <div style="text-align: center; font-size: 24px; font-weight: bold; margin: 10px 0 20px 0;"><%= @answer_sheet.subject.subject_name %></div>
+      <ul>
+        <%= f.fields_for :answer_sheet_details do |builder| %>
+            <%= render 'shared/question',:f => builder, :status => @examination.status %>
+        <% end %>
+      </ul>
+      <p>
+        <% if @examination.editable?(current_user, @answer_sheet.limit_time?) %>
+            <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+        <% end %>
+        <%
+           next_answer_sheet = @examination.next_answer_sheet(@answer_sheet)
+           previous_answer_sheet = @examination.previous_answer_sheet(@answer_sheet)
+           if !previous_answer_sheet.nil? %>
+            &nbsp;&nbsp;
+            <% if previous_answer_sheet.started_at.nil? %>
+                <% if !@answer_sheet.exam_time.nil? %>
+                    <%= link_to "Start Previous", edit_examination_answer_sheet_path(@examination, previous_answer_sheet), class: "btn btn-large btn-primary" %>
+                <% end %>
+            <% else %>
+                <%= link_to "Previous", examination_answer_sheet_path(@examination, previous_answer_sheet) %>
+            <% end %>
+        <% end
+           if !next_answer_sheet.nil? %>
+            &nbsp;&nbsp;
+            <% if next_answer_sheet.started_at.nil? %>
+                <% if !@answer_sheet.exam_time.nil? %>
+                    <%= link_to "Start Next", edit_examination_answer_sheet_path(@examination, next_answer_sheet), class: "btn btn-large btn-primary" %>
+                <% end %>
+            <% else %>
+                <%= link_to "Next", examination_answer_sheet_path(@examination, next_answer_sheet) %>
+            <% end %>
+        <% end %>
+      </p>
   <% end %>
 </div>

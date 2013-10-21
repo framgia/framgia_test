@@ -1,10 +1,14 @@
-FramgiaTraining::Application.routes.draw do
+  FramgiaTraining::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :examinations do
     resources :answer_sheets do
       resources :answer_sheet_details, only: [:show] do
       end
+    end
+  end
+  resources :questions do
+    resources :answers do
     end
   end
   resources :exports

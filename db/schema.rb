@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20131017043033) do
 
   create_table "training_answer", primary_key: "answer_id", force: true do |t|
     t.integer  "question_id",    limit: 8
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "active_flag"
+    t.integer  "exam_time"
   end
 
   create_table "training_exam_question_detail", primary_key: "exam_question_detail_id", force: true do |t|
@@ -111,6 +112,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "active_flag"
+    t.string   "description",       limit: 128
   end
 
   create_table "training_question_group", primary_key: "question_group_id", force: true do |t|

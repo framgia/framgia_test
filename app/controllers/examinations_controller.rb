@@ -21,20 +21,25 @@ class ExaminationsController < ApplicationController
     @user = current_user
     @examination = Examination.new(:user_id => current_user.user_id, :status => 1)
     if @examination.save
-      subject_id = params[:subject_id]
+      subject_ids = params[:subject_ids]
       level_id = params[:level_id]
+      no = 1
+      subject_ids.each do |subject_id|
       exam_question_ids = ExamQuestion.where("subject_id = :subject_id AND level_id = :level_id AND active_flag = :active_flag",
-                                    subject_id: subject_id, level_id: level_id, active_flag: 1).pluck(:exam_question_id)
+                                             subject_id: subject_id, level_id: level_id, active_flag: 1).pluck(:exam_question_id)
       exam_question_id = exam_question_ids.sample
-      if exam_question_id
-        @answer_sheet = AnswerSheet.new(:user_id => current_user.user_id, :exam_question_id => exam_question_id,
-                                       :examination_id => @examination.examination_id, :subject_id => subject_id,
-                                      :no => 1)
-        if @answer_sheet.save
-          create_answer_sheet_detail(@answer_sheet)
+      #binding.pry
+        if exam_question_id
+          answer_sheet = AnswerSheet.new(:user_id => current_user.user_id, :exam_question_id => exam_question_id,
+                                         :examination_id => @examination.examination_id, :subject_id => subject_id,
+                                        :no => no)
+          if answer_sheet.save
+            create_answer_sheet_detail(answer_sheet)
+          end
+          no = no + 1
         end
       end
-      redirect_to examination_answer_sheet_path(@examination, @answer_sheet)
+      redirect_to examinations_path(@examination)
     else
       render 'new'
     end

@@ -26,4 +26,14 @@ class AnswerSheet < ActiveRecord::Base
     end
     self.exam_result = total
   end
+
+  def limit_time?
+    (Time.now.to_i - self.started_at.to_i) > self.exam_question.exam_time
+  end
+
+  def limit_time
+    timed = Time.now.to_i - self.started_at.to_i
+    self.exam_question.exam_time > timed ? self.exam_question.exam_time - timed : 0
+  end
+
 end

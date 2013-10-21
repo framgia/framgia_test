@@ -8,15 +8,15 @@
       <%= f.text_field :answer_content %>
   <% end %>
   <% if answer_type == 3 %>
-      <%= f.text_area :answer_content %>
+      <%= f.text_area :answer_content, rows: 5 %>
       <% if answer_sheet_detail.answer_file.nil? %>
-      <%= f.file_field :attach_file, ochange: "$('#__answer_file_#{answer_sheet_detail.answer_sheet_detail_id}').val('change');" %>
+      <%= f.file_field :attach_file, onchange: "$('#__answer_file_#{answer_sheet_detail.answer_sheet_detail_id}').val('change');" %>
       <% else %>
       <span id="__attachment_<%= answer_sheet_detail.answer_sheet_detail_id %>">
       <a href="javascript: void(0)" onclick="$.fileDownload('<%= download_path(@examination, @answer_sheet, answer_sheet_detail, "attachment") %>');">Attachment</a>
       <a href="javascript: void(0)" onclick="$('#__attachment_<%= answer_sheet_detail.answer_sheet_detail_id %>').hide();$('#__attachment_file_<%= answer_sheet_detail.answer_sheet_detail_id %>').show();$('#__attachment_file_<%= answer_sheet_detail.answer_sheet_detail_id %>').removeAttr('disabled');$('#__answer_file_<%= answer_sheet_detail.answer_sheet_detail_id %>').val('change');">X</a>
       </span>
-      <%= f.file_field :attach_file, ochange: "$('#__answer_file_#{answer_sheet_detail.answer_sheet_detail_id}').val('change');" , style: "display: none", disabled: "disabled", id: "__attachment_file_#{answer_sheet_detail.answer_sheet_detail_id}" %>
+      <%= f.file_field :attach_file, onchange: "$('#__answer_file_#{answer_sheet_detail.answer_sheet_detail_id}').val('change');" , style: "display: none", disabled: "disabled", id: "__attachment_file_#{answer_sheet_detail.answer_sheet_detail_id}" %>
       <% end %>
       <%= f.hidden_field :answer_file, id: "__answer_file_#{answer_sheet_detail.answer_sheet_detail_id}" %>
   <% end %>
@@ -37,7 +37,7 @@
   <% end %>
   <% if answer_type == 3 %>
       <%= render partial: 'shared/answer_item', :locals => {:answer => answer} %>
-      <textarea disabled="disabled"><%= answer_sheet_detail.answer_content %></textarea>
+      <textarea disabled="disabled" rows="5"><%= answer_sheet_detail.answer_content %></textarea>
       <% if !answer_sheet_detail.answer_file.nil? %>
       <a href="javascript: void(0)" onclick="$.fileDownload('<%= download_path(@examination, @answer_sheet, answer_sheet_detail, "attachment") %>');">Attachment</a>
       <% end %>

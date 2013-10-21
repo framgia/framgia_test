@@ -1,5 +1,6 @@
 class AnswerSheetsController < ApplicationController
   before_action :signed_in_user, only: [:index, :edit, :update, :destroy]
+  before_action :correct_user, only: [:index, :show, :edit, :update, :destroy]
 
   def index
     @answer_sheet = AnswerSheet.paginate(page: params[:page])
@@ -26,9 +27,15 @@ class AnswerSheetsController < ApplicationController
   def edit
     @examination = Examination.find(params[:examination_id])
     @answer_sheet = AnswerSheet.find(params[:id])
+    if @answer_sheet.started_at.nil?
+      @answer_sheet.update_attributes(started_at: Time.now)
+      @answer_sheet = AnswerSheet.find(params[:id])
+    end
+    redirect_to [@examination, @answer_sheet]
   end
 
   def update
+    @examination = Examination.find(params[:examination_id])
     @answer_sheet = AnswerSheet.find(params[:id])
     if @answer_sheet.update_attributes(answer_sheet_params)
       total = 0
@@ -37,13 +44,21 @@ class AnswerSheetsController < ApplicationController
           total = total + 1
         end
       end
-      @answer_sheet.update_attributes(:exam_result => total)
+      exam_time = Time.now.to_i - @answer_sheet.started_at.to_i
+      @answer_sheet.update_attributes(:exam_result => total, :exam_time => exam_time)
       flash[:success] = "Answer sheet updated"
-      if admin_user?
-        redirect_to admin_url
-      else
-        redirect_to root_url
-      end
+      redirect_to [@examination, @answer_sheet]
+      #binding.pry
+      #next_answer_sheet = @examination.next_answer_sheet(@answer_sheet)
+      #if !next_answer_sheet.nil?
+      #  redirect_to examination_answer_sheet_path(@examination, next_answer_sheet)
+      #else
+      #  if admin_user?
+      #    redirect_to admin_url
+      #  else
+      #    redirect_to root_url
+      #  end
+      #end
     else
       render 'show'
     end
@@ -66,6 +81,14 @@ class AnswerSheetsController < ApplicationController
     unless signed_in?
       store_location
       redirect_to signin_url, notice: "Please sign in."
+    end
+  end
+
+  def correct_user
+    examination = Examination.find(params[:examination_id])
+    if !current_user.user_admin? && !current_user?(examination.user)
+      flash[:success] = "You can not show the examination of another"
+      redirect_to(root_url)
     end
   end
 

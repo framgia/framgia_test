@@ -9,6 +9,7 @@
   </span>
   <span style="display: inline-block; width: 10%;">
   <% if examination.status == 1 %>
+      <%= link_to "View", examination_path(examination) %>
       <%= link_to "Check", examination_path(examination) + "?examination[status]=2", :method => :put %>
   <% else %>
       <%= link_to "View", examination_path(examination) %>

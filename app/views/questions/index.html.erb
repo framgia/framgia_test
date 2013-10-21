@@ -1,0 +1,24 @@
+<% provide(:title, 'All questions') %>
+<h1>All questions</h1>
+
+<%= form_tag(new_question_path, :method => "get") do |f| %>
+    <%= select_tag "subject_id", options_from_collection_for_select(@subjects, "subject_id", "subject_name", @subject_id), style: "display: inline-block; width: 200px;", onchange: "" %>
+    <a href="javascript: void(0)" onclick="window.location.href='<%=questions_path%>?subject_id=' + $('#subject_id').val()">Filter</a>
+    <%= submit_tag "New Question", class: "btn btn-large btn-primary", style: "float: right;" %>
+<% end %>
+
+<%= will_paginate @questions %>
+
+<ul class="users">
+  <% @questions.each do |question| %>
+  <li>
+    <span style="width: 5%; display: inline-block; float: left;"><%= link_to "#" + question.question_id.to_s, question_path(question) %></span>
+    <span style="width: 45%; display: inline-block; float: left;">&nbsp;<%= question.description %></span>
+    <span style="width: 15%; display: inline-block; float: left;"><%= answer_type question.answer_type %></span>
+    <span style="width: 25%; display: inline-block; float: left;"><%= question.question_group.question_group_name %></span>
+    <span style="width: 10%; display: inline-block; float: left;"><%= link_to "Edit", edit_question_path(question) %>&nbsp;&nbsp;<%= link_to "Delete", question_path(question), method: "delete" %></span>
+  </li>
+  <% end %>
+</ul>
+
+<%= will_paginate @questions %>

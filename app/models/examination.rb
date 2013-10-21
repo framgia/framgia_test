@@ -14,6 +14,14 @@ class Examination < ActiveRecord::Base
     answer_sheets.find_by(no: 1)
   end
 
+  def next_answer_sheet(answer_sheet)
+    answer_sheets.find_by(no: answer_sheet.no + 1)
+  end
+
+  def previous_answer_sheet(answer_sheet)
+    answer_sheets.find_by(no: answer_sheet.no - 1)
+  end
+
   def default_active_values
     self.active_flag ||= 1
   end
@@ -22,6 +30,10 @@ class Examination < ActiveRecord::Base
     examination_ids = "SELECT MAX(examination_id) FROM training_examination
                          GROUP BY user_id"
     where("examination_id IN (#{examination_ids})", examination_ids: examination_ids)
+  end
+
+  def editable?(user, limit_time)
+    self.status == 1 && !user.admin_user? && !limit_time || self.status == 2 && user.admin_user?
   end
 
 end

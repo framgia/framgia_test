@@ -1,0 +1,98 @@
+<% provide(:title, 'Question') %>
+<h1>Question</h1>
+
+<div class="row">
+    <%= form_for(@question) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+
+        <%= f.hidden_field :subject_id %>
+
+        <%= f.label :question_group_id %>
+        <%= f.select :question_group_id, options_from_collection_for_select(@question_groups, "question_group_id", "question_group_name"), style: "display: inline-block; width: 200px;" %>
+
+        <%= f.label :question_content %>
+        <%= f.text_area :question_content, rows: 5 %>
+        <% if !@question.question_file.nil? %>
+        <span id="__question_attachment">
+        <%= image_tag "question/" + @question.question_file, id: "__question_image" %>
+        <a href="javascript: void(0)" onclick="$('#__question_attachment').hide();$('#__question_file').val('change');">Remove file</a>
+        </span>
+        <br>
+        <% end %>
+        <%= f.hidden_field :question_file, id: "__question_file" %>
+        <%= f.file_field :attach_file, onchange: "readURL(this, $('#__question_image'));$('#__question_attachment').show();$('#__question_file').val('change');" %>
+
+        <%= f.label :description %>
+        <%= f.text_field :description %>
+
+        <%= f.label :answer_type %>
+        <%= f.radio_button :answer_type, 1, disabled: "disabled" %> One choice option
+        <%= f.radio_button :answer_type, 2, disabled: "disabled" %> Text answer
+        <%= f.radio_button :answer_type, 3, disabled: "disabled" %> Exercise
+
+        <% if @question.answer_type == 1 %>
+        <div id="__option_answer">
+          <div style="margin-top: 20px;">Answers</div>
+          <ul>
+            <%= f.fields_for :answers do |builder| %>
+                <li>
+                  <%= builder.index + 1 %>.
+                  <%= builder.check_box :answer_correct %> Correct answer
+                  <%= builder.text_area :answer_content, rows: 2 %>
+                  <%= builder.hidden_field :subject_id, value: @question.subject_id %>
+                  <% if !builder.object.answer_file.nil? %>
+                  <span id="__answer_attachment_<%=builder.object.answer_id%>">
+                  <%= image_tag "question/" + builder.object.answer_file, id: "__answer_image_" + builder.object.answer_id.to_s %>
+                    <a href="javascript: void(0)" onclick="$('#__answer_attachment_<%=builder.object.answer_id%>').hide();$('#__answer_file_<%=builder.object.answer_id.to_s%>').val('change');">Remove file</a>
+                  </span>
+                      <br>
+                  <% end %>
+                  <%= builder.hidden_field :answer_file, id: "__answer_file_" + builder.object.answer_id.to_s %>
+                  <%= builder.file_field :attach_file, onchange: "readURL(this, $('#__answer_image_#{builder.object.answer_id.to_s}'));$('#__answer_attachment_#{builder.object.answer_id.to_s}').show();$('#__answer_file_#{builder.object.answer_id.to_s}').val('change');" %>
+                </li>
+            <% end %>
+          </ul>
+          <a href="void(0)" onclick="">Add more answer</a>
+        </div>
+        <% end %>
+        <% if @question.answer_type == 2 %>
+        <div id="__text_answer">
+          <div style="margin-top: 20px;">Answer</div>
+          <%= f.fields_for :answers do |builder| %>
+              <%= builder.hidden_field :subject_id, value: @question.subject_id %>
+              <%= builder.hidden_field :answer_no, value: 1 %>
+              <%= builder.text_area :answer_content, rows: 2 %>
+              <% if !builder.object.answer_file.nil? %>
+                  <span id="__answer_attachment_<%=builder.object.answer_id%>">
+                  <%= image_tag "question/" + builder.object.answer_file, id: "__answer_image_" + builder.object.answer_id.to_s %>
+                    <a href="javascript: void(0)" onclick="$('#__answer_attachment_<%=builder.object.answer_id%>').hide();$('#__answer_file_<%=builder.object.answer_id.to_s%>').val('change');">Remove file</a>
+                  </span>
+                  <br>
+              <% end %>
+              <%= builder.hidden_field :answer_file, id: "__answer_file_" + builder.object.answer_id.to_s %>
+              <%= builder.file_field :attach_file, onchange: "readURL(this, $('#__answer_image_#{builder.object.answer_id.to_s}'));$('#__answer_attachment_#{builder.object.answer_id.to_s}').show();$('#__answer_file_#{builder.object.answer_id.to_s}').val('change');" %>
+          <% end %>
+        </div>
+        <% end %>
+        <% if @question.answer_type == 3 %>
+        <div id="__exercise_answer">
+          <div style="margin-top: 20px;">Answer</div>
+          <%= f.fields_for :answers do |builder| %>
+              <%= builder.hidden_field :subject_id, value: @question.subject_id %>
+              <%= builder.hidden_field :answer_no, value: 1 %>
+              <%= builder.text_area :answer_content, rows: 5 %>
+              <% if !builder.object.answer_file.nil? %>
+                  <span id="__answer_attachment_<%=builder.object.answer_id%>">
+                  <%= image_tag "question/" + builder.object.answer_file, id: "__answer_image_" + builder.object.answer_id.to_s %>
+                    <a href="javascript: void(0)" onclick="$('#__answer_attachment_<%=builder.object.answer_id%>').hide();$('#__answer_file_<%=builder.object.answer_id.to_s%>').val('change');">Remove file</a>
+                  </span>
+                  <br>
+              <% end %>
+              <%= builder.hidden_field :answer_file, id: "__answer_file_" + builder.object.answer_id.to_s %>
+              <%= builder.file_field :attach_file, onchange: "readURL(this, $('#__answer_image_#{builder.object.answer_id.to_s}'));$('#__answer_attachment_#{builder.object.answer_id.to_s}').show();$('#__answer_file_#{builder.object.answer_id.to_s}').val('change');" %>
+          <% end %>
+        </div>
+        <% end %>
+        <%= f.submit "Update Question", class: "btn btn-large btn-primary", style: "margin-top: 20px;" %>
+    <% end %>
+</div>

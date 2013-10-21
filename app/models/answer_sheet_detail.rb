@@ -36,7 +36,7 @@ class AnswerSheetDetail < ActiveRecord::Base
         if !Dir.exist? Rails.root.join(dir_path)
           Dir.mkdir Rails.root.join(dir_path)
         end
-        File.open(Rails.root.join(dir_path, file_name), 'w+') do |file|
+        File.open(Rails.root.join(dir_path, file_name), 'wb') do |file|
           file.write(uploaded_io.read)
           self.answer_file = file_path
         end

@@ -1,7 +1,27 @@
 <li>
-  <%= link_to I18n.l(examination.created_at), examination_answer_sheet_path(examination, examination.first_answer_sheet) %>
-  <%= examination_status examination.status %>
-  <% if examination.conclusion %>
+  <span style="display: inline-block; width: 20%; font-weight: bold;"><%= I18n.l(examination.created_at) %></span>
+  <span style="display: inline-block; width: 20%;"><%= examination_status examination.status %></span>
+  <span style="display: inline-block; width: 20%;"><% if examination.conclusion %>
   <%= examination.conclusion.conclusion_name %>
-  <% end %>
+  <% end %>&nbsp;</span>
+  <span style="display: inline-block; width: 40%;">&nbsp;</span>
+  <ul>
+    <% examination.answer_sheets.each do |answer_sheet| %>
+    <li>
+      <span style="display: inline-block; width: 30%;"><%= answer_sheet.subject.subject_name %></span>
+      <span style="display: inline-block; width: 10%;"><% if examination.status != 1 %>
+      <%= answer_sheet.exam_result %>/<%= answer_sheet.exam_question.number_question %>
+      <% end %>&nbsp;</span>
+      <span style="display: inline-block; width: 20%;"><%= exam_time_s(answer_sheet.exam_time) %>&nbsp;</span>
+      <span style="display: inline-block; width: 10%;">
+      <% if answer_sheet.started_at.nil? %>
+      <%= link_to "Start", edit_examination_answer_sheet_path(examination, answer_sheet) %>
+      <% else %>
+      <%= link_to "View", examination_answer_sheet_path(examination, answer_sheet) %>
+      <% end %>
+      </span>
+      <span style="display: inline-block; width: 25%;">&nbsp;</span>
+    </li>
+    <% end %>
+  </ul>
 </li>
