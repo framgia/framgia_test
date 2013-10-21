@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 20131017043033) do
     t.integer  "subject_id"
     t.integer  "no"
     t.integer  "exam_result"
+    t.integer  "exam_time",        limit: 8
+    t.datetime "started_at"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "active_flag"
@@ -112,7 +114,7 @@ ActiveRecord::Schema.define(version: 20131017043033) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "active_flag"
-    t.string   "description",       limit: 128
+    t.text     "description"
   end
 
   create_table "training_question_group", primary_key: "question_group_id", force: true do |t|

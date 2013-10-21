@@ -17,6 +17,7 @@
   match 'examinations/:examination_id/answer_sheets/:answer_sheet_id/answer_sheet_details/:id/:attachment', to: 'answer_sheet_details#show', as: "download", via: 'get'
   match '/admin',  to: 'admin#index',            via: 'get'
   match '/monitor',  to: 'monitor#index',            via: 'get'
+  match '/generate',  to: 'monitor#generate',            via: 'get'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'

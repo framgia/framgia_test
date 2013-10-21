@@ -1,0 +1,307 @@
+question_id,subject_id,question_group_id,question_content,question_file,answer_type,created_at,updated_at,active_flag,description
+1,1,1,Which SQL function is used to count the number of rows in a SQL query?,"",1,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1,
+2,1,1,The FROM SQL clause is used to…,,1,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1,
+3,1,2,How do you get the number of rows affected by query?,,2,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1,
+4,1,2,"If the value in the column is repeatable, how do you find out the unique values?",,2,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1,
+5,1,3,,1/exercise1.jpg,3,2013-10-11 12:00:00 UTC,2013-10-21 01:46:35 UTC,0,
+6,2,4,Hãy chọn lệnh đúng để khởi động server Rails.,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+7,2,4,Hãy chọn rake task thích hợp dùng để xuất ra các routing được định nghĩa trong config/routes.rb.,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+8,2,4,Hãy chọn rake task thích hợp dùng để tạo database được chỉ định trong config/databases.yml,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+9,2,4,"Đưa ra kết quả khi chạy lệnh sau đây:
+{'foo' => 'bar'}.symbolize_keys.merge(:foo => 'hoge')",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+10,2,4,"Điền vào (1) dòng code để validate độ dài xâu của trường title trong bảng Article nằm trong 20 ký tự.
+ class Article < ActiveRecord::Base
+　　__(1)__
+end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+11,2,4,"Khi validate trường age của bảng User là số nguyên không âm, điền vào (1) đoạn code thích hợp.
+ 
+ class User < ActiveRecord::Base
+  　 __(1)__
+  end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+12,2,4,Chọn một đáp án đúng khi nói về sự khác nhau giữa ActiveRecord::Base#update_attributes!và ActiveRecord::Base#update_attributes,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+13,2,4,"Điền vào (1) dòng code để định nghĩa một scope tên là administrator lấy ra các record có trường admin bằng true.
+ 
+class User < ActiveRecord::Base
+　__(1)__
+end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+14,2,4,"Hai model Company và Employer có quan hệ 1 nhiều (has_many). Điền vào (1) đoạn code để khi xoá một record trong model Company thì những record phụ thuộc của model Employer cũng bị xoá theo.
+ 
+            class Company < ActiveRecord::Base
+              __(1)__
+            end
+            class Employee < ActiveRecord::Base
+              belongs_to :company
+            end
+",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+15,2,4,"Điền vào (1) dòng code để đánh index cho trường name của bảng user.
+ 
+class CreateUsers < ActiveRecord::Migration
+　def self.up
+  　create_table :users do |t|
+    　t.string :name
+    　t.timestamps
+  　end
+  　__(1)__
+　end
+　def self.down
+　　drop_table :users
+ 　end
+ end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+16,2,5,"Điền vào (1) dòng code để định nghĩa routing, khi truy cập vào “/” thì action “welcome#index” được gọi.
+ 
+Rails3::Application.routes.draw do
+ 　__(1)__
+ end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+17,2,5,"Điền vào (1) từ thích hợp để định nghĩa routing, khi truy cập vào “/users/1/preview” thì action “users#preview” được gọi.
+ 
+Rails3::Application.routes.draw do
+　resources :users do
+  　__(1)__ do
+         get :preview
+     end
+   end
+             end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+18,2,5,"Điền vào (1) dòng code khi muốn tất cả các action không được chạy khi kết quả thực hiện của current_user.admin? là false
+ 
+class Admin::UsersController < ApplicationController
+　__(1)__
+　def index
+  　@users = Users.all
+　end
+  private
+  def require_admin
+  　redirect_to welcome_path unless current_user.admin?
+  end
+end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+19,2,5,"Điền vào (1) đoạn code để truyền đoạn message “Book was successfully created.
+” vào flash và thực hiện redirect.
+ 
+class BooksController < ApplicationController
+  def create
+    @book = Book.new(params[:book])
+    if @book.save
+      __(1)__
+    else
+      render :action => :new
+    end
+  end
+end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+20,2,5,"Điền vào (1) code thích hợp để tạo link dẫn đến trang của từng user
+            
+Code 1:
+class User < ActiveRecord::Base
+end
+ 
+Code 2:
+ <% User.all.each do |user| %>
+ <%= __(1)__ user.name, user %>
+ <% end %>",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+21,2,5,"Đoạn code bên dưới muốn định nghĩa title của trang là “Hello world”. Điền vào (1) đoạn code thích hợp
+ 
+Code 1:
+<html>
+　<head>
+     __(1)__
+   </head>
+   <body>
+     <%= yield %>
+   </body>
+ </html>
+ 
+Code 2:
+<% content_for :head do %>
+　<title>Hello world</title>
+<% end %>",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+22,2,5,"File config/routes.rb được định nghĩa như Code 1 bên dưới. Đoạn code ở file 2 sẽ sinh ra string nào? Chọn đáp án thích hợp.
+ 
+Code 1:
+Rails3::Application.routes.draw do
+　resources :users
+end
+
+Code 2:
+<%= url_for User.find(1) %>",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+23,2,5,"Điền vào (1) code để cài đặt địa chỉ người gửi mặc định.
+ 
+class NotifierMailer < ActionMailer::Base
+　　__(1)__
+  　def welcome(recipient)
+     　mail :to => recipient.email
+    end
+ end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+24,2,5,"Lệnh để khởi tạo một project rails mới tên là “ittrain” là gì?
+ 
+1.     rails create ittrain
+2.     rails project ittrain
+3.     rails new ittrain
+4.     rails ittrain",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+25,2,5,Lựa chọn nào dưới đây không phải là thành phần cơ bản của Rails 3?,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+26,2,5,"Kết quả khi chạy lệnh ""Person"".tableize  là gì?",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+27,2,5,"Kết quả trả về khi chạy lệnh save ở đoạn code thứ 2 là gì?
+ 
+  Code 1
+  class User < ActiveRecord::Base
+    validates :login, :length => {:minimum => 5}
+  end
+  Code 2
+  user = User.new(:login => ""foo"")
+  user.save",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+28,2,5,"Chọn dòng code để lấy ra tất cả các record có giá trị trường login là “foo”
+ 
+class User < ActiveRecord::Base
+　validates :login, :presence => true
+end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+29,2,5,"Điền vào (1) từ thích hợp để khi tạo và update instace của model User thì màn hình log in ra chữ “debug”
+ 
+class User < ActiveRecord::Base
+  ___(1)__ :logging
+  private
+    def logging
+    logger.debug ""debug""
+  end
+end
+",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+30,2,5,"Điền vào (1) dòng code thích hợp để xoá trường email trong bảng users
+ 
+class RemoveEmailToUsers < ActiveRecord::Migration
+  def self.up
+    __(1)__
+  end
+  def self.down
+  end
+end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+31,2,5,"Sau khi chạy rake db:migrate thì trường nào của bảng users không được định nghĩa?
+ 
+class CreateUsers < ActiveRecord::Migration
+  def self.up
+    create_table :users do |t|
+    　t.string :login
+    　t.timestamps
+  　end
+  end
+  def self.down
+    drop_table :users
+  end
+end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+32,2,5,"Nếu định nghĩa resource :user thì sẽ tạo ra cac route nào?
+ 
+ 
+Rails3::Application.routes.draw do
+  Resource :user
+end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+33,2,5,"Điền vào (1) dòng code để gán giá trị cho session.
+ 
+class SessionsController < ApplicationController
+  def create
+    if @user = User.authenticate(params[:login], params[:password])
+      __(1)__
+      redirect_to root_path
+    else
+    　render :action => :new
+　　end
+   end
+end",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+34,2,5,"File routes.rb được định nghĩa như bên dưới. Helper method nào dùng để gọi đến action “comments#show”?
+ 
+Rails3::Application.routes.draw do
+  resources :message_boards do
+    resources :comments
+  end
+end
+ 
+1.     comment_url(@message_board, @comment)
+2.     comments_url(@message_board)
+3.     message_board_comment_url(@message_board, @comment)
+4.     message_board_comments_url(@message_board)",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+35,2,5,"Điền vào (1) từ thích hợp để trả về respond dự liệu.
+ 
+class UsersController < ApplicationController
+  def index
+    @users = User.all
+    __(1)__ do |format|
+      format.html
+      format.xml { render :xml => @users }
+    end
+  end
+end
+ 
+1.     request_from
+2.     request_to
+3.     respond_from
+4.     respond_to",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1,
+36,1,1,Which of the following is NOT a SQL keyword or SQL clause?,,1,2013-10-17 08:40:53 UTC,2013-10-18 02:00:34 UTC,0,
+37,1,1,The UNION SQL clause can be used with…,,1,2013-10-17 08:57:43 UTC,2013-10-18 02:00:22 UTC,0,The UNION SQL clause can be used with…
+39,1,1,Which SQL keyword is used to retrieve a maximum value?,,1,2013-10-17 09:57:41 UTC,2013-10-18 02:00:37 UTC,0,Which SQL keyword is used to retrieve a maximum value?
+40,1,1,"",,3,2013-10-17 10:06:34 UTC,2013-10-17 11:31:10 UTC,0,Exercise 2
+41,3,3,"Have following relations: Students, Teachers, Courses, Classes, Subjects, CourseRegisters, Teaching
+a. List all students have registered both subjects X, Y
+b. List the teachers teach more than five class
+c. List the teachers teach a class that have at least 30 student return up
+d. List all subjects of teacher G that have registered by student A","",3,2013-10-18 08:41:28 UTC,2013-10-21 03:14:55 UTC,1,"Have following relations: Students, Teachers, Courses, Classes, Subjects, CourseRegisters, Teaching"
+42,1,1,Which of the following is NOT a SQL keyword or SQL clause?,,1,2013-10-21 01:55:54 UTC,2013-10-21 01:55:54 UTC,1,Which of the following is NOT a SQL keyword or SQL clause?
+43,1,1,The UNION SQL clause can be used with…,,1,2013-10-21 01:58:20 UTC,2013-10-21 01:58:20 UTC,1,The UNION SQL clause can be used with…
+44,1,1,What does DML stand for?,,1,2013-10-21 02:00:03 UTC,2013-10-21 02:00:03 UTC,1,What does DML stand for?
+45,1,1,Which SQL keyword is used to retrieve a maximum value?,,1,2013-10-21 02:01:41 UTC,2013-10-21 02:01:41 UTC,1,Which SQL keyword is used to retrieve a maximum value?
+46,1,1,Which SQL statement inserts data into a table called Projects?,,1,2013-10-21 02:04:25 UTC,2013-10-21 02:04:25 UTC,1,Which SQL statement inserts data into a table called Projects?
+47,1,1,Which of the following SQL clauses is used to enter data into a SQL table?,,1,2013-10-21 02:05:20 UTC,2013-10-21 02:05:20 UTC,1,Which of the following SQL clauses is used to enter data into a SQL table?
+48,1,1,Which of the following SQL clauses is used to DELETE data from a database table?,,1,2013-10-21 02:07:00 UTC,2013-10-21 02:07:00 UTC,1,Which of the following SQL clauses is used to DELETE data from a database table?
+49,1,1,Which of the following SQL statements is correct?,,1,2013-10-21 02:08:41 UTC,2013-10-21 02:08:41 UTC,1,Which of the following SQL statements is correct?
+50,1,1,What does SQL stand for?,,1,2013-10-21 02:09:21 UTC,2013-10-21 02:09:21 UTC,1,What does SQL stand for?
+51,1,1,Which SQL statement is used to extract data from a database?,,1,2013-10-21 02:09:45 UTC,2013-10-21 02:09:45 UTC,1,Which SQL statement is used to extract data from a database?
+52,1,1,Which SQL statement is used to update data in a database?,,1,2013-10-21 02:10:16 UTC,2013-10-21 02:10:16 UTC,1,Which SQL statement is used to update data in a database?
+53,1,1,"With SQL, how do you select a column named ""FirstName"" from a table named ""Persons""?",,1,2013-10-21 02:10:53 UTC,2013-10-21 02:10:53 UTC,1,"With SQL, how do you select a column named ""FirstName"" from a table named ""Persons""?"
+54,1,1,"With SQL, how do you select all the columns from a table named ""Persons""?",,1,2013-10-21 02:11:32 UTC,2013-10-21 02:11:32 UTC,1,"With SQL, how do you select all the columns from a table named ""Persons""?"
+55,1,1,"With SQL, how do you select all the records from a table named ""Persons"" where the value of the column ""FirstName"" is ""Peter""?",,1,2013-10-21 02:12:05 UTC,2013-10-21 02:12:05 UTC,1,"With SQL, how do you select all the records from a table named ""Persons"" where the value of the column ""FirstName"" is ""Peter""?"
+56,1,1,"With SQL, how do you select all the records from a table named ""Persons"" where the value of the column ""FirstName"" starts with an ""a""?",,1,2013-10-21 02:25:26 UTC,2013-10-21 02:25:26 UTC,1,"With SQL, how do you select all the records from a table named ""Persons"" where the value of the column ""FirstName"" starts with an ""a""?"
+57,1,1,The OR operator displays a record if ANY conditions listed are true. The AND operator displays a record if ALL of the conditions listed are,,1,2013-10-21 02:25:53 UTC,2013-10-21 02:25:53 UTC,1,The OR operator displays a record if ANY conditions listed are true. The AND operator displays a record if ALL of the conditions listed are
+58,1,1,"With SQL, how do you select all the records from a table named ""Persons"" where the ""FirstName"" is ""Peter"" and the ""LastName"" is ""Jackson""?",,1,2013-10-21 02:26:19 UTC,2013-10-21 02:26:19 UTC,1,"With SQL, how do you select all the records from a table named ""Persons"" where the ""FirstName"" is ""Peter"" and the ""LastName"" is ""Jackson""?"
+59,1,1,"With SQL, how do you select all the records from a table named ""Persons"" where the ""LastName"" is alphabetically between (and including) ""Hansen"" and ""Pettersen""?",,1,2013-10-21 02:26:54 UTC,2013-10-21 02:26:54 UTC,1,"With SQL, how do you select all the records from a table named ""Persons"" where the ""LastName"" is alphabetically between (and including) ""Hansen"" and ""Pettersen""?"
+60,1,1,Which SQL statement is used to return only different values?,,1,2013-10-21 02:27:26 UTC,2013-10-21 02:27:26 UTC,1,Which SQL statement is used to return only different values?
+61,1,1,Which SQL keyword is used to sort the result-set?,,1,2013-10-21 02:27:50 UTC,2013-10-21 02:27:50 UTC,1,Which SQL keyword is used to sort the result-set?
+62,1,1,"With SQL, how can you return all the records from a table named ""Persons"" sorted descending by ""FirstName""?",,1,2013-10-21 02:28:23 UTC,2013-10-21 02:28:23 UTC,1,"With SQL, how can you return all the records from a table named ""Persons"" sorted descending by ""FirstName""?"
+63,1,1,"With SQL, how can you insert a new record into the ""Persons"" table?",,1,2013-10-21 02:28:45 UTC,2013-10-21 02:28:45 UTC,1,"With SQL, how can you insert a new record into the ""Persons"" table?"
+64,1,1,"How can you change ""Hansen"" into ""Nilsen"" in the ""LastName"" column in the Persons table?",,1,2013-10-21 02:29:09 UTC,2013-10-21 02:29:09 UTC,1,"How can you change ""Hansen"" into ""Nilsen"" in the ""LastName"" column in the Persons table?"
+65,1,1,"With SQL, how can you delete the records where the ""FirstName"" is ""Peter"" in the Persons Table?",,1,2013-10-21 02:30:12 UTC,2013-10-21 02:30:12 UTC,1,"With SQL, how can you delete the records where the ""FirstName"" is ""Peter"" in the Persons Table?"
+66,1,1,"With SQL, how can you return the number of records in the ""Persons"" table?",,1,2013-10-21 02:30:38 UTC,2013-10-21 02:30:38 UTC,1,"With SQL, how can you return the number of records in the ""Persons"" table?"
+67,1,1,"If you don't specify ASC or DESC after a SQL ORDER BY clause, the following is used by default:",,1,2013-10-21 02:31:10 UTC,2013-10-21 02:31:10 UTC,1,"If you don't specify ASC or DESC after a SQL ORDER BY clause, the following is used by default:"
+68,1,1,When inserting data in a table do you always have to specify a list of all column names you are inserting values for?,,1,2013-10-21 02:31:32 UTC,2013-10-21 02:31:32 UTC,1,When inserting data in a table do you always have to specify a list of all column names you are inserting values for?
+69,1,1,Which of the following 3 SQL statements is correct?,,1,2013-10-21 02:31:55 UTC,2013-10-21 02:31:55 UTC,1,Which of the following 3 SQL statements is correct?
+70,1,1,What is a database cursor?,,1,2013-10-21 02:32:36 UTC,2013-10-21 02:32:36 UTC,1,What is a database cursor?
+71,1,1,What does follow after the SQL WHERE clause?,,1,2013-10-21 02:33:10 UTC,2013-10-21 02:33:10 UTC,1,What does follow after the SQL WHERE clause?
+72,1,1,What does the ALTER TABLE clause do?,,1,2013-10-21 02:33:36 UTC,2013-10-21 02:33:36 UTC,1,What does the ALTER TABLE clause do?
+73,1,1,What is the difference between the WHERE and HAVING SQL clauses?,,1,2013-10-21 02:34:05 UTC,2013-10-21 02:34:05 UTC,1,What is the difference between the WHERE and HAVING SQL clauses?
+74,1,1,What is the purpose of the SQL AS clause?,,1,2013-10-21 02:34:30 UTC,2013-10-21 02:34:30 UTC,1,What is the purpose of the SQL AS clause?
+75,1,1,Can you join a table to itself?,,1,2013-10-21 02:34:49 UTC,2013-10-21 02:34:49 UTC,1,Can you join a table to itself?
+76,1,1,The IN SQL keyword…,,1,2013-10-21 02:35:16 UTC,2013-10-21 02:35:16 UTC,1,The IN SQL keyword…
+77,1,1,The UPDATE SQL clause can…,,1,2013-10-21 02:43:07 UTC,2013-10-21 02:43:07 UTC,1,The UPDATE SQL clause can…
+78,1,1,The difference between the DELETE and TRUNCATE SQL clauses is:,,1,2013-10-21 02:44:14 UTC,2013-10-21 02:44:14 UTC,1,The difference between the DELETE and TRUNCATE SQL clauses is:
+79,1,1,The LIKE SQL keyword is used along with ...,,1,2013-10-21 02:44:54 UTC,2013-10-21 02:44:54 UTC,1,The LIKE SQL keyword is used along with ...
+80,1,1,Which of the following statements gets the total value of the column 'Price' in the 'Sales' table?,,1,2013-10-21 02:45:41 UTC,2013-10-21 02:45:41 UTC,1,Which of the following statements gets the total value of the column 'Price' in the 'Sales' table?
+81,1,1,"Which of the following SQL statements selects the total number of orders from the Sales table? 
+        OrderNumber	Date		CustomerID 
+        1		12/12/2005 	13 
+        2		13/12/2005 	17",,1,2013-10-21 02:48:03 UTC,2013-10-21 02:48:03 UTC,1,Which of the following SQL statements selects the total number of orders from the Sales table? 
+82,1,2,How do you return the a hundred books starting from 25th?,,2,2013-10-21 02:50:30 UTC,2013-10-21 02:50:30 UTC,1,How do you return the a hundred books starting from 25th?
+83,1,2,"You wrote a search engine that should retrieve 10 results at a time, but at the same time you’d like to know how many rows there’re total. How do you display that to the user?",,2,2013-10-21 02:51:09 UTC,2013-10-21 02:51:09 UTC,1,"You wrote a search engine that should retrieve 10 results at a time, but at the same time you’d like to know how many rows there’re total. How do you display that to the user?"
+84,1,2,"How would you write a query to select all teams that won either 2, 4, 6 or 8 games?",,2,2013-10-21 02:53:12 UTC,2013-10-21 02:53:12 UTC,1,"How would you write a query to select all teams that won either 2, 4, 6 or 8 games?"
+85,1,2,"How would you select all the users, whose phone number is null?",,2,2013-10-21 02:53:28 UTC,2013-10-21 02:53:28 UTC,1,"How would you select all the users, whose phone number is null?"
+86,1,2,"What does this query mean: SELECT user_name, user_isp FROM users LEFT JOIN isps USING (user_id) ?",,2,2013-10-21 02:53:43 UTC,2013-10-21 02:53:43 UTC,1,"What does this query mean: SELECT user_name, user_isp FROM users LEFT JOIN isps USING (user_id) ?"
+87,1,2,On executing the DELETE statement I keep getting the error about foreign key constraint failing. What do I do?,"",2,2013-10-21 02:53:58 UTC,2013-10-21 02:59:35 UTC,1,On executing the DELETE statement I keep getting the error about foreign key constraint failing. What do I do?
+88,1,2,When would you use ORDER BY in DELETE statement?,"",2,2013-10-21 02:54:22 UTC,2013-10-21 02:59:20 UTC,1,When would you use ORDER BY in DELETE statement?
+89,1,2,How would you change a column from VARCHAR(10) to VARCHAR(50)?,"",2,2013-10-21 02:54:36 UTC,2013-10-21 02:59:09 UTC,1,How would you change a column from VARCHAR(10) to VARCHAR(50)?
+90,1,2,How would you delete a column?,"",2,2013-10-21 02:54:48 UTC,2013-10-21 02:58:56 UTC,1,How would you delete a column?
+91,1,2,How do you concatenate strings in MySQL?,"",2,2013-10-21 02:55:00 UTC,2013-10-21 02:58:38 UTC,1,How do you concatenate strings in MySQL?
+92,1,2,How do you get a portion of a string?,"",2,2013-10-21 02:55:11 UTC,2013-10-21 02:58:19 UTC,1,How do you get a portion of a string?
+93,1,2,What’s the difference between CHAR_LENGTH and LENGTH?,,2,2013-10-21 02:55:31 UTC,2013-10-21 02:55:31 UTC,1,What’s the difference between CHAR_LENGTH and LENGTH?
+94,1,2,How do you convert a string to UTF-8?,,2,2013-10-21 02:55:45 UTC,2013-10-21 02:55:45 UTC,1,How do you convert a string to UTF-8?
+95,1,2,What do % and _ mean inside LIKE statement?,,2,2013-10-21 02:55:59 UTC,2013-10-21 02:55:59 UTC,1,What do % and _ mean inside LIKE statement?
+96,1,2,What does + mean in REGEXP?,,2,2013-10-21 02:56:12 UTC,2013-10-21 02:56:12 UTC,1,What does + mean in REGEXP?
+97,1,2,How do you get the month from a timestamp?,,2,2013-10-21 02:56:28 UTC,2013-10-21 02:56:28 UTC,1,How do you get the month from a timestamp?
+98,1,2,How do you offload the time/date handling to MySQL?,,2,2013-10-21 02:56:44 UTC,2013-10-21 02:56:44 UTC,1,How do you offload the time/date handling to MySQL?
+99,1,2,How do you add three minutes to a date?,,2,2013-10-21 02:56:58 UTC,2013-10-21 02:56:58 UTC,1,How do you add three minutes to a date?
+100,1,2,What’s the difference between Unix timestamps and MySQL timestamps?,,2,2013-10-21 02:57:11 UTC,2013-10-21 02:57:11 UTC,1,What’s the difference between Unix timestamps and MySQL timestamps?
+101,3,3,"Have following relations: Books, Authors, Readers, Borrows
+a. List the books have been borrowed more than 10 times in 2011
+b. List the readers has borrowed at least 10 different books
+c. List the books are being borrowed by a reader in the preceding sentence (b)
+d. List of Stephen King books present no one is borrowing",,3,2013-10-21 03:15:28 UTC,2013-10-21 03:15:28 UTC,1,"Have following relations: Books, Authors, Readers, Borrows"

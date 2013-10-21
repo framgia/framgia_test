@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   has_many :answer_sheets, foreign_key: "user_id", class_name:  "AnswerSheet"
 
   before_save { self.email = email.downcase }
-  before_create :create_remember_token, :default_active_values
+  before_create :create_remember_token, :default_active_values, :default_user_admin_values
   validates :full_name, presence: true, length: { maximum: 256 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence:   true,
@@ -34,6 +34,10 @@ class User < ActiveRecord::Base
 
   def default_active_values
     self.active_flag ||= 1
+  end
+
+  def default_user_admin_values
+    self.user_admin ||= 0
   end
 
   def admin_user

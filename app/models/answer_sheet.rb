@@ -4,7 +4,7 @@ class AnswerSheet < ActiveRecord::Base
   default_scope -> { order('no') }
 
   before_create :default_active_values
-  before_save :set_exam_result_values
+  before_update :set_exam_result_values
 
   has_many :answer_sheet_details, foreign_key: "answer_sheet_id", class_name: "AnswerSheetDetail", dependent: :destroy
   belongs_to :user, class_name: "User"

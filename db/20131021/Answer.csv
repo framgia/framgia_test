@@ -1,0 +1,295 @@
+answer_id,question_id,answer_no,answer_content,answer_file,answer_correct,created_at,updated_at,active_flag
+256,76,1,Is used with the DISTINCT SQL keyword only.,,0,2013-10-21 02:35:16 UTC,2013-10-21 02:35:16 UTC,1
+1,1,1,COUNT(),,1,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
+259,77,1,update only one row at a time.,,0,2013-10-21 02:43:07 UTC,2013-10-21 02:43:07 UTC,1
+4,2,1,Specify range for search condition,,0,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
+7,3,1,SELECT COUNT (user_id) FROM users would only return the number of user_id’s.,,1,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
+263,78,1,"The TRUNCATE clause deletes all rows in a database table, while the DELETE clause can have a WHERE condition and might or might not delete all rows in a table.",,1,2013-10-21 02:44:14 UTC,2013-10-21 02:44:14 UTC,1
+8,4,1,"Use DISTINCT in the query, such as SELECT DISTINCT user_firstname FROM users; You can also ask for a number of distinct values by saying SELECT COUNT (DISTINCT user_firstname) FROM users;",,1,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
+9,5,1,,1/exercise1_answer.jpg,1,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
+10,6,1,rails c,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+266,79,1,WHERE clause.,,1,2013-10-21 02:44:54 UTC,2013-10-21 02:44:54 UTC,1
+14,7,1,rake route,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+270,80,1,SELECT ADD(Price) FROM Sales,,0,2013-10-21 02:45:41 UTC,2013-10-21 02:45:41 UTC,1
+18,8,1,rake db:migrate,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+274,81,1,SELECT AVG(OrderNumber) FROM Sales,,0,2013-10-21 02:48:03 UTC,2013-10-21 02:48:03 UTC,1
+277,82,1,"SELECT book_title FROM books LIMIT 25, 100. The first number in LIMIT is the offset, the second is the number.",,,2013-10-21 02:50:30 UTC,2013-10-21 02:50:30 UTC,1
+22,9,1,{:foo => 'bar'},,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+278,83,1,"SELECT SQL_CALC_FOUND_ROWS page_title FROM web_pages LIMIT 1,10; SELECT FOUND_ROWS(); The second query (not that COUNT() is never used) will tell you how many results there’re total, so you can display a phrase ""Found 13,450,600 results, displaying 1-10"". Note that FOUND_ROWS does not pay attention to the LIMITs you specified and always returns the total number of rows affected by query.",,,2013-10-21 02:51:09 UTC,2013-10-21 02:51:09 UTC,1
+279,84,1,"SELECT team_name FROM teams WHERE team_won IN (2, 4, 6, 8)",,,2013-10-21 02:53:12 UTC,2013-10-21 02:53:12 UTC,1
+280,85,1,SELECT user_name FROM users WHERE ISNULL(user_phonenumber);,,,2013-10-21 02:53:28 UTC,2013-10-21 02:53:28 UTC,1
+281,86,1,"It’s equivalent to saying SELECT user_name, user_isp FROM users LEFT JOIN isps WHERE users.user_id=isps.user_id",,,2013-10-21 02:53:43 UTC,2013-10-21 02:53:43 UTC,1
+26,10,1,"validates :title, :length, maximum: 20",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+282,87,1,"What it means is that so of the data that you’re trying to delete is still alive in another table. Like if you have a table for universities and a table for students, which contains the ID of the university they go to, running a delete on a university table will fail if the students table still contains people enrolled at that university. Proper way to do it would be to delete the offending data first, and then delete the university in question. Quick way would involve running SET foreign_key_checks=0 before the DELETE command, and setting the parameter back to 1 after the DELETE is done. If your foreign key was formulated with ON DELETE CASCADE, the data in dependent tables will be removed automatically.","",,2013-10-21 02:53:58 UTC,2013-10-21 02:59:35 UTC,1
+283,88,1,When you’re not deleting by row ID. Such as in DELETE FROM techpreparation_com_questions ORDER BY timestamp LIMIT 1. This will delete the most recently posted question in the table techpreparation_com_questions.,"",,2013-10-21 02:54:22 UTC,2013-10-21 02:59:20 UTC,1
+284,89,1,ALTER TABLE techpreparation_questions CHANGE techpreparation_content techpreparation_CONTENT VARCHAR(50).,"",,2013-10-21 02:54:36 UTC,2013-10-21 02:59:09 UTC,1
+285,90,1,ALTER TABLE techpreparation_answers DROP answer_user_id.,"",,2013-10-21 02:54:48 UTC,2013-10-21 02:58:56 UTC,1
+30,11,1,"validates :age, numericality: {greater_than_or_equal_to: 0, only_integer: true}",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+286,91,1,"CONCAT (string1, string2, string3)","",,2013-10-21 02:55:00 UTC,2013-10-21 02:58:38 UTC,1
+287,92,1,"SELECT SUBSTR(title, 1, 10) from techpreparation_questions;","",,2013-10-21 02:55:11 UTC,2013-10-21 02:58:19 UTC,1
+288,93,1,"The first is, naturally, the character count. The second is byte count. For the Latin characters the numbers are the same, but they’re not the same for Unicode and other encodings.",,,2013-10-21 02:55:31 UTC,2013-10-21 02:55:31 UTC,1
+289,94,1,SELECT (techpreparation_question USING utf8);,,,2013-10-21 02:55:45 UTC,2013-10-21 02:55:45 UTC,1
+34,12,1,update_attributes! Khi validate lỗi thì trả về ngoại lệ,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+290,95,1,"% corresponds to 0 or more characters, _ is exactly one character. ",,,2013-10-21 02:55:59 UTC,2013-10-21 02:55:59 UTC,1
+291,96,1,At least one character. Appendix G. Regular Expressions from MySQL manual is worth perusing before the interview.,,,2013-10-21 02:56:12 UTC,2013-10-21 02:56:12 UTC,1
+292,97,1,SELECT MONTH(techpreparation_timestamp) from techpreparation_questions;,,,2013-10-21 02:56:28 UTC,2013-10-21 02:56:28 UTC,1
+293,98,1,"SELECT DATE_FORMAT(techpreparation_timestamp, ‘%Y-%m-%d’) from techpreparation_questions; A similar TIME_FORMAT function deals with time.",,,2013-10-21 02:56:44 UTC,2013-10-21 02:56:44 UTC,1
+38,13,1,"scope :administrators, where([:admin, true]",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+294,99,1,"ADDDATE(techpreparation_publication_date, INTERVAL 3 MINUTE)",,,2013-10-21 02:56:58 UTC,2013-10-21 02:56:58 UTC,1
+295,100,1,"Internally Unix timestamps are stored as 32-bit integers, while MySQL timestamps are stored in a similar manner, but represented in readable YYYY-MM-DD HH:MM:SS format.",,,2013-10-21 02:57:11 UTC,2013-10-21 02:57:11 UTC,1
+296,101,1,"",,,2013-10-21 03:15:28 UTC,2013-10-21 03:15:28 UTC,1
+42,14,1,"has_many :employees, :dependent => :nullify",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+46,15,1,"create_index :users, :name",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+50,16,1,root :to => 'welcome#index',,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+54,17,1,collection,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+58,18,1,before :require_admin,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+62,19,1,"redirect_to @book, :message => ""Book was successfully created.""",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+66,20,1,link_for,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+70,21,1,<%= yield :head %>,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+74,22,1,/users/1/edit,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+78,23,1,default :from => 'no-reply@example.com,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+82,24,1,rails create ittrain,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+86,25,1,ActionView,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+90,26,1,“people”,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+94,27,1,TRUE,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+98,28,1,"User.where(:login, ""foo"")",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+102,29,1,after_save,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+106,30,1,"remove_column :users, :email",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+110,31,1,updated_at,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+114,32,1,"show, new, create, edit, update, destroy",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+118,33,1,session[:user_id] = @user.id,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+122,34,1,"comment_url(@message_board, @comment)",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+126,35,1,request_from,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+130,39,1,MOST,,0,2013-10-17 09:57:41 UTC,2013-10-17 11:10:30 UTC,1
+134,40,1,"",1/1382004394exercise1_answer.jpg,,2013-10-17 10:06:34 UTC,2013-10-17 10:06:34 UTC,1
+139,41,1,"","",,2013-10-18 08:41:28 UTC,2013-10-21 03:14:55 UTC,1
+140,42,1,INSERT,,0,2013-10-21 01:55:54 UTC,2013-10-21 01:55:54 UTC,1
+144,43,1,the SELECT clause only,,1,2013-10-21 01:58:20 UTC,2013-10-21 01:58:20 UTC,1
+148,44,1,Different Mode Level,,0,2013-10-21 02:00:03 UTC,2013-10-21 02:00:03 UTC,1
+152,45,1,MOST,,0,2013-10-21 02:01:41 UTC,2013-10-21 02:01:41 UTC,1
+156,46,1,"INSERT INTO Projects (ProjectName, ProjectDescription) VALUES ('Content Development', 'Website content development project')",,1,2013-10-21 02:04:26 UTC,2013-10-21 02:04:26 UTC,1
+160,47,1,INSERT INTO,,1,2013-10-21 02:05:20 UTC,2013-10-21 02:05:20 UTC,1
+164,48,1,DELETE,,1,2013-10-21 02:07:00 UTC,2013-10-21 02:07:00 UTC,1
+168,49,1,"SELECT CustomerName, COUNT(CustomerName) FROM Orders",,0,2013-10-21 02:08:41 UTC,2013-10-21 02:08:41 UTC,1
+171,50,1,Strong Question Language,,0,2013-10-21 02:09:21 UTC,2013-10-21 02:09:21 UTC,1
+174,51,1,SELECT,,1,2013-10-21 02:09:45 UTC,2013-10-21 02:09:45 UTC,1
+178,52,1,SAVE,,0,2013-10-21 02:10:16 UTC,2013-10-21 02:10:16 UTC,1
+182,53,1,SELECT Persons.FirstName,,0,2013-10-21 02:10:53 UTC,2013-10-21 02:10:53 UTC,1
+185,54,1,SELECT *.Persons,,0,2013-10-21 02:11:32 UTC,2013-10-21 02:11:32 UTC,1
+189,55,1,SELECT * FROM Persons WHERE FirstName'Peter',,0,2013-10-21 02:12:05 UTC,2013-10-21 02:12:05 UTC,1
+193,56,1,SELECT * FROM Persons WHERE FirstName='a',,0,2013-10-21 02:25:26 UTC,2013-10-21 02:25:26 UTC,1
+197,57,1,False,,0,2013-10-21 02:25:53 UTC,2013-10-21 02:25:53 UTC,1
+199,58,1,SELECT * FROM Persons WHERE FirstName='Peter' AND LastName='Jackson',,1,2013-10-21 02:26:19 UTC,2013-10-21 02:26:19 UTC,1
+202,59,1,SELECT * FROM Persons WHERE LastName BETWEEN 'Hansen' AND 'Pettersen',,1,2013-10-21 02:26:54 UTC,2013-10-21 02:26:54 UTC,1
+205,60,1,SELECT DISTINCT,,1,2013-10-21 02:27:26 UTC,2013-10-21 02:27:26 UTC,1
+208,61,1,ORDER BY,,1,2013-10-21 02:27:50 UTC,2013-10-21 02:27:50 UTC,1
+212,62,1,SELECT * FROM Persons SORT BY 'FirstName' DESC,,0,2013-10-21 02:28:23 UTC,2013-10-21 02:28:23 UTC,1
+216,63,1,"INSERT INTO Persons VALUES ('Jimmy', 'Jackson')",,1,2013-10-21 02:28:45 UTC,2013-10-21 02:28:45 UTC,1
+219,64,1,UPDATE Persons SET LastName='Hansen' INTO LastName='Nilsen',,0,2013-10-21 02:29:09 UTC,2013-10-21 02:29:09 UTC,1
+223,65,1,DELETE FROM Persons WHERE FirstName = 'Peter',,1,2013-10-21 02:30:12 UTC,2013-10-21 02:30:12 UTC,1
+226,66,1,SELECT COUNT() FROM Persons,,0,2013-10-21 02:30:38 UTC,2013-10-21 02:30:38 UTC,1
+230,67,1,ASC,,1,2013-10-21 02:31:10 UTC,2013-10-21 02:31:10 UTC,1
+233,68,1,No,,1,2013-10-21 02:31:32 UTC,2013-10-21 02:31:32 UTC,1
+235,69,1,"SELECT Username, Password FROM Users",,1,2013-10-21 02:31:55 UTC,2013-10-21 02:31:55 UTC,1
+238,70,1,Cursor is acronym for Current Set Of Records and is a database object pointing to a currently selected set of records.,,1,2013-10-21 02:32:36 UTC,2013-10-21 02:32:36 UTC,1
+241,71,1,Definition of the condition to be met for the rows to be returned.,,1,2013-10-21 02:33:10 UTC,2013-10-21 02:33:10 UTC,1
+244,72,1,"The SQL ALTER TABLE clause modifies a table definition by altering, adding, or deleting table columns and/or constraints.",,1,2013-10-21 02:33:36 UTC,2013-10-21 02:33:36 UTC,1
+248,73,1,The WHERE and the HAVING clauses are identical,,0,2013-10-21 02:34:05 UTC,2013-10-21 02:34:05 UTC,1
+251,74,1,The AS SQL clause is used change the name of a column in the result set or to assign a name to a derived column.,,1,2013-10-21 02:34:30 UTC,2013-10-21 02:34:30 UTC,1
+254,75,1,Yes,,1,2013-10-21 02:34:49 UTC,2013-10-21 02:34:49 UTC,1
+257,76,2,Determines if a value matches any of the values in a list or a sub-query.,,1,2013-10-21 02:35:16 UTC,2013-10-21 02:35:16 UTC,1
+2,1,2,NUMBER(),,0,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
+260,77,2,update more than one row at a time.,,1,2013-10-21 02:43:07 UTC,2013-10-21 02:43:07 UTC,1
+5,2,2,Specify search condition,,0,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
+264,78,2,"The DELETE clause deletes all rows in a database table, while the TRUNCATE clause can have a WHERE condition and might or might not delete all rows in a table.",,0,2013-10-21 02:44:14 UTC,2013-10-21 02:44:14 UTC,1
+11,6,2,rails,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+267,79,2,GROUP BY clause.,,0,2013-10-21 02:44:54 UTC,2013-10-21 02:44:54 UTC,1
+15,7,2,rake routings,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+271,80,2,SELECT SUM(Price) FROM Sales,,1,2013-10-21 02:45:41 UTC,2013-10-21 02:45:41 UTC,1
+19,8,2,rake db:add,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+275,81,2,SELECT COUNT(*) FROM Sales,,1,2013-10-21 02:48:03 UTC,2013-10-21 02:48:03 UTC,1
+23,9,2,{'foo' => 'hoge'},,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+27,10,2,"validates :title, maximum: 20",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+31,11,2,"validates :age, numericality: {greater_than_or_equal_to: 0}",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+35,12,2,update_attributes! Dù validate lỗi thì vẫn cập nhật record,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+39,13,2,"scope :administrators, :where => {:admin => true}",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+43,14,2,"has_many :employees, :dependent => :destroy",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+47,15,2,"use_index :users, :name",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+51,16,2,root 'welcome#index',,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+55,17,2,namespace,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+59,18,2,before_filter :require_admin,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+63,19,2,"redirect_to @book, :notice => ""Book was successfully created.""",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+67,20,2,link_tag,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+71,21,2,<%= yield :partial => 'head' %>,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+75,22,2,/users/new,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+79,23,2,"default :from, 'no-reply@example.com'",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+83,24,2,rails project ittrain,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+87,25,2,ActiveModel,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+91,26,2,“person”,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+95,27,2,FALSE,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+99,28,2,"User.where(:login => ""foo"")",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+103,29,2,after_create,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+107,30,2,"delete_column :users, :email",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+111,31,2,deleted_at,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+115,32,2,"show, entry, create, edit, update, delete",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+119,33,2,"session(:user_id, @user.id)",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+123,34,2,comments_url(@message_board),,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+127,35,2,request_to,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+131,39,2,MAX,,1,2013-10-17 09:57:41 UTC,2013-10-17 09:57:41 UTC,1
+141,42,2,SELECT,,0,2013-10-21 01:55:54 UTC,2013-10-21 01:55:54 UTC,1
+145,43,2,the DELETE and UPDATE clauses,,0,2013-10-21 01:58:20 UTC,2013-10-21 01:58:20 UTC,1
+149,44,2,Data Model Language,,0,2013-10-21 02:00:03 UTC,2013-10-21 02:00:03 UTC,1
+153,45,2,MAX,,1,2013-10-21 02:01:41 UTC,2013-10-21 02:01:41 UTC,1
+157,46,2,"SAVE INTO Projects (ProjectName, ProjectDescription) VALUES ('Content Development', 'Website content development project')",,0,2013-10-21 02:04:26 UTC,2013-10-21 02:04:26 UTC,1
+161,47,2,WRITE,,0,2013-10-21 02:05:20 UTC,2013-10-21 02:05:20 UTC,1
+165,48,2,REMOVE,,0,2013-10-21 02:07:00 UTC,2013-10-21 02:07:00 UTC,1
+169,49,2,"SELECT CustomerName, COUNT(CustomerName) FROM Orders GROUP BY CustomerName",,1,2013-10-21 02:08:41 UTC,2013-10-21 02:08:41 UTC,1
+172,50,2,Structured Query Language,,1,2013-10-21 02:09:21 UTC,2013-10-21 02:09:21 UTC,1
+175,51,2,GET,,0,2013-10-21 02:09:45 UTC,2013-10-21 02:09:45 UTC,1
+179,52,2,SAVE AS,,0,2013-10-21 02:10:16 UTC,2013-10-21 02:10:16 UTC,1
+183,53,2,SELECT FirstName FROM Persons,,1,2013-10-21 02:10:53 UTC,2013-10-21 02:10:53 UTC,1
+186,54,2,SELECT [all] FROM Persons,,0,2013-10-21 02:11:32 UTC,2013-10-21 02:11:32 UTC,1
+190,55,2,SELECT [all] FROM Persons WHERE FirstName LIKE 'Peter',,0,2013-10-21 02:12:05 UTC,2013-10-21 02:12:05 UTC,1
+194,56,2,SELECT * FROM Persons WHERE FirstName LIKE 'a%',,1,2013-10-21 02:25:26 UTC,2013-10-21 02:25:26 UTC,1
+198,57,2,True,,1,2013-10-21 02:25:53 UTC,2013-10-21 02:25:53 UTC,1
+200,58,2,"SELECT FirstName='Peter', LastName='Jackson' FROM Persons",,0,2013-10-21 02:26:19 UTC,2013-10-21 02:26:19 UTC,1
+203,59,2,SELECT * FROM Persons WHERE LastName>'Hansen' AND LastName,,0,2013-10-21 02:26:54 UTC,2013-10-21 02:26:54 UTC,1
+206,60,2,SELECT DIFFERENT,,0,2013-10-21 02:27:26 UTC,2013-10-21 02:27:26 UTC,1
+209,61,2,SORT,,0,2013-10-21 02:27:50 UTC,2013-10-21 02:27:50 UTC,1
+213,62,2,SELECT * FROM Persons ORDER FirstName DESC,,0,2013-10-21 02:28:23 UTC,2013-10-21 02:28:23 UTC,1
+217,63,2,"INSERT VALUES ('Jimmy', 'Jackson') INTO Persons",,0,2013-10-21 02:28:45 UTC,2013-10-21 02:28:45 UTC,1
+220,64,2,MODIFY Persons SET LastName='Nilsen' WHERE LastName='Hansen',,0,2013-10-21 02:29:09 UTC,2013-10-21 02:29:09 UTC,1
+224,65,2,DELETE ROW FirstName='Peter' FROM Persons,,0,2013-10-21 02:30:12 UTC,2013-10-21 02:30:12 UTC,1
+227,66,2,SELECT COLUMNS() FROM Persons,,0,2013-10-21 02:30:38 UTC,2013-10-21 02:30:38 UTC,1
+231,67,2,DESC,,0,2013-10-21 02:31:10 UTC,2013-10-21 02:31:10 UTC,1
+234,68,2,Yes,,0,2013-10-21 02:31:32 UTC,2013-10-21 02:31:32 UTC,1
+236,69,2,SELECT Username AND Password FROM Users,,0,2013-10-21 02:31:55 UTC,2013-10-21 02:31:55 UTC,1
+239,70,2,A cursor is SQL keyword specifying a retrieved data order.,,0,2013-10-21 02:32:36 UTC,2013-10-21 02:32:36 UTC,1
+242,71,2,A list of columns to be selected.,,0,2013-10-21 02:33:10 UTC,2013-10-21 02:33:10 UTC,1
+245,72,2,The SQL ALTER TABLE clause is used to insert data into database table.,,0,2013-10-21 02:33:36 UTC,2013-10-21 02:33:36 UTC,1
+249,73,2,The HAVING SQL clause condition(s) is applied to all rows in the result set before the WHERE clause is applied (if present). The WHERE clause is used only with SELECT SQL statements and specifies a search condition for an aggregate or a group.,,0,2013-10-21 02:34:05 UTC,2013-10-21 02:34:05 UTC,1
+252,74,2,The AS clause is used with the JOIN clause only.,,0,2013-10-21 02:34:30 UTC,2013-10-21 02:34:30 UTC,1
+255,75,2,No,,0,2013-10-21 02:34:49 UTC,2013-10-21 02:34:49 UTC,1
+258,76,3,Defines the tables we are selecting or deleting data from,,0,2013-10-21 02:35:16 UTC,2013-10-21 02:35:16 UTC,1
+3,1,3,SUM(),,0,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
+261,77,3,delete more than one row at a time.,,0,2013-10-21 02:43:07 UTC,2013-10-21 02:43:07 UTC,1
+6,2,3,Specify what table we are selecting or deleting data from,,1,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
+265,78,3,The TRUNCATE clause is identical to the DELETE clause,,0,2013-10-21 02:44:14 UTC,2013-10-21 02:44:14 UTC,1
+12,6,3,rails a,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+268,79,3,ORDER BY clause.,,0,2013-10-21 02:44:54 UTC,2013-10-21 02:44:54 UTC,1
+16,7,3,rake routes,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+272,80,3,SELECT TOTAL(Price) FROM Sales,,0,2013-10-21 02:45:41 UTC,2013-10-21 02:45:41 UTC,1
+20,8,3,rake db:schema:load,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+276,81,3,SELECT SUM(OrderNumber) FROM Sales ,,0,2013-10-21 02:48:03 UTC,2013-10-21 02:48:03 UTC,1
+24,9,3,"{'foo' => 'bar', :foo => 'hoge'}",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+28,10,3,"validates :title, length: {maximum: 20}",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+32,11,3,"validates :age, integer: {greater_than_or_equal_to: 0}",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+36,12,3,update_attributes Khi validate lỗi thì trả về ngoại lệ,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+40,13,3,"scope :administrators, where(:admin => true)",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+44,14,3,"has_many :employees, :autodestroy => :true",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+48,15,3,"index :users, :name",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+52,16,3,match :root => 'welcome#index',,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+56,17,3,member,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+60,18,3,"after_filter :require_admin
+",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+64,19,3,"redirect @book, :notice => ""Book was successfully created.""",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+68,20,3,link_to,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+72,21,3,<%= render :head  %>,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+76,22,3,/users,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+80,23,3,from 'no-reply@example.com',,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+84,24,3,rails new ittrain,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+88,25,3,ActionContrller,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+92,26,3,“People”,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+96,27,3,nil,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+100,28,3,"User.select(:login => ""foo"")",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+104,29,3,after_update,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+108,30,3,"remove :users, :email",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+112,31,3,login,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+116,32,3,"index, show, new, create, edit, update, destroy",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+120,33,3,"session.set(:user_id, @user.id)",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+124,34,3,"message_board_comment_url(@message_board, @comment)",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+128,35,3,respond_from,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+132,39,3,TOP,,0,2013-10-17 09:57:41 UTC,2013-10-17 09:57:41 UTC,1
+142,42,3,UPDATE,,0,2013-10-21 01:55:54 UTC,2013-10-21 01:55:54 UTC,1
+146,43,3,the UPDATE clause only,,0,2013-10-21 01:58:20 UTC,2013-10-21 01:58:20 UTC,1
+150,44,3,Data Mode Lane,,0,2013-10-21 02:00:03 UTC,2013-10-21 02:00:03 UTC,1
+154,45,3,TOP,,0,2013-10-21 02:01:41 UTC,2013-10-21 02:01:41 UTC,1
+158,46,3,"INSERT Projects VALUES ('Content Development', 'Website content development project')",,0,2013-10-21 02:04:26 UTC,2013-10-21 02:04:26 UTC,1
+162,47,3,SELECT,,0,2013-10-21 02:05:20 UTC,2013-10-21 02:05:20 UTC,1
+166,48,3,DROP DATA,,0,2013-10-21 02:07:00 UTC,2013-10-21 02:07:00 UTC,1
+170,49,3,"SELECT CustomerName, COUNT(CustomerName) FROM Orders ORDER BY CustomerName",,0,2013-10-21 02:08:41 UTC,2013-10-21 02:08:41 UTC,1
+173,50,3,Structured Question Language,,0,2013-10-21 02:09:21 UTC,2013-10-21 02:09:21 UTC,1
+176,51,3,OPEN,,0,2013-10-21 02:09:45 UTC,2013-10-21 02:09:45 UTC,1
+180,52,3,MODIFY,,0,2013-10-21 02:10:16 UTC,2013-10-21 02:10:16 UTC,1
+184,53,3,EXTRACT FirstName FROM Persons,,0,2013-10-21 02:10:53 UTC,2013-10-21 02:10:53 UTC,1
+187,54,3,SELECT * FROM Persons,,1,2013-10-21 02:11:32 UTC,2013-10-21 02:11:32 UTC,1
+191,55,3,SELECT * FROM Persons WHERE FirstName='Peter',,1,2013-10-21 02:12:05 UTC,2013-10-21 02:12:05 UTC,1
+195,56,3,SELECT * FROM Persons WHERE FirstName LIKE '%a',,0,2013-10-21 02:25:26 UTC,2013-10-21 02:25:26 UTC,1
+201,58,3,SELECT * FROM Persons WHERE FirstName'Peter' AND LastName'Jackson',,0,2013-10-21 02:26:19 UTC,2013-10-21 02:26:19 UTC,1
+204,59,3,SELECT LastName>'Hansen' AND LastName,,0,2013-10-21 02:26:54 UTC,2013-10-21 02:26:54 UTC,1
+207,60,3,SELECT UNIQUE,,0,2013-10-21 02:27:26 UTC,2013-10-21 02:27:26 UTC,1
+210,61,3,ORDER,,0,2013-10-21 02:27:50 UTC,2013-10-21 02:27:50 UTC,1
+214,62,3,SELECT * FROM Persons SORT 'FirstName' DESC,,0,2013-10-21 02:28:23 UTC,2013-10-21 02:28:23 UTC,1
+218,63,3,"INSERT ('Jimmy', 'Jackson') INTO Persons",,0,2013-10-21 02:28:45 UTC,2013-10-21 02:28:45 UTC,1
+221,64,3,MODIFY Persons SET LastName='Hansen' INTO LastName='Nilsen,,0,2013-10-21 02:29:09 UTC,2013-10-21 02:29:09 UTC,1
+225,65,3,DELETE FirstName='Peter' FROM Persons,,0,2013-10-21 02:30:12 UTC,2013-10-21 02:30:12 UTC,1
+228,66,3,SELECT COLUMNS(*) FROM Persons,,0,2013-10-21 02:30:38 UTC,2013-10-21 02:30:38 UTC,1
+232,67,3,There is no default value.,,0,2013-10-21 02:31:10 UTC,2013-10-21 02:31:10 UTC,1
+237,69,3,"SELECT Username, Password WHERE Username = 'user1'",,0,2013-10-21 02:31:55 UTC,2013-10-21 02:31:55 UTC,1
+240,70,3,A blinking vertical line that indicates the location of the next input on the display screen.,,0,2013-10-21 02:32:36 UTC,2013-10-21 02:32:36 UTC,1
+243,71,3,The name of the table we are selecting from.,,0,2013-10-21 02:33:10 UTC,2013-10-21 02:33:10 UTC,1
+246,72,3,THE SQL ALTER TABLE deletes data from database table.,,0,2013-10-21 02:33:36 UTC,2013-10-21 02:33:36 UTC,1
+250,73,3,The WHERE SQL clause condition(s) is applied to all rows in the result set before the HAVING clause is applied (if present). The HAVING clause is used only with SELECT SQL statements and specifies a search condition for an aggregate or a group.,,1,2013-10-21 02:34:05 UTC,2013-10-21 02:34:05 UTC,1
+253,74,3,The AS clause defines a search condition.,,0,2013-10-21 02:34:30 UTC,2013-10-21 02:34:30 UTC,1
+262,77,4,delete only one row at a time..,,0,2013-10-21 02:43:07 UTC,2013-10-21 02:43:07 UTC,1
+13,6,4,rails s,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+269,79,4,JOIN clause.,,0,2013-10-21 02:44:54 UTC,2013-10-21 02:44:54 UTC,1
+17,7,4,rake routing,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+273,80,4,SELECT SUM(Price) WHERE Sales,,0,2013-10-21 02:45:41 UTC,2013-10-21 02:45:41 UTC,1
+21,8,4,rake db:create,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+25,9,4,{:foo => 'hoge'},,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+29,10,4,"validates :title, length: true, maximum: 20
+",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+33,11,4,"validates :age, only_integer: {greater_than_or_equal_to: 0}",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+37,12,4,update_attributes Dù validate lỗi thì vẫn cập nhật record,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+41,13,4,"scope :administrators, :admin => true",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+45,14,4,"has_many :employees, :autonullify => true",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+49,15,4,"add_index :users, :name",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+53,16,4,get :root => 'welcome#index',,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+57,17,4,match,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+61,18,4,after :require_admin,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+65,19,4,"redirect @book, :message => ""Book was successfully created.""",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+69,20,4,link,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+73,21,4,<%= render :partial => 'head' %>,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+77,22,4,/users/1,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+81,23,4,send_from 'no-reply@example.com',,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+85,24,4,rails ittrain,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+89,25,4,ActionWebService,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+93,26,4,“Person”,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+97,27,4,Trả về ngoại lệ,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+101,28,4,"User.select(:login , ""foo"")",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+105,29,4,after_destroy,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+109,30,4,"delete :users, :email",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+113,31,4,id,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+117,32,4,"index, show, entry, create, edit, update, delete",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+121,33,4,"set_session(:user_id, @user_id)",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+125,34,4,message_board_comments_url(@message_board),,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+129,35,4,respond_to,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+133,39,4,UPPER,,0,2013-10-17 09:57:41 UTC,2013-10-17 09:57:41 UTC,1
+143,42,4,INVERT,,1,2013-10-21 01:55:54 UTC,2013-10-21 01:55:54 UTC,1
+147,43,4,none of the other three,,0,2013-10-21 01:58:20 UTC,2013-10-21 01:58:20 UTC,1
+151,44,4,Data Manipulation language,,1,2013-10-21 02:00:03 UTC,2013-10-21 02:00:03 UTC,1
+155,45,4,UPPER,,0,2013-10-21 02:01:41 UTC,2013-10-21 02:01:41 UTC,1
+159,46,4,"INSERT Projects ('Content Development', 'Website content development project')",,0,2013-10-21 02:04:26 UTC,2013-10-21 02:04:26 UTC,1
+163,47,4,ENTER,,0,2013-10-21 02:05:20 UTC,2013-10-21 02:05:20 UTC,1
+167,48,4,CLEAR,,0,2013-10-21 02:07:00 UTC,2013-10-21 02:07:00 UTC,1
+177,51,4,EXTRACT,,0,2013-10-21 02:09:45 UTC,2013-10-21 02:09:45 UTC,1
+181,52,4,UPDATE,,1,2013-10-21 02:10:16 UTC,2013-10-21 02:10:16 UTC,1
+188,54,4,SELECT Persons,,0,2013-10-21 02:11:32 UTC,2013-10-21 02:11:32 UTC,1
+192,55,4,SELECT [all] FROM Persons WHERE FirstName='Peter',,0,2013-10-21 02:12:05 UTC,2013-10-21 02:12:05 UTC,1
+196,56,4,SELECT * FROM Persons WHERE FirstName='%a%',,0,2013-10-21 02:25:26 UTC,2013-10-21 02:25:26 UTC,1
+211,61,4,SORT BY,,0,2013-10-21 02:27:50 UTC,2013-10-21 02:27:50 UTC,1
+215,62,4,SELECT * FROM Persons ORDER BY FirstName DESC,,1,2013-10-21 02:28:23 UTC,2013-10-21 02:28:23 UTC,1
+222,64,4,UPDATE Persons SET LastName='Nilsen' WHERE LastName='Hansen',,1,2013-10-21 02:29:09 UTC,2013-10-21 02:29:09 UTC,1
+229,66,4,SELECT COUNT(*) FROM Persons,,1,2013-10-21 02:30:38 UTC,2013-10-21 02:30:38 UTC,1
+247,72,4,The SQL ALTER TABLE clause is used to delete a database table.,,0,2013-10-21 02:33:36 UTC,2013-10-21 02:33:36 UTC,1

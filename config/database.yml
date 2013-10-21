@@ -9,17 +9,17 @@
 # And be sure to use new-style password hashing:
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 development:
-  adapter: mysql2
-  encoding: utf8
-  database: framgia_training
-  pool: 5
-  username: root
-  password: "123456"
-#  adapter: postgresql
+#  adapter: mysql2
+#  encoding: utf8
 #  database: framgia_training
-#  host: localhost
-#  username: tuanca
-#  password: "tuanca"
+#  pool: 5
+#  username: root
+#  password: "123456"
+  adapter: postgresql
+  database: framgia_training
+  host: localhost
+  username: tuanca
+  password: "tuanca"
   #socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and

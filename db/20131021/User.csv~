@@ -1,0 +1,12 @@
+user_id,full_name,email,password,password_confirmation,remember_token,user_admin,created_at,updated_at,active_flag
+1,Chu Anh Tuan,chu.anh.tuan@framgia.com,123456,123456,2d2ca712e100b1503c524cdbf763f02df43436b8,,2013-10-17 02:59:49 UTC,2013-10-17 03:12:53 UTC,1
+3,kien,buitrungkien1904@gmail.com,123456,123456,36428b696bee262f707fee1ecd2e91d48bd79a3f,,2013-10-17 03:16:46 UTC,2013-10-17 03:23:13 UTC,1
+4,dfdf,dangkhanhjava@gmail.com,123456,123456,70b98372969362813517685d9fdd7b3d942decb8,,2013-10-17 03:23:18 UTC,2013-10-17 03:23:18 UTC,1
+5,johnny,takuma.miyake@framgia.com,123456,123456,b6d94f4b7dc78da22974b98eb7555119e9315592,,2013-10-17 03:24:22 UTC,2013-10-17 03:29:39 UTC,1
+6,Pham Xuan Thanh,pxthanh@gmail.com,123456,123456,6645ebe105546705b4ba2de88afdc9f0dec161e3,,2013-10-17 04:03:45 UTC,2013-10-17 04:03:45 UTC,1
+7,Nguyen Van Vuong,nguyen.van.vuong@framgia.com,123456,123456,19d4d172038dc7934a006c951bd4e2dafa3dd310,,2013-10-17 04:04:16 UTC,2013-10-17 04:04:38 UTC,1
+8,Lai Minh Dao,lai.minh.dao@framgia.com,123456,123456,46bd84dd2d286e18c51e1a634a348c987907377d,,2013-10-17 04:04:49 UTC,2013-10-17 04:04:49 UTC,1
+9,Hoang Thi Tuan Dung,hoang.thi.tuan.dung@framgia.com,123456,123456,af776b86238d960313eb4c1ee88fe8f54d4e6791,,2013-10-17 04:05:39 UTC,2013-10-17 04:05:39 UTC,1
+10,DuongThiLan,duong.thi.lan@framgia.com,123456,123456,3ce20a2084e93619c2e85f1598347a239c382127,,2013-10-17 04:05:56 UTC,2013-10-17 04:05:56 UTC,1
+11,BuiThiThuDung,bui.thi.thu.dung@framgia.com,123456,123456,2a83ce3b12c82e6bfe8eb9e55803cea8a545efab,,2013-10-17 04:06:47 UTC,2013-10-17 04:06:47 UTC,1
+12,sdfghjk,zoro_0302@gmail.com,123456,123456,7083d2ef266161dbf2295c5a028199dcf38a7cfa,,2013-10-17 05:22:46 UTC,2013-10-17 05:22:46 UTC,1

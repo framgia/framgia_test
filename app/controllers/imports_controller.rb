@@ -1,20 +1,33 @@
 class ImportsController < ApplicationController
   def index
-
-    file_names = ["Answer", "Conclusion", "ExamQuestion", "ExamQuestionDetail", "Level",
-                  "Question", "QuestionGroup", "Subject", "SubjectQuestionGroup", "User"]
-    file_names.each do |file|
-      import file
+    model_name = params[:model_name]
+    if model_name.nil?
+      file_names = ["Answer", "AnswerSheet", "AnswerSheetDetail", "Conclusion", "Examination", "ExamQuestion",
+                    "ExamQuestionDetail", "Level", "Question", "QuestionGroup", "Subject", "SubjectQuestionGroup", "User"]
+      file_names.each do |file|
+        import file
+      end
+    else
+      import(model_name)
     end
   end
 
   def import(file)
-    CSV.foreach('db/' + file + ".csv", headers: true) do |row|
+    CSV.foreach('db/20131021/' + file + ".csv", headers: true) do |row|
       if file == "Answer"
         Answer.create! row.to_hash
       end
+      if file == "AnswerSheet"
+        AnswerSheet.create! row.to_hash
+      end
+      if file == "AnswerSheetDetail"
+        AnswerSheetDetail.create! row.to_hash
+      end
       if file == "Conclusion"
         Conclusion.create! row.to_hash
+      end
+      if file == "Examination"
+        Examination.create! row.to_hash
       end
       if file == "ExamQuestion"
         ExamQuestion.create! row.to_hash
