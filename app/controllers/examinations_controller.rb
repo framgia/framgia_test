@@ -28,7 +28,6 @@ class ExaminationsController < ApplicationController
       exam_question_ids = ExamQuestion.where("subject_id = :subject_id AND level_id = :level_id AND active_flag = :active_flag",
                                              subject_id: subject_id, level_id: level_id, active_flag: 1).pluck(:exam_question_id)
       exam_question_id = exam_question_ids.sample
-      #binding.pry
         if exam_question_id
           answer_sheet = AnswerSheet.new(:user_id => current_user.user_id, :exam_question_id => exam_question_id,
                                          :examination_id => @examination.examination_id, :subject_id => subject_id,

@@ -1,5 +1,5 @@
 <li>
-  <span style="display: inline-block; width: 20%;"><%= I18n.l(examination.created_at) %></span>
+  <span style="display: inline-block; width: 20%; font-weight: bold;"><%= I18n.l(examination.created_at) %></span>
   <span style="display: inline-block; width: 30%;"><%= examination.user.full_name %></span>
   <span style="display: inline-block; width: 10%;"><%= examination_status examination.status %></span>
   <span style="display: inline-block; width: 20%;">
@@ -9,10 +9,26 @@
   </span>
   <span style="display: inline-block; width: 10%;">
   <% if examination.status == 1 %>
-      <%= link_to "View", examination_path(examination) %>
       <%= link_to "Check", examination_path(examination) + "?examination[status]=2", :method => :put %>
-  <% else %>
-      <%= link_to "View", examination_path(examination) %>
   <% end %>
   </span>
+  <ul>
+    <% examination.answer_sheets.each do |answer_sheet| %>
+        <li>
+          <span style="display: inline-block; width: 30%;"><%= answer_sheet.subject.subject_name %></span>
+      <span style="display: inline-block; width: 10%;"><% if examination.status != 1 %>
+      <%= answer_sheet.exam_result %>/<%= answer_sheet.exam_question.number_question %>
+      <% end %>&nbsp;</span>
+          <span style="display: inline-block; width: 20%;"><%= exam_time_s(answer_sheet.exam_time) %>&nbsp;</span>
+      <span style="display: inline-block; width: 10%;">
+      <% if answer_sheet.started_at.nil? %>
+      <%= link_to "Start", edit_examination_answer_sheet_path(examination, answer_sheet) %>
+      <% else %>
+      <%= link_to "View", examination_answer_sheet_path(examination, answer_sheet) %>
+      <% end %>
+      </span>
+          <span style="display: inline-block; width: 25%;">&nbsp;</span>
+        </li>
+    <% end %>
+  </ul>
 </li>

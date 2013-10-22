@@ -36,7 +36,7 @@
           <ul>
             <%= f.fields_for :answers do |builder| %>
                 <li>
-                  <%= builder.index + 1 %>.
+                  <span id="__no"><%= builder.index + 1 %></span>.
                   <%= builder.check_box :answer_correct %> Correct answer
                   <%= builder.text_area :answer_content, rows: 2 %>
                   <%= builder.hidden_field :subject_id, value: @question.subject_id %>
@@ -52,7 +52,6 @@
                 </li>
             <% end %>
           </ul>
-          <a href="void(0)" onclick="">Add more answer</a>
         </div>
         <% end %>
         <% if @question.answer_type == 2 %>

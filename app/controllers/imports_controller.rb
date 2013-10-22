@@ -10,6 +10,7 @@ class ImportsController < ApplicationController
     else
       import(model_name)
     end
+    redirect_to monitor_path
   end
 
   def import(file)

@@ -1,10 +1,56 @@
+<script type="text/javascript">
+    $( document ).ready(function() {
+        if(Number($('#__exam_time_value').val()) > 0) {
+            var intervalId = setInterval(function(){
+                var exam_time = Number($('#__exam_time_value').val());
+                if(exam_time < 0) {
+                    clearInterval(intervalId);
+                    alert('Exam time has expired, your examination will be submitted automatically');
+                    $('#__submit_answer_sheet').click();
+                    return;
+                }
+                $('#__exam_time').html(exam_time_s(exam_time));
+                $('#__exam_time_value').val(exam_time - 1);
+            },1000);
+        }
+    });
+
+    function exam_time_s(exam_time) {
+      if (exam_time <= 0) {
+            return "00:00:00";
+      }
+      var day = parseInt(exam_time / (24 * 60 * 60));   //alert(day);
+      var hour = parseInt(exam_time / (60 * 60) % 24);       //alert(hour);
+      var minute = parseInt((exam_time / 60) % 60);          //alert(minute);
+      var second = parseInt(exam_time % 60);                   //alert(second);
+      var s = '';
+      if (day > 0) s = s + day + ' day ';
+      if (hour > 9)
+          s = s + hour;
+      else
+          s = s + '0' + hour;
+      s = s + ':';
+      if (minute > 9)
+          s = s + minute;
+      else
+          s = s + '0' + minute;
+      s = s + ':';
+      if (second > 9)
+          s = s + second;
+      else
+          s = s + '0' + second;
+      return s;
+    }
+</script>
 <div class="">
   <div>
     <span><%= I18n.l(@examination.created_at) %></span>
     <% if current_user.admin_user? %>
         <span style="float: right;"><%= @examination.user.full_name %></span>
     <% else %>
-        <span style="float: right;">Time left: <%= exam_time_s(@answer_sheet.limit_time) %></span>
+        <div style="float: right;">Time left: <span id="__exam_time"><%= exam_time_s(@answer_sheet.limit_time) %></span>
+          <input type="hidden" id="__exam_time_value" value="<%= @answer_sheet.limit_time %>">
+        </div>
     <% end %>
   </div>
   <% if !@answer_sheet.exam_result.nil? %>
@@ -21,7 +67,7 @@
       </ul>
       <p>
         <% if @examination.editable?(current_user, @answer_sheet.limit_time?) %>
-            <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+            <%= f.submit "Submit", class: "btn btn-large btn-primary", id: "__submit_answer_sheet" %>
         <% end %>
         <%
            next_answer_sheet = @examination.next_answer_sheet(@answer_sheet)

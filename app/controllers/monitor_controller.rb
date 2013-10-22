@@ -19,5 +19,6 @@ class MonitorController < ApplicationController
     else
       admin.update_attributes(password: "123456", password_confirmation: "123456", user_admin: 1)
     end
+    redirect_to monitor_path
   end
 end

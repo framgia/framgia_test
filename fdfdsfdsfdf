@@ -1,0 +1,26 @@
+
+[1mFrom:[0m /home/chuanhtuan/rails_projects/framgia_training/app/controllers/examinations_controller.rb @ line 102 ExaminationsController#create_answer_sheet_detail:
+
+     [1;34m97[0m: [1;31mdef[0m [1;34mcreate_answer_sheet_detail[0m(answer_sheet)
+     [1;34m98[0m:   [0;34m#binding.pry[0m
+     [1;34m99[0m:   exam_question = [1;34m[4mExamQuestion[0m.find(answer_sheet.exam_question_id)
+    [1;34m100[0m:   exam_question_details = exam_question.exam_question_details
+    [1;34m101[0m:   no = [1;34m1[0m
+ => [1;34m102[0m:   binding.pry
+    [1;34m103[0m:   exam_question_details.each [1;31mdo[0m |exam_question_detail|
+    [1;34m104[0m:     number_question = exam_question_detail.number_question
+    [1;34m105[0m:     i = [1;34m0[0m
+    [1;34m106[0m:     question_ids = [1;34m[4mQuestion[0m.where([32m[1;32m"[0m[32msubject_id = :subject_id AND question_group_id = :question_group_id AND active_flag = :active_flag[1;32m"[0m[32m[0m,
+    [1;34m107[0m:                                   [35msubject_id[0m: exam_question_detail.subject_id, [35mquestion_group_id[0m: exam_question_detail.question_group_id, [35mactive_flag[0m: [1;34m1[0m).pluck([1;32m:question_id[0m)
+    [1;34m108[0m:     [1;31mwhile[0m i < number_question && question_ids.size != [1;34m0[0m [1;31mdo[0m
+    [1;34m109[0m:       question_id = question_ids.sample
+    [1;34m110[0m:       question_ids.delete question_id
+    [1;34m111[0m:       answer_sheet_detail = [1;34m[4mAnswerSheetDetail[0m.new([1;32m:answer_sheet_id[0m => answer_sheet.answer_sheet_id, [1;32m:question_id[0m => question_id, [1;32m:no[0m => no)
+    [1;34m112[0m:       [1;31mif[0m answer_sheet_detail.save
+    [1;34m113[0m:         no = no + [1;34m1[0m
+    [1;34m114[0m:       [1;31mend[0m
+    [1;34m115[0m:       i = i + [1;34m1[0m
+    [1;34m116[0m:     [1;31mend[0m
+    [1;34m117[0m:   [1;31mend[0m
+    [1;34m118[0m: [1;31mend[0m
+
