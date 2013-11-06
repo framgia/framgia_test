@@ -26,22 +26,24 @@
 <li id="<%= answer.answer_id %>">
   <% if answer_type == 1 %>
       <input type="radio" <%= 'checked=checked' if answer.answer_id == answer_sheet_detail.answer_id %> disabled="disabled">
-      <span style="<% if current_user.admin_user? && answer.answer_correct == 1 %>background-color: gray;<% end %><% if answer.answer_id == answer_sheet_detail.answer_id && answer.answer_correct == 0 %>color: red;<% end %>">
+      <span style="<% if current_user.admin_user? && answer.answer_correct == 1 %>background-color: gray;<% end %>">
       <%= render partial: 'shared/answer_item', :locals => {:answer => answer} %>
       </span>
   <% end %>
   <% if answer_type == 2 %>
+      <% if current_user.admin_user? %>
       <%= render partial: 'shared/answer_item', :locals => {:answer => answer} %>
+      <% end %>
       <input type="text" value="<%= answer_sheet_detail.answer_content %>" disabled="disabled">
-      <%= f.check_box :answer_correct %> Answer correct
   <% end %>
   <% if answer_type == 3 %>
+      <% if current_user.admin_user? %>
       <%= render partial: 'shared/answer_item', :locals => {:answer => answer} %>
+      <% end %>
       <textarea disabled="disabled" rows="5"><%= answer_sheet_detail.answer_content %></textarea>
       <% if !answer_sheet_detail.answer_file.nil? %>
       <a href="javascript: void(0)" onclick="$.fileDownload('<%= download_path(@examination, @answer_sheet, answer_sheet_detail, "attachment") %>');">Attachment</a>
       <% end %>
-      <%= f.check_box :answer_correct %> Answer correct
   <% end %>
 </li>
 <% end %>

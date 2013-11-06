@@ -11,13 +11,29 @@
     resources :answers do
     end
   end
+  resources :exam_questions do
+    resources :exam_question_details do
+    end
+  end
+  resources :question_groups
+  resources :levels
+  resources :subjects  do
+    resources :subject_question_groups do
+    end
+  end
+  resources :exam_sessions  do
+    resources :exam_session_details do
+    end
+  end
   resources :exports
   resources :imports
   root  'static_pages#home'
   match 'examinations/:examination_id/answer_sheets/:answer_sheet_id/answer_sheet_details/:id/:attachment', to: 'answer_sheet_details#show', as: "download", via: 'get'
+  match 'users/:id/:admin', to: 'users#update', as: "admin_user", via: 'patch'
   match '/admin',  to: 'admin#index',            via: 'get'
   match '/monitor',  to: 'monitor#index',            via: 'get'
   match '/generate',  to: 'monitor#generate',            via: 'get'
+  match '/update_sequence',  to: 'monitor#update_sequence',            via: 'get'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'

@@ -1,0 +1,21 @@
+<% provide(:title, 'All exam sessions') %>
+<h1>All exam sessions</h1>
+
+<%= will_paginate @exam_sessions %>
+
+<ul class="users">
+  <% @exam_sessions.each do |exam_session| %>
+  <li>
+    <span style="width: 5%; display: inline-block; float: left;"><%= link_to "#" + exam_session.exam_session_id.to_s, exam_session_path(exam_session) %></span>
+    <span style="width: 25%; display: inline-block; float: left;">&nbsp;<%= exam_session.exam_session_name %></span>
+    <span style="width: 20%; display: inline-block; float: left;"><%= exam_session.level.level_name %></span>
+    <span style="width: 20%; display: inline-block; float: left;"><%= exam_session.exam_date %></span>
+    <span style="width: 20%; display: inline-block; float: left;"><%= exam_session.exam_duration %></span>
+    <span style="width: 10%; display: inline-block; float: left;"><%= link_to "Edit", edit_exam_session_path(exam_session) %>&nbsp;&nbsp;<%= link_to "Delete", exam_session_path(exam_session), method: "delete" %></span>
+  </li>
+  <% end %>
+</ul>
+
+<%= will_paginate @exam_sessions %>
+
+<%= link_to "Create new", new_exam_session_path, class: "btn btn-large btn-primary", style: "margin-top: 10px;" %>

@@ -1,0 +1,49 @@
+<% provide(:title, 'Exam Question') %>
+<h1>Exam Question</h1>
+
+<div class="row">
+  <div class="span7 offset2">
+  <%= form_for(@exam_question) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      Subject: <%= @exam_question.subject.subject_name %>
+
+      <%= f.hidden_field :subject_id %>
+
+      <%= f.label :level_id %>
+      <%= f.select :level_id, options_from_collection_for_select(@levels, "level_id", "level_name"), style: "display: inline-block; width: 200px;" %>
+
+      <%= f.label :number_correct %>
+      <%= f.text_field :number_correct %>
+
+      <%= f.label :exam_time %>
+      <%= f.text_field :exam_time %>
+
+      <div id="__option_answer">
+        <div style="margin-top: 20px;">Details</div>
+        <ul>
+          <li>
+            <span style="display: inline-block; width: 50px;">No</span>
+            <span style="display: inline-block; width: 250px;">Question group</span>
+            <span style="display: inline-block; width: 120px;">Number question</span>
+            <span style="display: inline-block; width: 50px; margin-left: 10px;">Used</span>
+          </li>
+          <%
+             all_exam_question_detail = @exam_question.all_exam_question_detail
+          %>
+          <%= f.fields_for :exam_question_details, all_exam_question_detail do |builder| %>
+              <li>
+                <span style="display: inline-block; width: 50px;"><%= builder.text_field :no %></span>
+                <span style="display: inline-block; width: 250px;"><%= builder.object.question_group.question_group_name %></span>
+                <span style="display: inline-block; width: 120px;"><%= builder.text_field :number_question %></span>
+                <span style="display: inline-block; width: 50px; margin-left: 10px;"><%= builder.check_box :used %></span>
+                <%= builder.hidden_field :subject_id %>
+                <%= builder.hidden_field :question_group_id %>
+              </li>
+          <% end %>
+        </ul>
+      </div>
+      <%= f.submit "Create Exam Question", class: "btn btn-large btn-primary", style: "margin-top: 20px;" %>
+  <% end %>
+</div>
+</div>

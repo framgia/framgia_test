@@ -59,13 +59,13 @@ ActiveRecord::Schema.define(version: 20131017043033) do
   end
 
   create_table "training_exam_question", primary_key: "exam_question_id", force: true do |t|
-    t.string   "subject_id",     limit: 45
+    t.integer  "subject_id"
     t.integer  "level_id"
     t.integer  "number_correct"
+    t.integer  "exam_time"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "active_flag"
-    t.integer  "exam_time"
   end
 
   create_table "training_exam_question_detail", primary_key: "exam_question_detail_id", force: true do |t|
@@ -79,20 +79,29 @@ ActiveRecord::Schema.define(version: 20131017043033) do
     t.integer  "active_flag"
   end
 
-  create_table "training_examination", primary_key: "examination_id", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "conclusion_id"
-    t.integer  "status"
+  create_table "training_exam_session", primary_key: "exam_session_id", force: true do |t|
+    t.string   "exam_session_name", limit: 256
+    t.datetime "exam_date"
+    t.integer  "exam_duration"
+    t.integer  "level_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "active_flag"
   end
 
-  create_table "training_examination_detail", primary_key: "examination_detail_id", force: true do |t|
-    t.integer  "examination_id",   limit: 8
-    t.integer  "exam_question_id"
-    t.integer  "exam_result"
-    t.time     "exam_time"
+  create_table "training_exam_session_detail", primary_key: "exam_session_detail_id", force: true do |t|
+    t.integer  "exam_session_id", limit: 8
+    t.integer  "subject_id"
+    t.integer  "no"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "active_flag"
+  end
+
+  create_table "training_examination", primary_key: "examination_id", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "conclusion_id"
+    t.integer  "status"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "active_flag"
@@ -111,10 +120,10 @@ ActiveRecord::Schema.define(version: 20131017043033) do
     t.text     "question_content"
     t.string   "question_file",     limit: 512
     t.integer  "answer_type"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "active_flag"
-    t.text     "description"
   end
 
   create_table "training_question_group", primary_key: "question_group_id", force: true do |t|
@@ -141,7 +150,7 @@ ActiveRecord::Schema.define(version: 20131017043033) do
 
   create_table "training_user", primary_key: "user_id", force: true do |t|
     t.string   "full_name",       limit: 256, null: false
-    t.string   "email",           limit: 256, null: false
+    t.string   "email",           limit: 256
     t.string   "password_digest", limit: 64
     t.string   "remember_token",  limit: 256
     t.integer  "user_admin"

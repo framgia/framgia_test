@@ -1,0 +1,30 @@
+<% provide(:title, 'Exam Session') %>
+<h1>Exam Session</h1>
+
+<div class="row">
+  <div class="span7 offset2">
+  Name: <%= @exam_session.exam_session_name %>
+  <br>
+  Level: <%= @exam_session.level.level_name %>
+  <br>
+  Exam date: <%= @exam_session.exam_date %>
+  <br>
+  Exam duration: <%= @exam_session.exam_duration %>
+
+  <div style="margin-top: 20px;">Details</div>
+  <div id="__option_answer">
+    <ul>
+      <li>
+        <span style="display: inline-block; width: 50px;">No</span>
+        <span style="display: inline-block; width: 250px;">Question group</span>
+      </li>
+      <% @exam_session.exam_session_details.each do |exam_session_detail| %>
+      <li>
+        <span style="display: inline-block; width: 50px;"><%= exam_session_detail.no %>.</span>
+        <span style="display: inline-block; width: 250px;"><%= exam_session_detail.subject.subject_name %></span>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+    </div>
+</div>

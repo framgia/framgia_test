@@ -1,0 +1,3 @@
+level_id,level_name,created_at,updated_at,active_flag
+1,Trainee,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+2,Engineer,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,0

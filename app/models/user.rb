@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   self.table_name = 'training_user'
   self.primary_key = 'user_id'
 
-  has_many :answer_sheets, foreign_key: "user_id", class_name:  "AnswerSheet"
+  has_many :answer_sheets, foreign_key: "user_id", class_name: "AnswerSheet"
 
   before_save { self.email = email.downcase }
   before_create :create_remember_token, :default_active_values, :default_user_admin_values
@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
             format:     { with: VALID_EMAIL_REGEX },
             uniqueness: { case_sensitive: false }
   has_secure_password
-  validates :password, length: { minimum: 6 }
+  validates :password, presence:   true, length: { minimum: 6 }
 
   def User.new_remember_token
     SecureRandom.urlsafe_base64

@@ -1,11 +1,13 @@
 <% provide(:title, @user.full_name) %>
+<h1>
+  User
+</h1>
 <div class="row">
-  <aside class="span4">
-    <section>
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.full_name %>
-      </h1>
-    </section>
-  </aside>
+  <div class="span6 offset3">
+    Full name: <%= @user.full_name %>
+    <br>
+    Email: <%= @user.email %>
+    <br>
+    Admin: <%= @user.admin_user? ? "Yes" : "No" %>
+  </div>
 </div>

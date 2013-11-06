@@ -1,0 +1,32 @@
+<% provide(:title, 'Exam Session') %>
+<h1>Exam Session</h1>
+
+<div class="row">
+  <div class="span7 offset2">
+  <%= form_for(@exam_session, html: {onsubmit: "selectAllOfSelect($('#exam_session_subject_ids'))"}) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :level_id %>
+      <%= f.select :level_id, options_from_collection_for_select(@levels, "level_id", "level_name"), style: "display: inline-block; width: 200px;" %>
+
+      <%= f.label :exam_session_name %>
+      <%= f.text_field :exam_session_name %>
+
+      <%= f.label :exam_date %>
+      <%= f.text_field :exam_date %>
+
+      <%= f.label :exam_duration %>
+      <%= f.text_field :exam_duration %>
+
+      <%= f.label :subject_ids %>
+      <div>
+      <%= select_tag "remain_subject_ids", options_from_collection_for_select(@remain_subjects, "subject_id", "subject_name"), :multiple => true , style: "display: inline-block; width: 200px; float: left;" %>
+      <a href="javascript: void(0)" onclick="move2Select($('#remain_subject_ids'), $('#exam_session_subject_ids'));" style="position: relative; top:15px; left: 65px;">&gt;&gt;</a>
+      <a href="javascript: void(0)" onclick="move2Select($('#exam_session_subject_ids'), $('#remain_subject_ids'));" style="position: relative; top:40px; left: 45px;">&lt;&lt;</a>
+      <%= f.select :subject_ids, options_from_collection_for_select(@subjects, "subject_id", "subject_name"), {}, :multiple => true , style: "display: inline-block; width: 200px;; float: right;" %>
+      </div>
+
+      <%= f.submit "Create Exam Question", class: "btn btn-large btn-primary", style: "margin-top: 20px;" %>
+  <% end %>
+</div>
+</div>

@@ -5,7 +5,7 @@ class AnswerSheetDetail < ActiveRecord::Base
   default_scope -> { order('answer_sheet_detail_id') }
 
   before_create :default_active_values, :default_answer_correct_values
-  before_update :save_file
+  before_update :save_file, :save_answer_correct_values
 
   belongs_to :answer_sheet, class_name: "AnswerSheet"
   belongs_to :question, class_name: "Question"

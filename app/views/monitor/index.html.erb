@@ -42,6 +42,26 @@
       </select>
       <%= submit_tag "Import" %>
   <% end %>
+  <%= form_tag(update_sequence_path, method: "get") do |f| %>
+      Model:
+      <select name="model_name" style="display: inline-block; width: 200px;">
+        <option value="Answer">Answer</option>
+        <option value="AnswerSheet">AnswerSheet</option>
+        <option value="AnswerSheetDetail">AnswerSheetDetail</option>
+        <option value="Conclusion">Conclusion</option>
+        <option value="ExamQuestion">ExamQuestion</option>
+        <option value="ExamQuestionDetail">ExamQuestionDetail</option>
+        <option value="Examination">Examination</option>
+        <option value="Level">Level</option>
+        <option value="Question">Question</option>
+        <option value="QuestionGroup">QuestionGroup</option>
+        <option value="Subject">Subject</option>
+        <option value="SubjectQuestionGroup">SubjectQuestionGroup</option>
+        <option value="User">User</option>
+      </select>
+      <%= text_field_tag "value", nil, style: "display: inline-block; width: 100px;" %>
+      <%= submit_tag "Update Sequence" %>
+  <% end %>
   <%= link_to "Generate", generate_path %>
 </p>
 

@@ -4,18 +4,27 @@
       <%= link_to "test app", root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <% if !   current_user.nil? && !current_user.user_admin? %>
+          <% if signed_in? %>
+          <% if !current_user.nil? && !current_user.admin_user? %>
           <li><%= link_to "Home", root_path %></li>
           <% else %>
+          <li><%= link_to "Home", admin_path %></li>
           <li id="main-menu" class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Menu <b class="caret"></b>
+              List <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Examinations", admin_path %></li>
               <li><%= link_to "Questions", questions_path %></li>
+              <li><%= link_to "Exam Questions", exam_questions_path %></li>
+              <li><%= link_to "Exam Sessions", exam_sessions_path %></li>
+              <li class="divider"></li>
+              <li><%= link_to "Levels", levels_path %></li>
+              <li><%= link_to "Question Groups", question_groups_path %></li>
+              <li><%= link_to "Subjects", subjects_path %></li>
             </ul>
           </li>
+          <li><%= link_to "Users", users_path %></li>
+          <% end %>
           <% end %>
           <li><%= link_to "Help", help_path %></li>
           <% if signed_in? %>

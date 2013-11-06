@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="Rails framgia_training: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="d35df9ad-ee6c-4fed-90a0-6728d94c7bfc">
+  <data-source source="LOCAL" name="Rails framgia_training: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="0f45bf86-9e08-4366-b2fd-f006cd230fbd">
     <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
     <jdbc-url>jdbc:mysql://127.0.0.1/framgia_training</jdbc-url>
     <user-name>root</user-name>

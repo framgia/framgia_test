@@ -16,7 +16,7 @@ development:
 #  username: root
 #  password: "123456"
   adapter: postgresql
-  database: framgia_training
+  database: framgia_test
   host: localhost
   username: tuanca
   password: "tuanca"

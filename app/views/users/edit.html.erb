@@ -18,7 +18,22 @@
         <%= f.label :password_confirmation, "Confirm Password" %>
         <%= f.password_field :password_confirmation %>
 
+        <br> <br>
         <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+    <% end %>
+    <% if admin_user? %>
+        <% if @user.admin_user? %>
+            <%= form_for(@user, url: admin_user_path(@user, "admin")) do |f| %>
+                <%= f.hidden_field :user_admin, value: 0 %>
+                <%= f.submit "Remove Admin", style: "margin-top: 10px;" %>
+            <% end %>
+        <% end %>
+        <% if !@user.admin_user? %>
+            <%= form_for(@user, url: admin_user_path(@user, "admin")) do |f| %>
+                <%= f.hidden_field :user_admin, value: 1 %>
+                <%= f.submit "Set Admin", style: "margin-top: 10px;" %>
+            <% end %>
+        <% end %>
     <% end %>
 
     <%= gravatar_for @user %>

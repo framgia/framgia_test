@@ -1,0 +1,18 @@
+<% provide(:title, 'All subjects') %>
+<h1>All subjects</h1>
+
+<%= will_paginate @subjects %>
+
+<ul class="users">
+  <% @subjects.each do |subject| %>
+  <li>
+    <span style="width: 5%; display: inline-block; float: left;"><%= link_to "#" + subject.subject_id.to_s, subject_path(subject) %></span>
+    <span style="width: 50%; display: inline-block; float: left;">&nbsp;<%= subject.subject_name %></span>
+    <span style="width: 10%; display: inline-block; float: left;"><%= link_to "Edit", edit_subject_path(subject) %>&nbsp;&nbsp;<%= link_to "Delete", subject_path(subject), method: "delete" %></span>
+  </li>
+  <% end %>
+</ul>
+
+<%= will_paginate @subjects %>
+
+<%= link_to "Create new", new_subject_path, class: "btn btn-large btn-primary", style: "margin-top: 10px;" %>

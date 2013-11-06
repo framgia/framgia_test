@@ -6,7 +6,7 @@ class Question < ActiveRecord::Base
   before_create :default_active_values, :save_file
   before_update :save_file
 
-  has_many :answers, foreign_key: "question_id", class_name:  "Answer", dependent: :destroy
+  has_many :answers, foreign_key: "question_id", class_name:  "Answer", dependent: :destroy, :conditions => "training_answer.active_flag = 1"
   belongs_to :subject, class_name: "Subject"
   belongs_to :question_group, class_name: "QuestionGroup"
   accepts_nested_attributes_for :answers

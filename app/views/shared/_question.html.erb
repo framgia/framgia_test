@@ -12,6 +12,14 @@
       <% f.object.question.answers.each do |answer| %>
           <%= render partial: 'shared/answer', :locals => {:f => f, :answer_sheet_detail => f.object, :answer => answer, :answer_type => f.object.question.answer_type, :status => status} %>
       <% end %>
+      <% if status == 2 %>
+        <% if current_user.admin_user? %>
+        <%= f.check_box :answer_correct%>
+        <% else %>
+        <%= f.check_box :answer_correct, disabled: "disabled" %>
+        <% end %>
+      &nbsp;<span style="<% if f.object.answer_correct == 0 %>color: red;<% end %>">Answer correct</span>
+      <% end %>
     </ul>
   </span>
 </li>

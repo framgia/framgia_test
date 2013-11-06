@@ -1,0 +1,15 @@
+<% provide(:title, 'Level') %>
+<h1>Level</h1>
+
+<div class="row">
+  <div class="span7 offset2">
+    <%= form_for(@level) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+
+        <%= f.label :level_name %>
+        <%= f.text_field :level_name %>
+
+        <%= f.submit "Update Level", class: "btn btn-large btn-primary", style: "margin-top: 20px;" %>
+    <% end %>
+  </div>
+</div>

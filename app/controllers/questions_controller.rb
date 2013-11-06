@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
   before_action :signed_in_user, only: [:index, :edit, :update, :destroy]
-  before_action :admin_user,     only: :destroy
+  before_action :admin_user
 
   def index
     if params[:subject_id]

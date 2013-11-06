@@ -38,3 +38,16 @@ function readURL(input,image) {
         reader.readAsDataURL(input.files[0]);
     }
 }
+
+function move2Select(source, destination) {
+    $(source).find(":selected").each(function() {
+        $(destination).append($(this).clone());
+        $(this).remove();
+    });
+}
+
+function selectAllOfSelect(source) {
+    $(source).find("option").each(function() {
+        $(this).attr('selected', 'selected');
+    });
+}

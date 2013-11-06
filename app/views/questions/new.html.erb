@@ -6,6 +6,8 @@
     <%= form_for(@question) do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
 
+        Subject: <%= @subject.subject_name %>
+        <br><br>
         <%= f.hidden_field :subject_id %>
 
         <%= f.label :question_group_id %>

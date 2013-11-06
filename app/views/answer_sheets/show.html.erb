@@ -48,7 +48,7 @@
     <% if current_user.admin_user? %>
         <span style="float: right;"><%= @examination.user.full_name %></span>
     <% else %>
-        <div style="float: right;">Time left: <span id="__exam_time"><%= exam_time_s(@answer_sheet.limit_time) %></span>
+        <div style="float: right;position:fixed;top:55px;right:200px;">Time left: <span id="__exam_time"><%= exam_time_s(@answer_sheet.limit_time) %></span>
           <input type="hidden" id="__exam_time_value" value="<%= @answer_sheet.limit_time %>">
         </div>
     <% end %>

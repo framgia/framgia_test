@@ -1,0 +1,17 @@
+<% provide(:title, 'Subject') %>
+<h1>Exam Question</h1>
+
+<div class="row">
+  <div class="span7 offset2">
+    <%= form_for(@subject) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+
+        <%= f.label :subject_name %>
+        <%= f.text_field :subject_name %>
+
+        <%= f.label :question_group_ids %>
+        <%= f.select "question_group_ids", options_from_collection_for_select(@question_groups, "question_group_id", "question_group_name", @subject.current_question_group_ids), {}, {:multiple => true , style: "display: inline-block; width: 200px;"} %>
+        <%= f.submit "Update Subject", class: "btn btn-large btn-primary", style: "margin-top: 20px;" %>
+    <% end %>
+  </div>
+</div>

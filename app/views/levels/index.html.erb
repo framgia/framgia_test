@@ -1,0 +1,20 @@
+<% provide(:title, 'All levels') %>
+<h1>All levels</h1>
+
+<%= will_paginate @levels %>
+
+<ul class="users">
+  <% @levels.each do |level| %>
+  <li>
+    <span style="width: 5%; display: inline-block; float: left;"><%= link_to "#" + level.level_id.to_s, level_path(level) %></span>
+    <span style="width: 50%; display: inline-block; float: left;">&nbsp;<%= level.level_name %></span>
+    <span style="width: 10%; display: inline-block; float: left;"><%= link_to "Edit", edit_level_path(level) %>&nbsp;&nbsp;<%= link_to "Delete", level_path(level), method: "delete" %></span>
+  </li>
+  <% end %>
+</ul>
+
+<%= will_paginate @levels %>
+
+<div style="width: 100%">
+  <%= link_to "Create new", new_level_path, class: "btn btn-large btn-primary", style: "margin-top: 10px;" %>
+</div>

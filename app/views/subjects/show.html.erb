@@ -1,0 +1,18 @@
+<% provide(:title, 'Subject') %>
+<h1>Subject</h1>
+
+<div class="row">
+  Name: <%= @subject.subject_name %>
+  <br>
+
+  <div style="margin-top: 20px;">Subject Question Groups</div>
+  <div id="__option_answer">
+    <ul>
+      <% @subject.subject_question_groups.each do |subject_question_group| %>
+      <li>
+        <span><%= subject_question_group.question_group.question_group_name %></span>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

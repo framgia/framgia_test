@@ -1,0 +1,30 @@
+<% provide(:title, 'Exam Question') %>
+<h1>Exam Question</h1>
+
+<div class="row">
+  Subject: <%= @exam_question.subject.subject_name %>
+  <br>
+  Level: <%= @exam_question.level.level_name %>
+  <br>
+  Number correct: <%= @exam_question.number_correct %>
+  <br>
+  Exam time: <%= @exam_question.exam_time %>
+
+  <div style="margin-top: 20px;">Details</div>
+  <div id="__option_answer">
+    <ul>
+      <li>
+        <span style="display: inline-block; width: 50px;">No</span>
+        <span style="display: inline-block; width: 250px;">Question group</span>
+        <span style="display: inline-block; width: 120px;">Number question</span>
+      </li>
+      <% @exam_question.exam_question_details.each do |exam_question_detail| %>
+      <li>
+        <span style="display: inline-block; width: 50px;"><%= exam_question_detail.no %>.</span>
+        <span style="display: inline-block; width: 250px;"><%= exam_question_detail.question_group.question_group_name %></span>
+        <span style="display: inline-block; width: 120px;"><%= exam_question_detail.number_question %></span>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

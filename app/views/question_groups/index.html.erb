@@ -1,0 +1,20 @@
+<% provide(:title, 'All question groups') %>
+<h1>All question groups</h1>
+
+<%= will_paginate @question_groups %>
+
+<ul class="users">
+  <% @question_groups.each do |question_group| %>
+  <li>
+    <span style="width: 5%; display: inline-block; float: left;"><%= link_to "#" + question_group.question_group_id.to_s, question_group_path(question_group) %></span>
+    <span style="width: 50%; display: inline-block; float: left;">&nbsp;<%= question_group.question_group_name %></span>
+    <span style="width: 10%; display: inline-block; float: left;"><%= link_to "Edit", edit_question_group_path(question_group) %>&nbsp;&nbsp;<%= link_to "Delete", question_group_path(question_group), method: "delete" %></span>
+  </li>
+  <% end %>
+</ul>
+
+<%= will_paginate @question_groups %>
+
+<div style="width: 100%">
+  <%= link_to "Create new", new_question_group_path, class: "btn btn-large btn-primary", style: "margin-top: 10px;" %>
+</div>
