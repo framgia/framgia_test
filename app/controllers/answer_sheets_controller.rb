@@ -44,8 +44,12 @@ class AnswerSheetsController < ApplicationController
           total = total + 1
         end
       end
-      exam_time = Time.now.to_i - @answer_sheet.started_at.to_i
-      @answer_sheet.update_attributes(:exam_result => total, :exam_time => exam_time)
+      if @examination.status == 1
+        exam_time = Time.now.to_i - @answer_sheet.started_at.to_i
+        @answer_sheet.update_attributes(:exam_result => total, :exam_time => exam_time)
+      else 
+        @answer_sheet.update_attributes(:exam_result => total)
+      end
       flash[:success] = "Answer sheet updated"
       redirect_to [@examination, @answer_sheet]
       #binding.pry

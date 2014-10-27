@@ -59,7 +59,8 @@ class QuestionsController < ApplicationController
 
   def question_params
     params.require(:question).permit(:subject_id, :question_group_id, :question_content,
-                                 :question_file, :attach_file, :answer_type, :description, answers_attributes: [:id, :subject_id, :answer_no, :answer_content, :answer_file, :attach_file, :answer_correct])
+                                 :question_file, :attach_file, :answer_type, :description, 
+                                 answers_attributes: [:id, :subject_id, :answer_no, :answer_content, :answer_file, :attach_file, :answer_correct])
   end
 
   # Before filters

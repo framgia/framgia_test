@@ -12,9 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui/datepicker
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+    $('.date-picker').datepicker();
+});
 
 function ajaxDownload(url){
     $.ajax({
@@ -49,5 +54,25 @@ function move2Select(source, destination) {
 function selectAllOfSelect(source) {
     $(source).find("option").each(function() {
         $(this).attr('selected', 'selected');
+    });
+}
+
+function __call_hr(){
+    alert('aaa');
+    jQuery.support.cors = true;
+    document.domain = 'http://118.70.170.72:5000'
+    $.ajax({
+        type: 'GET',
+        crossDomain: true,
+        url: "/auth/login",
+        xhrFields: {
+            withCredentials: true
+        },
+        success: function(data){aler(data);
+            $('#__from_hr').html($(data).find('#new_user').html());
+        }, error: function(a, b) {
+            console.log(a);
+            alert(b);
+        }
     });
 }
