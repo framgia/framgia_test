@@ -1,29 +1,29 @@
 question_id,subject_id,question_group_id,question_content,question_file,answer_type,description,created_at,updated_at,active_flag
-1,1,1,Which SQL function is used to count the number of rows in a SQL query?,"",1,,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
-2,1,1,The FROM SQL clause is used to…,,1,,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
-3,1,2,How do you get the number of rows affected by query?,,2,,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
-4,1,2,"If the value in the column is repeatable, how do you find out the unique values?",,2,,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
-5,1,3,,1/exercise1.jpg,3,,2013-10-11 12:00:00 UTC,2013-10-21 01:46:35 UTC,0
-6,2,4,Hãy chọn lệnh đúng để khởi động server Rails.,,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-7,2,4,Hãy chọn rake task thích hợp dùng để xuất ra các routing được định nghĩa trong config/routes.rb.,,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-8,2,4,Hãy chọn rake task thích hợp dùng để tạo database được chỉ định trong config/databases.yml,,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+1,1,1,Which SQL function is used to count the number of rows in a SQL query?,"",1,,2013-10-11 12:00:00,2013-10-11 12:00:00,1
+2,1,1,The FROM SQL clause is used to…,,1,,2013-10-11 12:00:00,2013-10-11 12:00:00,1
+3,1,2,How do you get the number of rows affected by query?,,2,,2013-10-11 12:00:00,2013-10-11 12:00:00,1
+4,1,2,"If the value in the column is repeatable, how do you find out the unique values?",,2,,2013-10-11 12:00:00,2013-10-11 12:00:00,1
+5,1,3,,1/exercise1.jpg,3,,2013-10-11 12:00:00,2013-10-21 01:46:35,0
+6,2,4,Hãy chọn lệnh đúng để khởi động server Rails.,,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+7,2,4,Hãy chọn rake task thích hợp dùng để xuất ra các routing được định nghĩa trong config/routes.rb.,,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+8,2,4,Hãy chọn rake task thích hợp dùng để tạo database được chỉ định trong config/databases.yml,,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 9,2,4,"Đưa ra kết quả khi chạy lệnh sau đây:
-{'foo' => 'bar'}.symbolize_keys.merge(:foo => 'hoge')",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+{'foo' => 'bar'}.symbolize_keys.merge(:foo => 'hoge')",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 10,2,4,"Điền vào (1) dòng code để validate độ dài xâu của trường title trong bảng Article nằm trong 20 ký tự.
  class Article < ActiveRecord::Base
 　　__(1)__
-end",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+end",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 11,2,4,"Khi validate trường age của bảng User là số nguyên không âm, điền vào (1) đoạn code thích hợp.
  
  class User < ActiveRecord::Base
   　 __(1)__
-  end",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-12,2,4,Chọn một đáp án đúng khi nói về sự khác nhau giữa ActiveRecord::Base#update_attributes!và ActiveRecord::Base#update_attributes,,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+  end",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+12,2,4,Chọn một đáp án đúng khi nói về sự khác nhau giữa ActiveRecord::Base#update_attributes!và ActiveRecord::Base#update_attributes,,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 13,2,4,"Điền vào (1) dòng code để định nghĩa một scope tên là administrator lấy ra các record có trường admin bằng true.
  
 class User < ActiveRecord::Base
 　__(1)__
-end",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+end",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 14,2,4,"Hai model Company và Employer có quan hệ 1 nhiều (has_many). Điền vào (1) đoạn code để khi xoá một record trong model Company thì những record phụ thuộc của model Employer cũng bị xoá theo.
  
             class Company < ActiveRecord::Base
@@ -32,7 +32,7 @@ end",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
             class Employee < ActiveRecord::Base
               belongs_to :company
             end
-",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 15,2,4,"Điền vào (1) dòng code để đánh index cho trường name của bảng user.
  
 class CreateUsers < ActiveRecord::Migration
@@ -46,12 +46,12 @@ class CreateUsers < ActiveRecord::Migration
 　def self.down
 　　drop_table :users
  　end
- end",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+ end",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 16,2,5,"Điền vào (1) dòng code để định nghĩa routing, khi truy cập vào “/” thì action “welcome#index” được gọi.
  
 Rails3::Application.routes.draw do
  　__(1)__
- end",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+ end",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 17,2,5,"Điền vào (1) từ thích hợp để định nghĩa routing, khi truy cập vào “/users/1/preview” thì action “users#preview” được gọi.
  
 Rails3::Application.routes.draw do
@@ -60,7 +60,7 @@ Rails3::Application.routes.draw do
          get :preview
      end
    end
-             end",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+             end",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 18,2,5,"Điền vào (1) dòng code khi muốn tất cả các action không được chạy khi kết quả thực hiện của current_user.admin? là false
  
 class Admin::UsersController < ApplicationController
@@ -72,7 +72,7 @@ class Admin::UsersController < ApplicationController
   def require_admin
   　redirect_to welcome_path unless current_user.admin?
   end
-end",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+end",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 19,2,5,"Điền vào (1) đoạn code để truyền đoạn message “Book was successfully created.
 ” vào flash và thực hiện redirect.
  
@@ -85,7 +85,7 @@ class BooksController < ApplicationController
       render :action => :new
     end
   end
-end",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+end",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 20,2,5,"Điền vào (1) code thích hợp để tạo link dẫn đến trang của từng user
             
 Code 1:
@@ -95,7 +95,7 @@ end
 Code 2:
  <% User.all.each do |user| %>
  <%= __(1)__ user.name, user %>
- <% end %>",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+ <% end %>",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 21,2,5,"Đoạn code bên dưới muốn định nghĩa title của trang là “Hello world”. Điền vào (1) đoạn code thích hợp
  
 Code 1:
@@ -111,7 +111,7 @@ Code 1:
 Code 2:
 <% content_for :head do %>
 　<title>Hello world</title>
-<% end %>",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+<% end %>",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 22,2,5,"File config/routes.rb được định nghĩa như Code 1 bên dưới. Đoạn code ở file 2 sẽ sinh ra string nào? Chọn đáp án thích hợp.
  
 Code 1:
@@ -120,7 +120,7 @@ Rails3::Application.routes.draw do
 end
 
 Code 2:
-<%= url_for User.find(1) %>",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+<%= url_for User.find(1) %>",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 23,2,5,"Điền vào (1) code để cài đặt địa chỉ người gửi mặc định.
  
 class NotifierMailer < ActionMailer::Base
@@ -128,15 +128,15 @@ class NotifierMailer < ActionMailer::Base
   　def welcome(recipient)
      　mail :to => recipient.email
     end
- end",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+ end",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 24,2,5,"Lệnh để khởi tạo một project rails mới tên là “ittrain” là gì?
  
 1.     rails create ittrain
 2.     rails project ittrain
 3.     rails new ittrain
-4.     rails ittrain",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-25,2,5,Lựa chọn nào dưới đây không phải là thành phần cơ bản của Rails 3?,,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-26,2,5,"Kết quả khi chạy lệnh ""Person"".tableize  là gì?",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+4.     rails ittrain",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+25,2,5,Lựa chọn nào dưới đây không phải là thành phần cơ bản của Rails 3?,,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+26,2,5,"Kết quả khi chạy lệnh ""Person"".tableize  là gì?",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 27,2,5,"Kết quả trả về khi chạy lệnh save ở đoạn code thứ 2 là gì?
  
   Code 1
@@ -145,12 +145,12 @@ class NotifierMailer < ActionMailer::Base
   end
   Code 2
   user = User.new(:login => ""foo"")
-  user.save",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+  user.save",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 28,2,5,"Chọn dòng code để lấy ra tất cả các record có giá trị trường login là “foo”
  
 class User < ActiveRecord::Base
 　validates :login, :presence => true
-end",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+end",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 29,2,5,"Điền vào (1) từ thích hợp để khi tạo và update instace của model User thì màn hình log in ra chữ “debug”
  
 class User < ActiveRecord::Base
@@ -160,7 +160,7 @@ class User < ActiveRecord::Base
     logger.debug ""debug""
   end
 end
-",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 30,2,5,"Điền vào (1) dòng code thích hợp để xoá trường email trong bảng users
  
 class RemoveEmailToUsers < ActiveRecord::Migration
@@ -169,7 +169,7 @@ class RemoveEmailToUsers < ActiveRecord::Migration
   end
   def self.down
   end
-end",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+end",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 31,2,5,"Sau khi chạy rake db:migrate thì trường nào của bảng users không được định nghĩa?
  
 class CreateUsers < ActiveRecord::Migration
@@ -182,13 +182,13 @@ class CreateUsers < ActiveRecord::Migration
   def self.down
     drop_table :users
   end
-end",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+end",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 32,2,5,"Nếu định nghĩa resource :user thì sẽ tạo ra cac route nào?
  
  
 Rails3::Application.routes.draw do
   Resource :user
-end",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+end",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 33,2,5,"Điền vào (1) dòng code để gán giá trị cho session.
  
 class SessionsController < ApplicationController
@@ -200,7 +200,7 @@ class SessionsController < ApplicationController
     　render :action => :new
 　　end
    end
-end",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+end",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 34,2,5,"File routes.rb được định nghĩa như bên dưới. Helper method nào dùng để gọi đến action “comments#show”?
  
 Rails3::Application.routes.draw do
@@ -212,7 +212,7 @@ end
 1.     comment_url(@message_board, @comment)
 2.     comments_url(@message_board)
 3.     message_board_comment_url(@message_board, @comment)
-4.     message_board_comments_url(@message_board)",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+4.     message_board_comments_url(@message_board)",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 35,2,5,"Điền vào (1) từ thích hợp để trả về respond dự liệu.
  
 class UsersController < ApplicationController
@@ -228,113 +228,113 @@ end
 1.     request_from
 2.     request_to
 3.     respond_from
-4.     respond_to",,1,,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-36,1,1,Which of the following is NOT a SQL keyword or SQL clause?,,1,,2013-10-17 08:40:53 UTC,2013-10-18 02:00:34 UTC,0
-37,1,1,The UNION SQL clause can be used with…,,1,The UNION SQL clause can be used with…,2013-10-17 08:57:43 UTC,2013-10-18 02:00:22 UTC,0
-39,1,1,Which SQL keyword is used to retrieve a maximum value?,,1,Which SQL keyword is used to retrieve a maximum value?,2013-10-17 09:57:41 UTC,2013-10-18 02:00:37 UTC,0
-40,1,1,"",,3,Exercise 2,2013-10-17 10:06:34 UTC,2013-10-17 11:31:10 UTC,0
+4.     respond_to",,1,,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+36,1,1,Which of the following is NOT a SQL keyword or SQL clause?,,1,,2013-10-17 08:40:53,2013-10-18 02:00:34,0
+37,1,1,The UNION SQL clause can be used with…,,1,The UNION SQL clause can be used with…,2013-10-17 08:57:43,2013-10-18 02:00:22,0
+39,1,1,Which SQL keyword is used to retrieve a maximum value?,,1,Which SQL keyword is used to retrieve a maximum value?,2013-10-17 09:57:41,2013-10-18 02:00:37,0
+40,1,1,"",,3,Exercise 2,2013-10-17 10:06:34,2013-10-17 11:31:10,0
 41,3,3,"Have following relations: Students, Teachers, Classes, Subjects, Registers, Teaching
 a. List all students have registered both subjects X, Y
 b. List the teachers teach more than five class
 c. List the teachers teach a class that have at least 30 student return up
-d. List all subjects of teacher G that have registered by student A","",3,"Have following relations: Students, Teachers, Courses, Classes, Subjects, CourseRegisters, Teaching",2013-10-18 08:41:28 UTC,2013-10-24 07:41:35 UTC,1
-42,1,1,Which of the following is NOT a SQL keyword or SQL clause?,,1,Which of the following is NOT a SQL keyword or SQL clause?,2013-10-21 01:55:54 UTC,2013-10-21 01:55:54 UTC,1
-43,1,1,The UNION SQL clause can be used with…,,1,The UNION SQL clause can be used with…,2013-10-21 01:58:20 UTC,2013-10-21 01:58:20 UTC,1
-44,1,1,What does DML stand for?,,1,What does DML stand for?,2013-10-21 02:00:03 UTC,2013-10-21 02:00:03 UTC,1
-45,1,1,Which SQL keyword is used to retrieve a maximum value?,,1,Which SQL keyword is used to retrieve a maximum value?,2013-10-21 02:01:41 UTC,2013-10-21 02:01:41 UTC,1
-46,1,1,Which SQL statement inserts data into a table called Projects?,,1,Which SQL statement inserts data into a table called Projects?,2013-10-21 02:04:25 UTC,2013-10-21 02:04:25 UTC,1
-47,1,1,Which of the following SQL clauses is used to enter data into a SQL table?,,1,Which of the following SQL clauses is used to enter data into a SQL table?,2013-10-21 02:05:20 UTC,2013-10-21 02:05:20 UTC,1
-48,1,1,Which of the following SQL clauses is used to DELETE data from a database table?,,1,Which of the following SQL clauses is used to DELETE data from a database table?,2013-10-21 02:07:00 UTC,2013-10-21 02:07:00 UTC,1
-49,1,1,Which of the following SQL statements is correct?,,1,Which of the following SQL statements is correct?,2013-10-21 02:08:41 UTC,2013-10-21 02:08:41 UTC,1
-50,1,1,What does SQL stand for?,,1,What does SQL stand for?,2013-10-21 02:09:21 UTC,2013-10-21 02:09:21 UTC,1
-51,1,1,Which SQL statement is used to extract data from a database?,,1,Which SQL statement is used to extract data from a database?,2013-10-21 02:09:45 UTC,2013-10-21 02:09:45 UTC,1
-52,1,1,Which SQL statement is used to update data in a database?,,1,Which SQL statement is used to update data in a database?,2013-10-21 02:10:16 UTC,2013-10-21 02:10:16 UTC,1
-53,1,1,"With SQL, how do you select a column named ""FirstName"" from a table named ""Persons""?",,1,"With SQL, how do you select a column named ""FirstName"" from a table named ""Persons""?",2013-10-21 02:10:53 UTC,2013-10-21 02:10:53 UTC,1
-54,1,1,"With SQL, how do you select all the columns from a table named ""Persons""?",,1,"With SQL, how do you select all the columns from a table named ""Persons""?",2013-10-21 02:11:32 UTC,2013-10-21 02:11:32 UTC,1
-55,1,1,"With SQL, how do you select all the records from a table named ""Persons"" where the value of the column ""FirstName"" is ""Peter""?",,1,"With SQL, how do you select all the records from a table named ""Persons"" where the value of the column ""FirstName"" is ""Peter""?",2013-10-21 02:12:05 UTC,2013-10-21 02:12:05 UTC,1
-56,1,1,"With SQL, how do you select all the records from a table named ""Persons"" where the value of the column ""FirstName"" starts with an ""a""?",,1,"With SQL, how do you select all the records from a table named ""Persons"" where the value of the column ""FirstName"" starts with an ""a""?",2013-10-21 02:25:26 UTC,2013-10-21 02:25:26 UTC,1
-57,1,1,The OR operator displays a record if ANY conditions listed are true. The AND operator displays a record if ALL of the conditions listed are,,1,The OR operator displays a record if ANY conditions listed are true. The AND operator displays a record if ALL of the conditions listed are,2013-10-21 02:25:53 UTC,2013-10-21 02:25:53 UTC,1
-58,1,1,"With SQL, how do you select all the records from a table named ""Persons"" where the ""FirstName"" is ""Peter"" and the ""LastName"" is ""Jackson""?",,1,"With SQL, how do you select all the records from a table named ""Persons"" where the ""FirstName"" is ""Peter"" and the ""LastName"" is ""Jackson""?",2013-10-21 02:26:19 UTC,2013-10-21 02:26:19 UTC,1
-59,1,1,"With SQL, how do you select all the records from a table named ""Persons"" where the ""LastName"" is alphabetically between (and including) ""Hansen"" and ""Pettersen""?",,1,"With SQL, how do you select all the records from a table named ""Persons"" where the ""LastName"" is alphabetically between (and including) ""Hansen"" and ""Pettersen""?",2013-10-21 02:26:54 UTC,2013-10-21 02:26:54 UTC,1
-60,1,1,Which SQL statement is used to return only different values?,,1,Which SQL statement is used to return only different values?,2013-10-21 02:27:26 UTC,2013-10-21 02:27:26 UTC,1
-61,1,1,Which SQL keyword is used to sort the result-set?,,1,Which SQL keyword is used to sort the result-set?,2013-10-21 02:27:50 UTC,2013-10-21 02:27:50 UTC,1
-62,1,1,"With SQL, how can you return all the records from a table named ""Persons"" sorted descending by ""FirstName""?",,1,"With SQL, how can you return all the records from a table named ""Persons"" sorted descending by ""FirstName""?",2013-10-21 02:28:23 UTC,2013-10-21 02:28:23 UTC,1
-63,1,1,"With SQL, how can you insert a new record into the ""Persons"" table?",,1,"With SQL, how can you insert a new record into the ""Persons"" table?",2013-10-21 02:28:45 UTC,2013-10-21 02:28:45 UTC,1
-64,1,1,"How can you change ""Hansen"" into ""Nilsen"" in the ""LastName"" column in the Persons table?",,1,"How can you change ""Hansen"" into ""Nilsen"" in the ""LastName"" column in the Persons table?",2013-10-21 02:29:09 UTC,2013-10-21 02:29:09 UTC,1
-65,1,1,"With SQL, how can you delete the records where the ""FirstName"" is ""Peter"" in the Persons Table?",,1,"With SQL, how can you delete the records where the ""FirstName"" is ""Peter"" in the Persons Table?",2013-10-21 02:30:12 UTC,2013-10-21 02:30:12 UTC,1
-66,1,1,"With SQL, how can you return the number of records in the ""Persons"" table?",,1,"With SQL, how can you return the number of records in the ""Persons"" table?",2013-10-21 02:30:38 UTC,2013-10-21 02:30:38 UTC,1
-67,1,1,"If you don't specify ASC or DESC after a SQL ORDER BY clause, the following is used by default:",,1,"If you don't specify ASC or DESC after a SQL ORDER BY clause, the following is used by default:",2013-10-21 02:31:10 UTC,2013-10-21 02:31:10 UTC,1
-68,1,1,When inserting data in a table do you always have to specify a list of all column names you are inserting values for?,,1,When inserting data in a table do you always have to specify a list of all column names you are inserting values for?,2013-10-21 02:31:32 UTC,2013-10-21 02:31:32 UTC,1
-69,1,1,Which of the following 3 SQL statements is correct?,,1,Which of the following 3 SQL statements is correct?,2013-10-21 02:31:55 UTC,2013-10-21 02:31:55 UTC,1
-70,1,1,What is a database cursor?,,1,What is a database cursor?,2013-10-21 02:32:36 UTC,2013-10-21 02:32:36 UTC,1
-71,1,1,What does follow after the SQL WHERE clause?,,1,What does follow after the SQL WHERE clause?,2013-10-21 02:33:10 UTC,2013-10-21 02:33:10 UTC,1
-72,1,1,What does the ALTER TABLE clause do?,,1,What does the ALTER TABLE clause do?,2013-10-21 02:33:36 UTC,2013-10-21 02:33:36 UTC,1
-73,1,1,What is the difference between the WHERE and HAVING SQL clauses?,,1,What is the difference between the WHERE and HAVING SQL clauses?,2013-10-21 02:34:05 UTC,2013-10-21 02:34:05 UTC,1
-74,1,1,What is the purpose of the SQL AS clause?,,1,What is the purpose of the SQL AS clause?,2013-10-21 02:34:30 UTC,2013-10-21 02:34:30 UTC,1
-75,1,1,Can you join a table to itself?,,1,Can you join a table to itself?,2013-10-21 02:34:49 UTC,2013-10-21 02:34:49 UTC,1
-76,1,1,The IN SQL keyword…,,1,The IN SQL keyword…,2013-10-21 02:35:16 UTC,2013-10-21 02:35:16 UTC,1
-77,1,1,The UPDATE SQL clause can…,,1,The UPDATE SQL clause can…,2013-10-21 02:43:07 UTC,2013-10-21 02:43:07 UTC,1
-78,1,1,The difference between the DELETE and TRUNCATE SQL clauses is:,,1,The difference between the DELETE and TRUNCATE SQL clauses is:,2013-10-21 02:44:14 UTC,2013-10-21 02:44:14 UTC,1
-79,1,1,The LIKE SQL keyword is used along with ...,,1,The LIKE SQL keyword is used along with ...,2013-10-21 02:44:54 UTC,2013-10-21 02:44:54 UTC,1
-80,1,1,Which of the following statements gets the total value of the column 'Price' in the 'Sales' table?,,1,Which of the following statements gets the total value of the column 'Price' in the 'Sales' table?,2013-10-21 02:45:41 UTC,2013-10-21 02:45:41 UTC,1
+d. List all subjects of teacher G that have registered by student A","",3,"Have following relations: Students, Teachers, Courses, Classes, Subjects, CourseRegisters, Teaching",2013-10-18 08:41:28,2013-10-24 07:41:35,1
+42,1,1,Which of the following is NOT a SQL keyword or SQL clause?,,1,Which of the following is NOT a SQL keyword or SQL clause?,2013-10-21 01:55:54,2013-10-21 01:55:54,1
+43,1,1,The UNION SQL clause can be used with…,,1,The UNION SQL clause can be used with…,2013-10-21 01:58:20,2013-10-21 01:58:20,1
+44,1,1,What does DML stand for?,,1,What does DML stand for?,2013-10-21 02:00:03,2013-10-21 02:00:03,1
+45,1,1,Which SQL keyword is used to retrieve a maximum value?,,1,Which SQL keyword is used to retrieve a maximum value?,2013-10-21 02:01:41,2013-10-21 02:01:41,1
+46,1,1,Which SQL statement inserts data into a table called Projects?,,1,Which SQL statement inserts data into a table called Projects?,2013-10-21 02:04:25,2013-10-21 02:04:25,1
+47,1,1,Which of the following SQL clauses is used to enter data into a SQL table?,,1,Which of the following SQL clauses is used to enter data into a SQL table?,2013-10-21 02:05:20,2013-10-21 02:05:20,1
+48,1,1,Which of the following SQL clauses is used to DELETE data from a database table?,,1,Which of the following SQL clauses is used to DELETE data from a database table?,2013-10-21 02:07:00,2013-10-21 02:07:00,1
+49,1,1,Which of the following SQL statements is correct?,,1,Which of the following SQL statements is correct?,2013-10-21 02:08:41,2013-10-21 02:08:41,1
+50,1,1,What does SQL stand for?,,1,What does SQL stand for?,2013-10-21 02:09:21,2013-10-21 02:09:21,1
+51,1,1,Which SQL statement is used to extract data from a database?,,1,Which SQL statement is used to extract data from a database?,2013-10-21 02:09:45,2013-10-21 02:09:45,1
+52,1,1,Which SQL statement is used to update data in a database?,,1,Which SQL statement is used to update data in a database?,2013-10-21 02:10:16,2013-10-21 02:10:16,1
+53,1,1,"With SQL, how do you select a column named ""FirstName"" from a table named ""Persons""?",,1,"With SQL, how do you select a column named ""FirstName"" from a table named ""Persons""?",2013-10-21 02:10:53,2013-10-21 02:10:53,1
+54,1,1,"With SQL, how do you select all the columns from a table named ""Persons""?",,1,"With SQL, how do you select all the columns from a table named ""Persons""?",2013-10-21 02:11:32,2013-10-21 02:11:32,1
+55,1,1,"With SQL, how do you select all the records from a table named ""Persons"" where the value of the column ""FirstName"" is ""Peter""?",,1,"With SQL, how do you select all the records from a table named ""Persons"" where the value of the column ""FirstName"" is ""Peter""?",2013-10-21 02:12:05,2013-10-21 02:12:05,1
+56,1,1,"With SQL, how do you select all the records from a table named ""Persons"" where the value of the column ""FirstName"" starts with an ""a""?",,1,"With SQL, how do you select all the records from a table named ""Persons"" where the value of the column ""FirstName"" starts with an ""a""?",2013-10-21 02:25:26,2013-10-21 02:25:26,1
+57,1,1,The OR operator displays a record if ANY conditions listed are true. The AND operator displays a record if ALL of the conditions listed are,,1,The OR operator displays a record if ANY conditions listed are true. The AND operator displays a record if ALL of the conditions listed are,2013-10-21 02:25:53,2013-10-21 02:25:53,1
+58,1,1,"With SQL, how do you select all the records from a table named ""Persons"" where the ""FirstName"" is ""Peter"" and the ""LastName"" is ""Jackson""?",,1,"With SQL, how do you select all the records from a table named ""Persons"" where the ""FirstName"" is ""Peter"" and the ""LastName"" is ""Jackson""?",2013-10-21 02:26:19,2013-10-21 02:26:19,1
+59,1,1,"With SQL, how do you select all the records from a table named ""Persons"" where the ""LastName"" is alphabetically between (and including) ""Hansen"" and ""Pettersen""?",,1,"With SQL, how do you select all the records from a table named ""Persons"" where the ""LastName"" is alphabetically between (and including) ""Hansen"" and ""Pettersen""?",2013-10-21 02:26:54,2013-10-21 02:26:54,1
+60,1,1,Which SQL statement is used to return only different values?,,1,Which SQL statement is used to return only different values?,2013-10-21 02:27:26,2013-10-21 02:27:26,1
+61,1,1,Which SQL keyword is used to sort the result-set?,,1,Which SQL keyword is used to sort the result-set?,2013-10-21 02:27:50,2013-10-21 02:27:50,1
+62,1,1,"With SQL, how can you return all the records from a table named ""Persons"" sorted descending by ""FirstName""?",,1,"With SQL, how can you return all the records from a table named ""Persons"" sorted descending by ""FirstName""?",2013-10-21 02:28:23,2013-10-21 02:28:23,1
+63,1,1,"With SQL, how can you insert a new record into the ""Persons"" table?",,1,"With SQL, how can you insert a new record into the ""Persons"" table?",2013-10-21 02:28:45,2013-10-21 02:28:45,1
+64,1,1,"How can you change ""Hansen"" into ""Nilsen"" in the ""LastName"" column in the Persons table?",,1,"How can you change ""Hansen"" into ""Nilsen"" in the ""LastName"" column in the Persons table?",2013-10-21 02:29:09,2013-10-21 02:29:09,1
+65,1,1,"With SQL, how can you delete the records where the ""FirstName"" is ""Peter"" in the Persons Table?",,1,"With SQL, how can you delete the records where the ""FirstName"" is ""Peter"" in the Persons Table?",2013-10-21 02:30:12,2013-10-21 02:30:12,1
+66,1,1,"With SQL, how can you return the number of records in the ""Persons"" table?",,1,"With SQL, how can you return the number of records in the ""Persons"" table?",2013-10-21 02:30:38,2013-10-21 02:30:38,1
+67,1,1,"If you don't specify ASC or DESC after a SQL ORDER BY clause, the following is used by default:",,1,"If you don't specify ASC or DESC after a SQL ORDER BY clause, the following is used by default:",2013-10-21 02:31:10,2013-10-21 02:31:10,1
+68,1,1,When inserting data in a table do you always have to specify a list of all column names you are inserting values for?,,1,When inserting data in a table do you always have to specify a list of all column names you are inserting values for?,2013-10-21 02:31:32,2013-10-21 02:31:32,1
+69,1,1,Which of the following 3 SQL statements is correct?,,1,Which of the following 3 SQL statements is correct?,2013-10-21 02:31:55,2013-10-21 02:31:55,1
+70,1,1,What is a database cursor?,,1,What is a database cursor?,2013-10-21 02:32:36,2013-10-21 02:32:36,1
+71,1,1,What does follow after the SQL WHERE clause?,,1,What does follow after the SQL WHERE clause?,2013-10-21 02:33:10,2013-10-21 02:33:10,1
+72,1,1,What does the ALTER TABLE clause do?,,1,What does the ALTER TABLE clause do?,2013-10-21 02:33:36,2013-10-21 02:33:36,1
+73,1,1,What is the difference between the WHERE and HAVING SQL clauses?,,1,What is the difference between the WHERE and HAVING SQL clauses?,2013-10-21 02:34:05,2013-10-21 02:34:05,1
+74,1,1,What is the purpose of the SQL AS clause?,,1,What is the purpose of the SQL AS clause?,2013-10-21 02:34:30,2013-10-21 02:34:30,1
+75,1,1,Can you join a table to itself?,,1,Can you join a table to itself?,2013-10-21 02:34:49,2013-10-21 02:34:49,1
+76,1,1,The IN SQL keyword…,,1,The IN SQL keyword…,2013-10-21 02:35:16,2013-10-21 02:35:16,1
+77,1,1,The UPDATE SQL clause can…,,1,The UPDATE SQL clause can…,2013-10-21 02:43:07,2013-10-21 02:43:07,1
+78,1,1,The difference between the DELETE and TRUNCATE SQL clauses is:,,1,The difference between the DELETE and TRUNCATE SQL clauses is:,2013-10-21 02:44:14,2013-10-21 02:44:14,1
+79,1,1,The LIKE SQL keyword is used along with ...,,1,The LIKE SQL keyword is used along with ...,2013-10-21 02:44:54,2013-10-21 02:44:54,1
+80,1,1,Which of the following statements gets the total value of the column 'Price' in the 'Sales' table?,,1,Which of the following statements gets the total value of the column 'Price' in the 'Sales' table?,2013-10-21 02:45:41,2013-10-21 02:45:41,1
 81,1,1,"Which of the following SQL statements selects the total number of orders from the Sales table? 
         OrderNumber	Date		CustomerID 
         1		12/12/2005 	13 
-        2		13/12/2005 	17",,1,Which of the following SQL statements selects the total number of orders from the Sales table? ,2013-10-21 02:48:03 UTC,2013-10-21 02:48:03 UTC,1
-82,1,2,How do you return the a hundred books starting from 25th?,,2,How do you return the a hundred books starting from 25th?,2013-10-21 02:50:30 UTC,2013-10-21 02:50:30 UTC,1
-83,1,2,"You wrote a search engine that should retrieve 10 results at a time, but at the same time you’d like to know how many rows there’re total. How do you display that to the user?",,2,"You wrote a search engine that should retrieve 10 results at a time, but at the same time you’d like to know how many rows there’re total. How do you display that to the user?",2013-10-21 02:51:09 UTC,2013-10-21 02:51:09 UTC,1
-84,1,2,"How would you write a query to select all teams that won either 2, 4, 6 or 8 games?",,2,"How would you write a query to select all teams that won either 2, 4, 6 or 8 games?",2013-10-21 02:53:12 UTC,2013-10-21 02:53:12 UTC,1
-85,1,2,"How would you select all the users, whose phone number is null?",,2,"How would you select all the users, whose phone number is null?",2013-10-21 02:53:28 UTC,2013-10-21 02:53:28 UTC,1
-86,1,2,"What does this query mean: SELECT user_name, user_isp FROM users LEFT JOIN isps USING (user_id) ?",,2,"What does this query mean: SELECT user_name, user_isp FROM users LEFT JOIN isps USING (user_id) ?",2013-10-21 02:53:43 UTC,2013-10-21 02:53:43 UTC,1
-87,1,2,On executing the DELETE statement I keep getting the error about foreign key constraint failing. What do I do?,"",2,On executing the DELETE statement I keep getting the error about foreign key constraint failing. What do I do?,2013-10-21 02:53:58 UTC,2013-10-21 02:59:35 UTC,1
-88,1,2,When would you use ORDER BY in DELETE statement?,"",2,When would you use ORDER BY in DELETE statement?,2013-10-21 02:54:22 UTC,2013-10-21 02:59:20 UTC,1
-89,1,2,How would you change a column from VARCHAR(10) to VARCHAR(50)?,"",2,How would you change a column from VARCHAR(10) to VARCHAR(50)?,2013-10-21 02:54:36 UTC,2013-10-21 02:59:09 UTC,1
-90,1,2,How would you delete a column?,"",2,How would you delete a column?,2013-10-21 02:54:48 UTC,2013-10-21 02:58:56 UTC,1
-91,1,2,How do you concatenate strings in MySQL?,"",2,How do you concatenate strings in MySQL?,2013-10-21 02:55:00 UTC,2013-10-21 02:58:38 UTC,1
-92,1,2,How do you get a portion of a string?,"",2,How do you get a portion of a string?,2013-10-21 02:55:11 UTC,2013-10-21 02:58:19 UTC,1
-93,1,2,What’s the difference between CHAR_LENGTH and LENGTH?,,2,What’s the difference between CHAR_LENGTH and LENGTH?,2013-10-21 02:55:31 UTC,2013-10-21 02:55:31 UTC,1
-94,1,2,How do you convert a string to UTF-8?,,2,How do you convert a string to UTF-8?,2013-10-21 02:55:45 UTC,2013-10-21 02:55:45 UTC,1
-95,1,2,What do % and _ mean inside LIKE statement?,,2,What do % and _ mean inside LIKE statement?,2013-10-21 02:55:59 UTC,2013-10-21 02:55:59 UTC,1
-96,1,2,What does + mean in REGEXP?,,2,What does + mean in REGEXP?,2013-10-21 02:56:12 UTC,2013-10-21 02:56:12 UTC,1
-97,1,2,How do you get the month from a timestamp?,,2,How do you get the month from a timestamp?,2013-10-21 02:56:28 UTC,2013-10-21 02:56:28 UTC,1
-98,1,2,How do you offload the time/date handling to MySQL?,,2,How do you offload the time/date handling to MySQL?,2013-10-21 02:56:44 UTC,2013-10-21 02:56:44 UTC,1
-99,1,2,How do you add three minutes to a date?,,2,How do you add three minutes to a date?,2013-10-21 02:56:58 UTC,2013-10-21 02:56:58 UTC,1
-100,1,2,What’s the difference between Unix timestamps and MySQL timestamps?,,2,What’s the difference between Unix timestamps and MySQL timestamps?,2013-10-21 02:57:11 UTC,2013-10-21 02:57:11 UTC,1
+        2		13/12/2005 	17",,1,Which of the following SQL statements selects the total number of orders from the Sales table? ,2013-10-21 02:48:03,2013-10-21 02:48:03,1
+82,1,2,How do you return the a hundred books starting from 25th?,,2,How do you return the a hundred books starting from 25th?,2013-10-21 02:50:30,2013-10-21 02:50:30,1
+83,1,2,"You wrote a search engine that should retrieve 10 results at a time, but at the same time you’d like to know how many rows there’re total. How do you display that to the user?",,2,"You wrote a search engine that should retrieve 10 results at a time, but at the same time you’d like to know how many rows there’re total. How do you display that to the user?",2013-10-21 02:51:09,2013-10-21 02:51:09,1
+84,1,2,"How would you write a query to select all teams that won either 2, 4, 6 or 8 games?",,2,"How would you write a query to select all teams that won either 2, 4, 6 or 8 games?",2013-10-21 02:53:12,2013-10-21 02:53:12,1
+85,1,2,"How would you select all the users, whose phone number is null?",,2,"How would you select all the users, whose phone number is null?",2013-10-21 02:53:28,2013-10-21 02:53:28,1
+86,1,2,"What does this query mean: SELECT user_name, user_isp FROM users LEFT JOIN isps USING (user_id) ?",,2,"What does this query mean: SELECT user_name, user_isp FROM users LEFT JOIN isps USING (user_id) ?",2013-10-21 02:53:43,2013-10-21 02:53:43,1
+87,1,2,On executing the DELETE statement I keep getting the error about foreign key constraint failing. What do I do?,"",2,On executing the DELETE statement I keep getting the error about foreign key constraint failing. What do I do?,2013-10-21 02:53:58,2013-10-21 02:59:35,1
+88,1,2,When would you use ORDER BY in DELETE statement?,"",2,When would you use ORDER BY in DELETE statement?,2013-10-21 02:54:22,2013-10-21 02:59:20,1
+89,1,2,How would you change a column from VARCHAR(10) to VARCHAR(50)?,"",2,How would you change a column from VARCHAR(10) to VARCHAR(50)?,2013-10-21 02:54:36,2013-10-21 02:59:09,1
+90,1,2,How would you delete a column?,"",2,How would you delete a column?,2013-10-21 02:54:48,2013-10-21 02:58:56,1
+91,1,2,How do you concatenate strings in MySQL?,"",2,How do you concatenate strings in MySQL?,2013-10-21 02:55:00,2013-10-21 02:58:38,1
+92,1,2,How do you get a portion of a string?,"",2,How do you get a portion of a string?,2013-10-21 02:55:11,2013-10-21 02:58:19,1
+93,1,2,What’s the difference between CHAR_LENGTH and LENGTH?,,2,What’s the difference between CHAR_LENGTH and LENGTH?,2013-10-21 02:55:31,2013-10-21 02:55:31,1
+94,1,2,How do you convert a string to UTF-8?,,2,How do you convert a string to UTF-8?,2013-10-21 02:55:45,2013-10-21 02:55:45,1
+95,1,2,What do % and _ mean inside LIKE statement?,,2,What do % and _ mean inside LIKE statement?,2013-10-21 02:55:59,2013-10-21 02:55:59,1
+96,1,2,What does + mean in REGEXP?,,2,What does + mean in REGEXP?,2013-10-21 02:56:12,2013-10-21 02:56:12,1
+97,1,2,How do you get the month from a timestamp?,,2,How do you get the month from a timestamp?,2013-10-21 02:56:28,2013-10-21 02:56:28,1
+98,1,2,How do you offload the time/date handling to MySQL?,,2,How do you offload the time/date handling to MySQL?,2013-10-21 02:56:44,2013-10-21 02:56:44,1
+99,1,2,How do you add three minutes to a date?,,2,How do you add three minutes to a date?,2013-10-21 02:56:58,2013-10-21 02:56:58,1
+100,1,2,What’s the difference between Unix timestamps and MySQL timestamps?,,2,What’s the difference between Unix timestamps and MySQL timestamps?,2013-10-21 02:57:11,2013-10-21 02:57:11,1
 101,3,3,"Have following relations: Books, Authors, Readers, Borrows
 a. List the books have been borrowed more than 10 times in 2011
 b. List the readers has borrowed at least 10 different books
 c. List the books are being borrowed by a reader in the preceding sentence (b)
-d. List of Stephen King books present no one is borrowing",,3,"Have following relations: Books, Authors, Readers, Borrows",2013-10-21 03:15:28 UTC,2013-10-21 03:15:28 UTC,1
-102,4,1,Hiển thị trợ giúp,,1,Hiển thị trợ giúp,2013-11-07 02:58:39 UTC,2013-11-07 02:58:39 UTC,1
-103,4,1,Kiểm tra thiết lập,,1,Kiểm tra thiết lập,2013-11-07 02:59:25 UTC,2013-11-07 02:59:25 UTC,1
-104,4,1,Chỉ staging foo.txt,,1,Chỉ staging foo.txt,2013-11-07 03:00:12 UTC,2013-11-07 03:00:12 UTC,1
-105,4,1,Commit tệp staging ,,1,Commit tệp staging ,2013-11-07 03:00:54 UTC,2013-11-07 03:00:54 UTC,1
-106,4,1,Hiển thị nhật ký commit,,1,Hiển thị nhật ký commit,2013-11-07 03:02:36 UTC,2013-11-07 03:02:36 UTC,1
-107,4,1,Hiển thị nhật ký trên 1 dòng,,1,Hiển thị nhật ký trên 1 dòng,2013-11-07 03:03:53 UTC,2013-11-07 03:03:53 UTC,1
-108,4,1,Xem nhật ký thao tác ,,1,Xem nhật ký thao tác ,2013-11-07 03:04:33 UTC,2013-11-07 03:04:33 UTC,1
-109,4,1,Chỉ định tệp rồi hiển thị nhật ký,,1,Chỉ định tệp rồi hiển thị nhật ký,2013-11-07 03:05:12 UTC,2013-11-07 03:05:12 UTC,1
-110,4,1,Xem trạng thái của kho lưu trữ,,1,Xem trạng thái của kho lưu trữ,2013-11-07 03:05:48 UTC,2013-11-07 03:05:48 UTC,1
-111,4,1,Xem sự khác biệt giữa nhánh đang làm viêc và stage,,1,Xem sự khác biệt giữa nhánh đang làm viêc và stage,2013-11-07 03:06:54 UTC,2013-11-07 03:06:54 UTC,1
-112,4,1,Xem sự khác biệt giữa HEAD và stage,,1,Xem sự khác biệt giữa HEAD và stage,2013-11-07 03:09:42 UTC,2013-11-07 03:09:42 UTC,1
-113,4,1,Xem sự khác biệt giữa nhánh đang làm việc và HEAD,,1,Xem sự khác biệt giữa nhánh đang làm việc và HEAD,2013-11-07 03:11:31 UTC,2013-11-07 03:11:31 UTC,1
-114,4,1,Xem sự khác biệt giữa các commit,,1,Xem sự khác biệt giữa các commit,2013-11-07 03:12:09 UTC,2013-11-07 03:12:09 UTC,1
-115,4,1,Xem nội dung của thay đổi,,1,Xem nội dung của thay đổi,2013-11-07 03:12:48 UTC,2013-11-07 03:12:48 UTC,1
-116,4,1,Nội dung của tệp stage trở về HEAD,,1,Nội dung của tệp stage trở về HEAD,2013-11-07 03:13:22 UTC,2013-11-07 03:13:22 UTC,1
-117,4,1,Nội dung của nhánh làm việc trở về HEAD,,1,Nội dung của nhánh làm việc trở về HEAD,2013-11-07 03:13:55 UTC,2013-11-07 03:13:55 UTC,1
-118,4,1,Thay đổi tên tệp,,1,Thay đổi tên tệp,2013-11-07 03:15:05 UTC,2013-11-07 03:15:05 UTC,1
-119,4,1,Xóa tệp,,1,Xóa tệp,2013-11-07 03:15:40 UTC,2013-11-07 03:15:40 UTC,1
-120,4,1,Xóa tệp khỏi stage,,1,Xóa tệp khỏi stage,2013-11-07 03:16:30 UTC,2013-11-07 03:16:30 UTC,1
-121,4,1,Xóa nhánh work1,,1,Xóa nhánh work1,2013-11-07 03:17:02 UTC,2013-11-07 03:17:02 UTC,1
-122,4,1,Đăng ký kho truy cập từ xa ,,1,Đăng ký kho truy cập từ xa ,2013-11-07 03:18:28 UTC,2013-11-07 03:18:28 UTC,1
-123,4,1,Sửa commit,,1,Sửa commit,2013-11-07 03:19:05 UTC,2013-11-07 03:19:05 UTC,1
-124,4,1,Tạo nhánh br1,,1,Tạo nhánh br1,2013-11-07 03:19:39 UTC,2013-11-07 03:19:39 UTC,1
-125,4,1,Xem danh sách các nhánh,,1,Xem danh sách các nhánh,2013-11-07 03:20:11 UTC,2013-11-07 03:20:11 UTC,1
-126,4,1,Chuyển đến 1 nhánh khác,,1,Chuyển đến 1 nhánh khác,2013-11-07 03:21:42 UTC,2013-11-07 03:21:42 UTC,1
-127,4,1,"Khi đang ở nhánh develop, ghép nhánh br1 vào nhánh develop",,1,"Khi đang ở nhánh develop, ghép nhánh br1 vào nhánh develop",2013-11-07 03:22:34 UTC,2013-11-07 03:22:34 UTC,1
-128,4,1,Đẩy nhánh work1 của kho local vào nhánh develop của kho truy cập từ xa origin,,1,Đẩy nhánh work1 của kho local vào nhánh develop của kho truy cập từ xa origin,2013-11-07 03:23:05 UTC,2013-11-07 03:23:05 UTC,1
-129,4,1,Kéo nhánh develop của kho truy cập từ xa origin về nhánh work1 của kho local origin ,,1,Kéo nhánh develop của kho truy cập từ xa origin về nhánh work1 của kho local origin ,2013-11-07 03:23:41 UTC,2013-11-07 03:23:41 UTC,1
-130,4,1,Sao chép kho truy cập từ xa（git@github.com:framgia/proj.git） vào local,,1,Sao chép kho truy cập từ xa（git@github.com:framgia/proj.git） vào local,2013-11-07 03:24:25 UTC,2013-11-07 03:24:25 UTC,1
-131,4,1,"Khi đang ở nhánh work1, rebase nhánh work1 theo HEAD của nhánh develop",,1,"Khi đang ở nhánh work1, rebase nhánh work1 theo HEAD của nhánh develop",2013-11-07 03:24:56 UTC,2013-11-07 03:24:56 UTC,1
+d. List of Stephen King books present no one is borrowing",,3,"Have following relations: Books, Authors, Readers, Borrows",2013-10-21 03:15:28,2013-10-21 03:15:28,1
+102,4,1,Hiển thị trợ giúp,,1,Hiển thị trợ giúp,2013-11-07 02:58:39,2013-11-07 02:58:39,1
+103,4,1,Kiểm tra thiết lập,,1,Kiểm tra thiết lập,2013-11-07 02:59:25,2013-11-07 02:59:25,1
+104,4,1,Chỉ staging foo.txt,,1,Chỉ staging foo.txt,2013-11-07 03:00:12,2013-11-07 03:00:12,1
+105,4,1,Commit tệp staging ,,1,Commit tệp staging ,2013-11-07 03:00:54,2013-11-07 03:00:54,1
+106,4,1,Hiển thị nhật ký commit,,1,Hiển thị nhật ký commit,2013-11-07 03:02:36,2013-11-07 03:02:36,1
+107,4,1,Hiển thị nhật ký trên 1 dòng,,1,Hiển thị nhật ký trên 1 dòng,2013-11-07 03:03:53,2013-11-07 03:03:53,1
+108,4,1,Xem nhật ký thao tác ,,1,Xem nhật ký thao tác ,2013-11-07 03:04:33,2013-11-07 03:04:33,1
+109,4,1,Chỉ định tệp rồi hiển thị nhật ký,,1,Chỉ định tệp rồi hiển thị nhật ký,2013-11-07 03:05:12,2013-11-07 03:05:12,1
+110,4,1,Xem trạng thái của kho lưu trữ,,1,Xem trạng thái của kho lưu trữ,2013-11-07 03:05:48,2013-11-07 03:05:48,1
+111,4,1,Xem sự khác biệt giữa nhánh đang làm viêc và stage,,1,Xem sự khác biệt giữa nhánh đang làm viêc và stage,2013-11-07 03:06:54,2013-11-07 03:06:54,1
+112,4,1,Xem sự khác biệt giữa HEAD và stage,,1,Xem sự khác biệt giữa HEAD và stage,2013-11-07 03:09:42,2013-11-07 03:09:42,1
+113,4,1,Xem sự khác biệt giữa nhánh đang làm việc và HEAD,,1,Xem sự khác biệt giữa nhánh đang làm việc và HEAD,2013-11-07 03:11:31,2013-11-07 03:11:31,1
+114,4,1,Xem sự khác biệt giữa các commit,,1,Xem sự khác biệt giữa các commit,2013-11-07 03:12:09,2013-11-07 03:12:09,1
+115,4,1,Xem nội dung của thay đổi,,1,Xem nội dung của thay đổi,2013-11-07 03:12:48,2013-11-07 03:12:48,1
+116,4,1,Nội dung của tệp stage trở về HEAD,,1,Nội dung của tệp stage trở về HEAD,2013-11-07 03:13:22,2013-11-07 03:13:22,1
+117,4,1,Nội dung của nhánh làm việc trở về HEAD,,1,Nội dung của nhánh làm việc trở về HEAD,2013-11-07 03:13:55,2013-11-07 03:13:55,1
+118,4,1,Thay đổi tên tệp,,1,Thay đổi tên tệp,2013-11-07 03:15:05,2013-11-07 03:15:05,1
+119,4,1,Xóa tệp,,1,Xóa tệp,2013-11-07 03:15:40,2013-11-07 03:15:40,1
+120,4,1,Xóa tệp khỏi stage,,1,Xóa tệp khỏi stage,2013-11-07 03:16:30,2013-11-07 03:16:30,1
+121,4,1,Xóa nhánh work1,,1,Xóa nhánh work1,2013-11-07 03:17:02,2013-11-07 03:17:02,1
+122,4,1,Đăng ký kho truy cập từ xa ,,1,Đăng ký kho truy cập từ xa ,2013-11-07 03:18:28,2013-11-07 03:18:28,1
+123,4,1,Sửa commit,,1,Sửa commit,2013-11-07 03:19:05,2013-11-07 03:19:05,1
+124,4,1,Tạo nhánh br1,,1,Tạo nhánh br1,2013-11-07 03:19:39,2013-11-07 03:19:39,1
+125,4,1,Xem danh sách các nhánh,,1,Xem danh sách các nhánh,2013-11-07 03:20:11,2013-11-07 03:20:11,1
+126,4,1,Chuyển đến 1 nhánh khác,,1,Chuyển đến 1 nhánh khác,2013-11-07 03:21:42,2013-11-07 03:21:42,1
+127,4,1,"Khi đang ở nhánh develop, ghép nhánh br1 vào nhánh develop",,1,"Khi đang ở nhánh develop, ghép nhánh br1 vào nhánh develop",2013-11-07 03:22:34,2013-11-07 03:22:34,1
+128,4,1,Đẩy nhánh work1 của kho local vào nhánh develop của kho truy cập từ xa origin,,1,Đẩy nhánh work1 của kho local vào nhánh develop của kho truy cập từ xa origin,2013-11-07 03:23:05,2013-11-07 03:23:05,1
+129,4,1,Kéo nhánh develop của kho truy cập từ xa origin về nhánh work1 của kho local origin ,,1,Kéo nhánh develop của kho truy cập từ xa origin về nhánh work1 của kho local origin ,2013-11-07 03:23:41,2013-11-07 03:23:41,1
+130,4,1,Sao chép kho truy cập từ xa（git@github.com:framgia/proj.git） vào local,,1,Sao chép kho truy cập từ xa（git@github.com:framgia/proj.git） vào local,2013-11-07 03:24:25,2013-11-07 03:24:25,1
+131,4,1,"Khi đang ở nhánh work1, rebase nhánh work1 theo HEAD của nhánh develop",,1,"Khi đang ở nhánh work1, rebase nhánh work1 theo HEAD của nhánh develop",2013-11-07 03:24:56,2013-11-07 03:24:56,1
 132,3,3,"Tạo các quan hệ cho CSDL: Nhạc sĩ, Ca sĩ, Bài hát
 1. Tìm các bài hát của Trịnh Công Sơn được Mỹ Linh hát
-2. Tìm các ca sĩ đã hát các bài hát của Trịnh Công Sơn trẻ hơn 30   tuổi, sắp xếp theo tên ca sĩ",,3,"Tạo các quan hệ cho CSDL: Nhạc sĩ, Ca sĩ, Bài hát",2013-11-07 06:23:51 UTC,2013-11-07 06:23:51 UTC,1
+2. Tìm các ca sĩ đã hát các bài hát của Trịnh Công Sơn trẻ hơn 30   tuổi, sắp xếp theo tên ca sĩ",,3,"Tạo các quan hệ cho CSDL: Nhạc sĩ, Ca sĩ, Bài hát",2013-11-07 06:23:51,2013-11-07 06:23:51,1

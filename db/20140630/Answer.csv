@@ -1,416 +1,416 @@
 answer_id,question_id,answer_no,answer_content,answer_file,answer_correct,created_at,updated_at,active_flag
-291,96,1,At least one character. Appendix G. Regular Expressions from MySQL manual is worth perusing before the interview.,,,2013-10-21 02:56:12 UTC,2013-10-21 02:56:12 UTC,1
-292,97,1,SELECT MONTH(techpreparation_timestamp) from techpreparation_questions;,,,2013-10-21 02:56:28 UTC,2013-10-21 02:56:28 UTC,1
-293,98,1,"SELECT DATE_FORMAT(techpreparation_timestamp, ‘%Y-%m-%d’) from techpreparation_questions; A similar TIME_FORMAT function deals with time.",,,2013-10-21 02:56:44 UTC,2013-10-21 02:56:44 UTC,1
-38,13,1,"scope :administrators, where([:admin, true]",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-294,99,1,"ADDDATE(techpreparation_publication_date, INTERVAL 3 MINUTE)",,,2013-10-21 02:56:58 UTC,2013-10-21 02:56:58 UTC,1
-295,100,1,"Internally Unix timestamps are stored as 32-bit integers, while MySQL timestamps are stored in a similar manner, but represented in readable YYYY-MM-DD HH:MM:SS format.",,,2013-10-21 02:57:11 UTC,2013-10-21 02:57:11 UTC,1
-296,101,1,"",,,2013-10-21 03:15:28 UTC,2013-10-21 03:15:28 UTC,1
-42,14,1,"has_many :employees, :dependent => :nullify",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-46,15,1,"create_index :users, :name",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-50,16,1,root :to => 'welcome#index',,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-54,17,1,collection,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-58,18,1,before :require_admin,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-62,19,1,"redirect_to @book, :message => ""Book was successfully created.""",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-66,20,1,link_for,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-70,21,1,<%= yield :head %>,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-74,22,1,/users/1/edit,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-78,23,1,default :from => 'no-reply@example.com,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-82,24,1,rails create ittrain,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-86,25,1,ActionView,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-90,26,1,“people”,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-94,27,1,TRUE,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-98,28,1,"User.where(:login, ""foo"")",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-102,29,1,after_save,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-106,30,1,"remove_column :users, :email",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-110,31,1,updated_at,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-114,32,1,"show, new, create, edit, update, destroy",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-118,33,1,session[:user_id] = @user.id,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-122,34,1,"comment_url(@message_board, @comment)",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-126,35,1,request_from,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-130,39,1,MOST,,0,2013-10-17 09:57:41 UTC,2013-10-17 11:10:30 UTC,1
-134,40,1,"",1/1382004394exercise1_answer.jpg,,2013-10-17 10:06:34 UTC,2013-10-17 10:06:34 UTC,1
-139,41,1,"","",,2013-10-18 08:41:28 UTC,2013-10-21 03:14:55 UTC,1
-140,42,1,INSERT,,0,2013-10-21 01:55:54 UTC,2013-10-21 01:55:54 UTC,1
-144,43,1,the SELECT clause only,,1,2013-10-21 01:58:20 UTC,2013-10-21 01:58:20 UTC,1
-148,44,1,Different Mode Level,,0,2013-10-21 02:00:03 UTC,2013-10-21 02:00:03 UTC,1
-152,45,1,MOST,,0,2013-10-21 02:01:41 UTC,2013-10-21 02:01:41 UTC,1
-156,46,1,"INSERT INTO Projects (ProjectName, ProjectDescription) VALUES ('Content Development', 'Website content development project')",,1,2013-10-21 02:04:26 UTC,2013-10-21 02:04:26 UTC,1
-160,47,1,INSERT INTO,,1,2013-10-21 02:05:20 UTC,2013-10-21 02:05:20 UTC,1
-164,48,1,DELETE,,1,2013-10-21 02:07:00 UTC,2013-10-21 02:07:00 UTC,1
-168,49,1,"SELECT CustomerName, COUNT(CustomerName) FROM Orders",,0,2013-10-21 02:08:41 UTC,2013-10-21 02:08:41 UTC,1
-171,50,1,Strong Question Language,,0,2013-10-21 02:09:21 UTC,2013-10-21 02:09:21 UTC,1
-174,51,1,SELECT,,1,2013-10-21 02:09:45 UTC,2013-10-21 02:09:45 UTC,1
-417,132,1,"",,,2013-11-07 06:23:51 UTC,2013-11-07 06:23:51 UTC,1
-413,131,1,git rebase work1 develop,,0,2013-11-07 03:24:56 UTC,2013-11-07 03:24:56 UTC,1
-409,130,1,git clone git@github.com:framgia/proj.git,,1,2013-11-07 03:24:25 UTC,2013-11-07 03:24:25 UTC,1
-405,129,1,git pull origin work1:develop,,0,2013-11-07 03:23:41 UTC,2013-11-07 03:23:41 UTC,1
-401,128,1,git push origin develop:work1,,0,2013-11-07 03:23:05 UTC,2013-11-07 03:23:05 UTC,1
-397,127,1,git merge br1,,1,2013-11-07 03:22:34 UTC,2013-11-07 03:22:34 UTC,1
-393,126,1,git checkout -b br1,,0,2013-11-07 03:21:42 UTC,2013-11-07 03:21:42 UTC,1
-389,125,1,git branche list,,0,2013-11-07 03:20:11 UTC,2013-11-07 03:20:11 UTC,1
-385,124,1,git checkout br1,,0,2013-11-07 03:19:39 UTC,2013-11-07 03:19:39 UTC,1
-381,123,1,git commit --recommit,,0,2013-11-07 03:19:05 UTC,2013-11-07 03:19:05 UTC,1
-377,122,1,git remote repo1,,0,2013-11-07 03:18:28 UTC,2013-11-07 03:18:28 UTC,1
-373,121,1,git branch -d work1,,1,2013-11-07 03:17:02 UTC,2013-11-07 03:17:02 UTC,1
-369,120,1,git rm foo.txt,,0,2013-11-07 03:16:30 UTC,2013-11-07 03:16:30 UTC,1
-256,76,1,Is used with the DISTINCT SQL keyword only.,,0,2013-10-21 02:35:16 UTC,2013-10-21 02:35:16 UTC,1
-365,119,1,git delete foo.txt,,0,2013-11-07 03:15:40 UTC,2013-11-07 03:15:40 UTC,1
-361,118,1,git mv foo.txt bar.txt,,1,2013-11-07 03:15:05 UTC,2013-11-07 03:15:05 UTC,1
-357,117,1,git reset --soft,,0,2013-11-07 03:13:55 UTC,2013-11-07 03:13:55 UTC,1
-353,116,1,git reset --soft,,0,2013-11-07 03:13:22 UTC,2013-11-07 03:13:22 UTC,1
-349,115,1,git show,,0,2013-11-07 03:12:48 UTC,2013-11-07 03:12:48 UTC,1
-345,114,1,git diff --c1 a3fbde --c2 d6aeba,,0,2013-11-07 03:12:09 UTC,2013-11-07 03:12:09 UTC,1
-341,113,1,git diff HEAD,,1,2013-11-07 03:11:31 UTC,2013-11-07 03:11:31 UTC,1
-337,112,1,git diff,,0,2013-11-07 03:09:42 UTC,2013-11-07 03:09:42 UTC,1
-333,111,1,git diff,,1,2013-11-07 03:06:54 UTC,2013-11-07 03:06:54 UTC,1
-329,110,1,git show,,0,2013-11-07 03:05:48 UTC,2013-11-07 03:05:48 UTC,1
-325,109,1,git log --fille foo.txt,,0,2013-11-07 03:05:12 UTC,2013-11-07 03:05:12 UTC,1
-321,108,1,git log,,0,2013-11-07 03:04:33 UTC,2013-11-07 03:04:33 UTC,1
-317,107,1,git log --one,,0,2013-11-07 03:03:53 UTC,2013-11-07 03:03:53 UTC,1
-313,106,1,git commitlog,,0,2013-11-07 03:02:36 UTC,2013-11-07 03:02:36 UTC,1
-309,105,1,git commit,,1,2013-11-07 03:00:54 UTC,2013-11-07 03:00:54 UTC,1
-305,104,1,git add . foo.txt,,0,2013-11-07 03:00:12 UTC,2013-11-07 03:00:12 UTC,1
-301,103,1,git config -l,,0,2013-11-07 02:59:25 UTC,2013-11-07 02:59:25 UTC,1
-297,102,1,git help,,1,2013-11-07 02:58:39 UTC,2013-11-07 02:58:39 UTC,1
-178,52,1,SAVE,,0,2013-10-21 02:10:16 UTC,2013-10-21 02:10:16 UTC,1
-182,53,1,SELECT Persons.FirstName,,0,2013-10-21 02:10:53 UTC,2013-10-21 02:10:53 UTC,1
-185,54,1,SELECT *.Persons,,0,2013-10-21 02:11:32 UTC,2013-10-21 02:11:32 UTC,1
-189,55,1,SELECT * FROM Persons WHERE FirstName'Peter',,0,2013-10-21 02:12:05 UTC,2013-10-21 02:12:05 UTC,1
-193,56,1,SELECT * FROM Persons WHERE FirstName='a',,0,2013-10-21 02:25:26 UTC,2013-10-21 02:25:26 UTC,1
-197,57,1,False,,0,2013-10-21 02:25:53 UTC,2013-10-21 02:25:53 UTC,1
-199,58,1,SELECT * FROM Persons WHERE FirstName='Peter' AND LastName='Jackson',,1,2013-10-21 02:26:19 UTC,2013-10-21 02:26:19 UTC,1
-202,59,1,SELECT * FROM Persons WHERE LastName BETWEEN 'Hansen' AND 'Pettersen',,1,2013-10-21 02:26:54 UTC,2013-10-21 02:26:54 UTC,1
-205,60,1,SELECT DISTINCT,,1,2013-10-21 02:27:26 UTC,2013-10-21 02:27:26 UTC,1
-208,61,1,ORDER BY,,1,2013-10-21 02:27:50 UTC,2013-10-21 02:27:50 UTC,1
-212,62,1,SELECT * FROM Persons SORT BY 'FirstName' DESC,,0,2013-10-21 02:28:23 UTC,2013-10-21 02:28:23 UTC,1
-216,63,1,"INSERT INTO Persons VALUES ('Jimmy', 'Jackson')",,1,2013-10-21 02:28:45 UTC,2013-10-21 02:28:45 UTC,1
-219,64,1,UPDATE Persons SET LastName='Hansen' INTO LastName='Nilsen',,0,2013-10-21 02:29:09 UTC,2013-10-21 02:29:09 UTC,1
-223,65,1,DELETE FROM Persons WHERE FirstName = 'Peter',,1,2013-10-21 02:30:12 UTC,2013-10-21 02:30:12 UTC,1
-226,66,1,SELECT COUNT() FROM Persons,,0,2013-10-21 02:30:38 UTC,2013-10-21 02:30:38 UTC,1
-230,67,1,ASC,,1,2013-10-21 02:31:10 UTC,2013-10-21 02:31:10 UTC,1
-233,68,1,No,,1,2013-10-21 02:31:32 UTC,2013-10-21 02:31:32 UTC,1
-235,69,1,"SELECT Username, Password FROM Users",,1,2013-10-21 02:31:55 UTC,2013-10-21 02:31:55 UTC,1
-238,70,1,Cursor is acronym for Current Set Of Records and is a database object pointing to a currently selected set of records.,,1,2013-10-21 02:32:36 UTC,2013-10-21 02:32:36 UTC,1
-241,71,1,Definition of the condition to be met for the rows to be returned.,,1,2013-10-21 02:33:10 UTC,2013-10-21 02:33:10 UTC,1
-244,72,1,"The SQL ALTER TABLE clause modifies a table definition by altering, adding, or deleting table columns and/or constraints.",,1,2013-10-21 02:33:36 UTC,2013-10-21 02:33:36 UTC,1
-248,73,1,The WHERE and the HAVING clauses are identical,,0,2013-10-21 02:34:05 UTC,2013-10-21 02:34:05 UTC,1
-251,74,1,The AS SQL clause is used change the name of a column in the result set or to assign a name to a derived column.,,1,2013-10-21 02:34:30 UTC,2013-10-21 02:34:30 UTC,1
-254,75,1,Yes,,1,2013-10-21 02:34:49 UTC,2013-10-21 02:34:49 UTC,1
-1,1,1,COUNT(),,1,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
-259,77,1,update only one row at a time.,,0,2013-10-21 02:43:07 UTC,2013-10-21 02:43:07 UTC,1
-4,2,1,Specify range for search condition,,0,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
-7,3,1,SELECT COUNT (user_id) FROM users would only return the number of user_id’s.,,1,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
-263,78,1,"The TRUNCATE clause deletes all rows in a database table, while the DELETE clause can have a WHERE condition and might or might not delete all rows in a table.",,1,2013-10-21 02:44:14 UTC,2013-10-21 02:44:14 UTC,1
-8,4,1,"Use DISTINCT in the query, such as SELECT DISTINCT user_firstname FROM users; You can also ask for a number of distinct values by saying SELECT COUNT (DISTINCT user_firstname) FROM users;",,1,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
-9,5,1,,1/exercise1_answer.jpg,1,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
-10,6,1,rails c,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-266,79,1,WHERE clause.,,1,2013-10-21 02:44:54 UTC,2013-10-21 02:44:54 UTC,1
-14,7,1,rake route,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-270,80,1,SELECT ADD(Price) FROM Sales,,0,2013-10-21 02:45:41 UTC,2013-10-21 02:45:41 UTC,1
-18,8,1,rake db:migrate,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-274,81,1,SELECT AVG(OrderNumber) FROM Sales,,0,2013-10-21 02:48:03 UTC,2013-10-21 02:48:03 UTC,1
-277,82,1,"SELECT book_title FROM books LIMIT 25, 100. The first number in LIMIT is the offset, the second is the number.",,,2013-10-21 02:50:30 UTC,2013-10-21 02:50:30 UTC,1
-22,9,1,{:foo => 'bar'},,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-278,83,1,"SELECT SQL_CALC_FOUND_ROWS page_title FROM web_pages LIMIT 1,10; SELECT FOUND_ROWS(); The second query (not that COUNT() is never used) will tell you how many results there’re total, so you can display a phrase ""Found 13,450,600 results, displaying 1-10"". Note that FOUND_ROWS does not pay attention to the LIMITs you specified and always returns the total number of rows affected by query.",,,2013-10-21 02:51:09 UTC,2013-10-21 02:51:09 UTC,1
-279,84,1,"SELECT team_name FROM teams WHERE team_won IN (2, 4, 6, 8)",,,2013-10-21 02:53:12 UTC,2013-10-21 02:53:12 UTC,1
-280,85,1,SELECT user_name FROM users WHERE ISNULL(user_phonenumber);,,,2013-10-21 02:53:28 UTC,2013-10-21 02:53:28 UTC,1
-281,86,1,"It’s equivalent to saying SELECT user_name, user_isp FROM users LEFT JOIN isps WHERE users.user_id=isps.user_id",,,2013-10-21 02:53:43 UTC,2013-10-21 02:53:43 UTC,1
-26,10,1,"validates :title, :length, maximum: 20",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-282,87,1,"What it means is that so of the data that you’re trying to delete is still alive in another table. Like if you have a table for universities and a table for students, which contains the ID of the university they go to, running a delete on a university table will fail if the students table still contains people enrolled at that university. Proper way to do it would be to delete the offending data first, and then delete the university in question. Quick way would involve running SET foreign_key_checks=0 before the DELETE command, and setting the parameter back to 1 after the DELETE is done. If your foreign key was formulated with ON DELETE CASCADE, the data in dependent tables will be removed automatically.","",,2013-10-21 02:53:58 UTC,2013-10-21 02:59:35 UTC,1
-283,88,1,When you’re not deleting by row ID. Such as in DELETE FROM techpreparation_com_questions ORDER BY timestamp LIMIT 1. This will delete the most recently posted question in the table techpreparation_com_questions.,"",,2013-10-21 02:54:22 UTC,2013-10-21 02:59:20 UTC,1
-284,89,1,ALTER TABLE techpreparation_questions CHANGE techpreparation_content techpreparation_CONTENT VARCHAR(50).,"",,2013-10-21 02:54:36 UTC,2013-10-21 02:59:09 UTC,1
-285,90,1,ALTER TABLE techpreparation_answers DROP answer_user_id.,"",,2013-10-21 02:54:48 UTC,2013-10-21 02:58:56 UTC,1
-30,11,1,"validates :age, numericality: {greater_than_or_equal_to: 0, only_integer: true}",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-286,91,1,"CONCAT (string1, string2, string3)","",,2013-10-21 02:55:00 UTC,2013-10-21 02:58:38 UTC,1
-287,92,1,"SELECT SUBSTR(title, 1, 10) from techpreparation_questions;","",,2013-10-21 02:55:11 UTC,2013-10-21 02:58:19 UTC,1
-288,93,1,"The first is, naturally, the character count. The second is byte count. For the Latin characters the numbers are the same, but they’re not the same for Unicode and other encodings.",,,2013-10-21 02:55:31 UTC,2013-10-21 02:55:31 UTC,1
-289,94,1,SELECT (techpreparation_question USING utf8);,,,2013-10-21 02:55:45 UTC,2013-10-21 02:55:45 UTC,1
-34,12,1,update_attributes! Khi validate lỗi thì trả về ngoại lệ,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-290,95,1,"% corresponds to 0 or more characters, _ is exactly one character. ",,,2013-10-21 02:55:59 UTC,2013-10-21 02:55:59 UTC,1
-366,119,2,git destroy foo.txt,,0,2013-11-07 03:15:40 UTC,2013-11-07 03:15:40 UTC,1
-257,76,2,Determines if a value matches any of the values in a list or a sub-query.,,1,2013-10-21 02:35:16 UTC,2013-10-21 02:35:16 UTC,1
-2,1,2,NUMBER(),,0,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
-260,77,2,update more than one row at a time.,,1,2013-10-21 02:43:07 UTC,2013-10-21 02:43:07 UTC,1
-5,2,2,Specify search condition,,0,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
-264,78,2,"The DELETE clause deletes all rows in a database table, while the TRUNCATE clause can have a WHERE condition and might or might not delete all rows in a table.",,0,2013-10-21 02:44:14 UTC,2013-10-21 02:44:14 UTC,1
-11,6,2,rails,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-267,79,2,GROUP BY clause.,,0,2013-10-21 02:44:54 UTC,2013-10-21 02:44:54 UTC,1
-15,7,2,rake routings,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-271,80,2,SELECT SUM(Price) FROM Sales,,1,2013-10-21 02:45:41 UTC,2013-10-21 02:45:41 UTC,1
-19,8,2,rake db:add,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-275,81,2,SELECT COUNT(*) FROM Sales,,1,2013-10-21 02:48:03 UTC,2013-10-21 02:48:03 UTC,1
-23,9,2,{'foo' => 'hoge'},,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-27,10,2,"validates :title, maximum: 20",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-31,11,2,"validates :age, numericality: {greater_than_or_equal_to: 0}",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-35,12,2,update_attributes! Dù validate lỗi thì vẫn cập nhật record,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-39,13,2,"scope :administrators, :where => {:admin => true}",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-43,14,2,"has_many :employees, :dependent => :destroy",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-47,15,2,"use_index :users, :name",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-51,16,2,root 'welcome#index',,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-55,17,2,namespace,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-59,18,2,before_filter :require_admin,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-63,19,2,"redirect_to @book, :notice => ""Book was successfully created.""",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-67,20,2,link_tag,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-71,21,2,<%= yield :partial => 'head' %>,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-75,22,2,/users/new,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-79,23,2,"default :from, 'no-reply@example.com'",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-83,24,2,rails project ittrain,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-87,25,2,ActiveModel,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-91,26,2,“person”,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-95,27,2,FALSE,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-99,28,2,"User.where(:login => ""foo"")",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-103,29,2,after_create,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-107,30,2,"delete_column :users, :email",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-111,31,2,deleted_at,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-115,32,2,"show, entry, create, edit, update, delete",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-119,33,2,"session(:user_id, @user.id)",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-123,34,2,comments_url(@message_board),,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-127,35,2,request_to,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-131,39,2,MAX,,1,2013-10-17 09:57:41 UTC,2013-10-17 09:57:41 UTC,1
-141,42,2,SELECT,,0,2013-10-21 01:55:54 UTC,2013-10-21 01:55:54 UTC,1
-145,43,2,the DELETE and UPDATE clauses,,0,2013-10-21 01:58:20 UTC,2013-10-21 01:58:20 UTC,1
-149,44,2,Data Model Language,,0,2013-10-21 02:00:03 UTC,2013-10-21 02:00:03 UTC,1
-153,45,2,MAX,,1,2013-10-21 02:01:41 UTC,2013-10-21 02:01:41 UTC,1
-157,46,2,"SAVE INTO Projects (ProjectName, ProjectDescription) VALUES ('Content Development', 'Website content development project')",,0,2013-10-21 02:04:26 UTC,2013-10-21 02:04:26 UTC,1
-161,47,2,WRITE,,0,2013-10-21 02:05:20 UTC,2013-10-21 02:05:20 UTC,1
-165,48,2,REMOVE,,0,2013-10-21 02:07:00 UTC,2013-10-21 02:07:00 UTC,1
-169,49,2,"SELECT CustomerName, COUNT(CustomerName) FROM Orders GROUP BY CustomerName",,1,2013-10-21 02:08:41 UTC,2013-10-21 02:08:41 UTC,1
-172,50,2,Structured Query Language,,1,2013-10-21 02:09:21 UTC,2013-10-21 02:09:21 UTC,1
-175,51,2,GET,,0,2013-10-21 02:09:45 UTC,2013-10-21 02:09:45 UTC,1
-179,52,2,SAVE AS,,0,2013-10-21 02:10:16 UTC,2013-10-21 02:10:16 UTC,1
-183,53,2,SELECT FirstName FROM Persons,,1,2013-10-21 02:10:53 UTC,2013-10-21 02:10:53 UTC,1
-186,54,2,SELECT [all] FROM Persons,,0,2013-10-21 02:11:32 UTC,2013-10-21 02:11:32 UTC,1
-190,55,2,SELECT [all] FROM Persons WHERE FirstName LIKE 'Peter',,0,2013-10-21 02:12:05 UTC,2013-10-21 02:12:05 UTC,1
-194,56,2,SELECT * FROM Persons WHERE FirstName LIKE 'a%',,1,2013-10-21 02:25:26 UTC,2013-10-21 02:25:26 UTC,1
-198,57,2,True,,1,2013-10-21 02:25:53 UTC,2013-10-21 02:25:53 UTC,1
-200,58,2,"SELECT FirstName='Peter', LastName='Jackson' FROM Persons",,0,2013-10-21 02:26:19 UTC,2013-10-21 02:26:19 UTC,1
-203,59,2,SELECT * FROM Persons WHERE LastName>'Hansen' AND LastName,,0,2013-10-21 02:26:54 UTC,2013-10-21 02:26:54 UTC,1
-206,60,2,SELECT DIFFERENT,,0,2013-10-21 02:27:26 UTC,2013-10-21 02:27:26 UTC,1
-209,61,2,SORT,,0,2013-10-21 02:27:50 UTC,2013-10-21 02:27:50 UTC,1
-213,62,2,SELECT * FROM Persons ORDER FirstName DESC,,0,2013-10-21 02:28:23 UTC,2013-10-21 02:28:23 UTC,1
-217,63,2,"INSERT VALUES ('Jimmy', 'Jackson') INTO Persons",,0,2013-10-21 02:28:45 UTC,2013-10-21 02:28:45 UTC,1
-220,64,2,MODIFY Persons SET LastName='Nilsen' WHERE LastName='Hansen',,0,2013-10-21 02:29:09 UTC,2013-10-21 02:29:09 UTC,1
-224,65,2,DELETE ROW FirstName='Peter' FROM Persons,,0,2013-10-21 02:30:12 UTC,2013-10-21 02:30:12 UTC,1
-227,66,2,SELECT COLUMNS() FROM Persons,,0,2013-10-21 02:30:38 UTC,2013-10-21 02:30:38 UTC,1
-231,67,2,DESC,,0,2013-10-21 02:31:10 UTC,2013-10-21 02:31:10 UTC,1
-234,68,2,Yes,,0,2013-10-21 02:31:32 UTC,2013-10-21 02:31:32 UTC,1
-236,69,2,SELECT Username AND Password FROM Users,,0,2013-10-21 02:31:55 UTC,2013-10-21 02:31:55 UTC,1
-239,70,2,A cursor is SQL keyword specifying a retrieved data order.,,0,2013-10-21 02:32:36 UTC,2013-10-21 02:32:36 UTC,1
-242,71,2,A list of columns to be selected.,,0,2013-10-21 02:33:10 UTC,2013-10-21 02:33:10 UTC,1
-245,72,2,The SQL ALTER TABLE clause is used to insert data into database table.,,0,2013-10-21 02:33:36 UTC,2013-10-21 02:33:36 UTC,1
-249,73,2,The HAVING SQL clause condition(s) is applied to all rows in the result set before the WHERE clause is applied (if present). The WHERE clause is used only with SELECT SQL statements and specifies a search condition for an aggregate or a group.,,0,2013-10-21 02:34:05 UTC,2013-10-21 02:34:05 UTC,1
-252,74,2,The AS clause is used with the JOIN clause only.,,0,2013-10-21 02:34:30 UTC,2013-10-21 02:34:30 UTC,1
-255,75,2,No,,0,2013-10-21 02:34:49 UTC,2013-10-21 02:34:49 UTC,1
-298,102,2,git show,,0,2013-11-07 02:58:39 UTC,2013-11-07 02:58:39 UTC,1
-302,103,2,git config -c,,0,2013-11-07 02:59:25 UTC,2013-11-07 02:59:25 UTC,1
-306,104,2,git add foo.txt,,1,2013-11-07 03:00:12 UTC,2013-11-07 03:00:12 UTC,1
-310,105,2,git add -c,,0,2013-11-07 03:00:54 UTC,2013-11-07 03:00:54 UTC,1
-314,106,2,git reflog,,0,2013-11-07 03:02:36 UTC,2013-11-07 03:02:36 UTC,1
-318,107,2,git log --oneline,,1,2013-11-07 03:03:53 UTC,2013-11-07 03:03:53 UTC,1
-322,108,2,git oplog,,0,2013-11-07 03:04:33 UTC,2013-11-07 03:04:33 UTC,1
-326,109,2,git log -f foo.txt,,0,2013-11-07 03:05:12 UTC,2013-11-07 03:05:12 UTC,1
-330,110,2,git view,,0,2013-11-07 03:05:48 UTC,2013-11-07 03:05:48 UTC,1
-334,111,2,git diff --stage,,0,2013-11-07 03:06:54 UTC,2013-11-07 03:06:54 UTC,1
-338,112,2,git diff HEAD,,0,2013-11-07 03:09:42 UTC,2013-11-07 03:09:42 UTC,1
-342,113,2,git diff --stage,,0,2013-11-07 03:11:31 UTC,2013-11-07 03:11:31 UTC,1
-346,114,2,git diff a3fbde d6aeba,,1,2013-11-07 03:12:09 UTC,2013-11-07 03:12:09 UTC,1
-350,115,2,git view,,0,2013-11-07 03:12:48 UTC,2013-11-07 03:12:48 UTC,1
-354,116,2,git reset,,1,2013-11-07 03:13:22 UTC,2013-11-07 03:13:22 UTC,1
-358,117,2,git reset --normal,,0,2013-11-07 03:13:55 UTC,2013-11-07 03:13:55 UTC,1
-362,118,2,git rename foo.txt bar.txt,,0,2013-11-07 03:15:05 UTC,2013-11-07 03:15:05 UTC,1
-370,120,2,git delete foo.txt,,0,2013-11-07 03:16:30 UTC,2013-11-07 03:16:30 UTC,1
-374,121,2,git branch delete work1,,0,2013-11-07 03:17:02 UTC,2013-11-07 03:17:02 UTC,1
-378,122,2,git remote add repo1,,1,2013-11-07 03:18:28 UTC,2013-11-07 03:18:28 UTC,1
-382,123,2,git commit --amend,,1,2013-11-07 03:19:05 UTC,2013-11-07 03:19:05 UTC,1
-386,124,2,git branch br1,,0,2013-11-07 03:19:39 UTC,2013-11-07 03:19:39 UTC,1
-390,125,2,git branch --list,,0,2013-11-07 03:20:11 UTC,2013-11-07 03:20:11 UTC,1
-394,126,2,git branch br1,,0,2013-11-07 03:21:42 UTC,2013-11-07 03:21:42 UTC,1
-398,127,2,git merge develop,,0,2013-11-07 03:22:34 UTC,2013-11-07 03:22:34 UTC,1
-402,128,2,git push origin work1 develop,,0,2013-11-07 03:23:05 UTC,2013-11-07 03:23:05 UTC,1
-406,129,2,git pull origin develop:work1,,1,2013-11-07 03:23:41 UTC,2013-11-07 03:23:41 UTC,1
-410,130,2,git checkout git@github.com:framgia/proj.git,,0,2013-11-07 03:24:25 UTC,2013-11-07 03:24:25 UTC,1
-414,131,2,git rebase develop work1,,0,2013-11-07 03:24:56 UTC,2013-11-07 03:24:56 UTC,1
-221,64,3,MODIFY Persons SET LastName='Hansen' INTO LastName='Nilsen,,0,2013-10-21 02:29:09 UTC,2013-10-21 02:29:09 UTC,1
-228,66,3,SELECT COLUMNS(*) FROM Persons,,0,2013-10-21 02:30:38 UTC,2013-10-21 02:30:38 UTC,1
-232,67,3,There is no default value.,,0,2013-10-21 02:31:10 UTC,2013-10-21 02:31:10 UTC,1
-237,69,3,"SELECT Username, Password WHERE Username = 'user1'",,0,2013-10-21 02:31:55 UTC,2013-10-21 02:31:55 UTC,1
-240,70,3,A blinking vertical line that indicates the location of the next input on the display screen.,,0,2013-10-21 02:32:36 UTC,2013-10-21 02:32:36 UTC,1
-243,71,3,The name of the table we are selecting from.,,0,2013-10-21 02:33:10 UTC,2013-10-21 02:33:10 UTC,1
-246,72,3,THE SQL ALTER TABLE deletes data from database table.,,0,2013-10-21 02:33:36 UTC,2013-10-21 02:33:36 UTC,1
-250,73,3,The WHERE SQL clause condition(s) is applied to all rows in the result set before the HAVING clause is applied (if present). The HAVING clause is used only with SELECT SQL statements and specifies a search condition for an aggregate or a group.,,1,2013-10-21 02:34:05 UTC,2013-10-21 02:34:05 UTC,1
-253,74,3,The AS clause defines a search condition.,,0,2013-10-21 02:34:30 UTC,2013-10-21 02:34:30 UTC,1
-311,105,3,git add --commit,,0,2013-11-07 03:00:54 UTC,2013-11-07 03:00:54 UTC,1
-88,25,3,ActionContrller,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-268,79,3,ORDER BY clause.,,0,2013-10-21 02:44:54 UTC,2013-10-21 02:44:54 UTC,1
-315,106,3,git log,,1,2013-11-07 03:02:36 UTC,2013-11-07 03:02:36 UTC,1
-84,24,3,rails new ittrain,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-319,107,3,git log -l 1,,0,2013-11-07 03:03:53 UTC,2013-11-07 03:03:53 UTC,1
-80,23,3,from 'no-reply@example.com',,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-395,126,3,git checkout br1,,1,2013-11-07 03:21:42 UTC,2013-11-07 03:21:42 UTC,1
-323,108,3,git log --operation,,0,2013-11-07 03:04:33 UTC,2013-11-07 03:04:33 UTC,1
-76,22,3,/users,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-327,109,3,git log foo.txt,,1,2013-11-07 03:05:12 UTC,2013-11-07 03:05:12 UTC,1
-72,21,3,<%= render :head  %>,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-12,6,3,rails a,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-331,110,3,git summary,,0,2013-11-07 03:05:48 UTC,2013-11-07 03:05:48 UTC,1
-68,20,3,link_to,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-3,1,3,SUM(),,0,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
-335,111,3,git diff HEAD,,0,2013-11-07 03:06:54 UTC,2013-11-07 03:06:54 UTC,1
-64,19,3,"redirect @book, :notice => ""Book was successfully created.""",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-399,127,3,git merge develop br1,,0,2013-11-07 03:22:34 UTC,2013-11-07 03:22:34 UTC,1
-339,112,3,git diff --stage,,1,2013-11-07 03:09:42 UTC,2013-11-07 03:09:42 UTC,1
+291,96,1,At least one character. Appendix G. Regular Expressions from MySQL manual is worth perusing before the interview.,,,2013-10-21 02:56:12,2013-10-21 02:56:12,1
+292,97,1,SELECT MONTH(techpreparation_timestamp) from techpreparation_questions;,,,2013-10-21 02:56:28,2013-10-21 02:56:28,1
+293,98,1,"SELECT DATE_FORMAT(techpreparation_timestamp, ‘%Y-%m-%d’) from techpreparation_questions; A similar TIME_FORMAT function deals with time.",,,2013-10-21 02:56:44,2013-10-21 02:56:44,1
+38,13,1,"scope :administrators, where([:admin, true]",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+294,99,1,"ADDDATE(techpreparation_publication_date, INTERVAL 3 MINUTE)",,,2013-10-21 02:56:58,2013-10-21 02:56:58,1
+295,100,1,"Internally Unix timestamps are stored as 32-bit integers, while MySQL timestamps are stored in a similar manner, but represented in readable YYYY-MM-DD HH:MM:SS format.",,,2013-10-21 02:57:11,2013-10-21 02:57:11,1
+296,101,1,"",,,2013-10-21 03:15:28,2013-10-21 03:15:28,1
+42,14,1,"has_many :employees, :dependent => :nullify",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+46,15,1,"create_index :users, :name",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+50,16,1,root :to => 'welcome#index',,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+54,17,1,collection,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+58,18,1,before :require_admin,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+62,19,1,"redirect_to @book, :message => ""Book was successfully created.""",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+66,20,1,link_for,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+70,21,1,<%= yield :head %>,,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+74,22,1,/users/1/edit,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+78,23,1,default :from => 'no-reply@example.com,,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+82,24,1,rails create ittrain,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+86,25,1,ActionView,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+90,26,1,“people”,,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+94,27,1,TRUE,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+98,28,1,"User.where(:login, ""foo"")",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+102,29,1,after_save,,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+106,30,1,"remove_column :users, :email",,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+110,31,1,updated_at,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+114,32,1,"show, new, create, edit, update, destroy",,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+118,33,1,session[:user_id] = @user.id,,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+122,34,1,"comment_url(@message_board, @comment)",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+126,35,1,request_from,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+130,39,1,MOST,,0,2013-10-17 09:57:41,2013-10-17 11:10:30,1
+134,40,1,"",1/1382004394exercise1_answer.jpg,,2013-10-17 10:06:34,2013-10-17 10:06:34,1
+139,41,1,"","",,2013-10-18 08:41:28,2013-10-21 03:14:55,1
+140,42,1,INSERT,,0,2013-10-21 01:55:54,2013-10-21 01:55:54,1
+144,43,1,the SELECT clause only,,1,2013-10-21 01:58:20,2013-10-21 01:58:20,1
+148,44,1,Different Mode Level,,0,2013-10-21 02:00:03,2013-10-21 02:00:03,1
+152,45,1,MOST,,0,2013-10-21 02:01:41,2013-10-21 02:01:41,1
+156,46,1,"INSERT INTO Projects (ProjectName, ProjectDescription) VALUES ('Content Development', 'Website content development project')",,1,2013-10-21 02:04:26,2013-10-21 02:04:26,1
+160,47,1,INSERT INTO,,1,2013-10-21 02:05:20,2013-10-21 02:05:20,1
+164,48,1,DELETE,,1,2013-10-21 02:07:00,2013-10-21 02:07:00,1
+168,49,1,"SELECT CustomerName, COUNT(CustomerName) FROM Orders",,0,2013-10-21 02:08:41,2013-10-21 02:08:41,1
+171,50,1,Strong Question Language,,0,2013-10-21 02:09:21,2013-10-21 02:09:21,1
+174,51,1,SELECT,,1,2013-10-21 02:09:45,2013-10-21 02:09:45,1
+417,132,1,"",,,2013-11-07 06:23:51,2013-11-07 06:23:51,1
+413,131,1,git rebase work1 develop,,0,2013-11-07 03:24:56,2013-11-07 03:24:56,1
+409,130,1,git clone git@github.com:framgia/proj.git,,1,2013-11-07 03:24:25,2013-11-07 03:24:25,1
+405,129,1,git pull origin work1:develop,,0,2013-11-07 03:23:41,2013-11-07 03:23:41,1
+401,128,1,git push origin develop:work1,,0,2013-11-07 03:23:05,2013-11-07 03:23:05,1
+397,127,1,git merge br1,,1,2013-11-07 03:22:34,2013-11-07 03:22:34,1
+393,126,1,git checkout -b br1,,0,2013-11-07 03:21:42,2013-11-07 03:21:42,1
+389,125,1,git branche list,,0,2013-11-07 03:20:11,2013-11-07 03:20:11,1
+385,124,1,git checkout br1,,0,2013-11-07 03:19:39,2013-11-07 03:19:39,1
+381,123,1,git commit --recommit,,0,2013-11-07 03:19:05,2013-11-07 03:19:05,1
+377,122,1,git remote repo1,,0,2013-11-07 03:18:28,2013-11-07 03:18:28,1
+373,121,1,git branch -d work1,,1,2013-11-07 03:17:02,2013-11-07 03:17:02,1
+369,120,1,git rm foo.txt,,0,2013-11-07 03:16:30,2013-11-07 03:16:30,1
+256,76,1,Is used with the DISTINCT SQL keyword only.,,0,2013-10-21 02:35:16,2013-10-21 02:35:16,1
+365,119,1,git delete foo.txt,,0,2013-11-07 03:15:40,2013-11-07 03:15:40,1
+361,118,1,git mv foo.txt bar.txt,,1,2013-11-07 03:15:05,2013-11-07 03:15:05,1
+357,117,1,git reset --soft,,0,2013-11-07 03:13:55,2013-11-07 03:13:55,1
+353,116,1,git reset --soft,,0,2013-11-07 03:13:22,2013-11-07 03:13:22,1
+349,115,1,git show,,0,2013-11-07 03:12:48,2013-11-07 03:12:48,1
+345,114,1,git diff --c1 a3fbde --c2 d6aeba,,0,2013-11-07 03:12:09,2013-11-07 03:12:09,1
+341,113,1,git diff HEAD,,1,2013-11-07 03:11:31,2013-11-07 03:11:31,1
+337,112,1,git diff,,0,2013-11-07 03:09:42,2013-11-07 03:09:42,1
+333,111,1,git diff,,1,2013-11-07 03:06:54,2013-11-07 03:06:54,1
+329,110,1,git show,,0,2013-11-07 03:05:48,2013-11-07 03:05:48,1
+325,109,1,git log --fille foo.txt,,0,2013-11-07 03:05:12,2013-11-07 03:05:12,1
+321,108,1,git log,,0,2013-11-07 03:04:33,2013-11-07 03:04:33,1
+317,107,1,git log --one,,0,2013-11-07 03:03:53,2013-11-07 03:03:53,1
+313,106,1,git commitlog,,0,2013-11-07 03:02:36,2013-11-07 03:02:36,1
+309,105,1,git commit,,1,2013-11-07 03:00:54,2013-11-07 03:00:54,1
+305,104,1,git add . foo.txt,,0,2013-11-07 03:00:12,2013-11-07 03:00:12,1
+301,103,1,git config -l,,0,2013-11-07 02:59:25,2013-11-07 02:59:25,1
+297,102,1,git help,,1,2013-11-07 02:58:39,2013-11-07 02:58:39,1
+178,52,1,SAVE,,0,2013-10-21 02:10:16,2013-10-21 02:10:16,1
+182,53,1,SELECT Persons.FirstName,,0,2013-10-21 02:10:53,2013-10-21 02:10:53,1
+185,54,1,SELECT *.Persons,,0,2013-10-21 02:11:32,2013-10-21 02:11:32,1
+189,55,1,SELECT * FROM Persons WHERE FirstName'Peter',,0,2013-10-21 02:12:05,2013-10-21 02:12:05,1
+193,56,1,SELECT * FROM Persons WHERE FirstName='a',,0,2013-10-21 02:25:26,2013-10-21 02:25:26,1
+197,57,1,False,,0,2013-10-21 02:25:53,2013-10-21 02:25:53,1
+199,58,1,SELECT * FROM Persons WHERE FirstName='Peter' AND LastName='Jackson',,1,2013-10-21 02:26:19,2013-10-21 02:26:19,1
+202,59,1,SELECT * FROM Persons WHERE LastName BETWEEN 'Hansen' AND 'Pettersen',,1,2013-10-21 02:26:54,2013-10-21 02:26:54,1
+205,60,1,SELECT DISTINCT,,1,2013-10-21 02:27:26,2013-10-21 02:27:26,1
+208,61,1,ORDER BY,,1,2013-10-21 02:27:50,2013-10-21 02:27:50,1
+212,62,1,SELECT * FROM Persons SORT BY 'FirstName' DESC,,0,2013-10-21 02:28:23,2013-10-21 02:28:23,1
+216,63,1,"INSERT INTO Persons VALUES ('Jimmy', 'Jackson')",,1,2013-10-21 02:28:45,2013-10-21 02:28:45,1
+219,64,1,UPDATE Persons SET LastName='Hansen' INTO LastName='Nilsen',,0,2013-10-21 02:29:09,2013-10-21 02:29:09,1
+223,65,1,DELETE FROM Persons WHERE FirstName = 'Peter',,1,2013-10-21 02:30:12,2013-10-21 02:30:12,1
+226,66,1,SELECT COUNT() FROM Persons,,0,2013-10-21 02:30:38,2013-10-21 02:30:38,1
+230,67,1,ASC,,1,2013-10-21 02:31:10,2013-10-21 02:31:10,1
+233,68,1,No,,1,2013-10-21 02:31:32,2013-10-21 02:31:32,1
+235,69,1,"SELECT Username, Password FROM Users",,1,2013-10-21 02:31:55,2013-10-21 02:31:55,1
+238,70,1,Cursor is acronym for Current Set Of Records and is a database object pointing to a currently selected set of records.,,1,2013-10-21 02:32:36,2013-10-21 02:32:36,1
+241,71,1,Definition of the condition to be met for the rows to be returned.,,1,2013-10-21 02:33:10,2013-10-21 02:33:10,1
+244,72,1,"The SQL ALTER TABLE clause modifies a table definition by altering, adding, or deleting table columns and/or constraints.",,1,2013-10-21 02:33:36,2013-10-21 02:33:36,1
+248,73,1,The WHERE and the HAVING clauses are identical,,0,2013-10-21 02:34:05,2013-10-21 02:34:05,1
+251,74,1,The AS SQL clause is used change the name of a column in the result set or to assign a name to a derived column.,,1,2013-10-21 02:34:30,2013-10-21 02:34:30,1
+254,75,1,Yes,,1,2013-10-21 02:34:49,2013-10-21 02:34:49,1
+1,1,1,COUNT(),,1,2013-10-11 12:00:00,2013-10-11 12:00:00,1
+259,77,1,update only one row at a time.,,0,2013-10-21 02:43:07,2013-10-21 02:43:07,1
+4,2,1,Specify range for search condition,,0,2013-10-11 12:00:00,2013-10-11 12:00:00,1
+7,3,1,SELECT COUNT (user_id) FROM users would only return the number of user_id’s.,,1,2013-10-11 12:00:00,2013-10-11 12:00:00,1
+263,78,1,"The TRUNCATE clause deletes all rows in a database table, while the DELETE clause can have a WHERE condition and might or might not delete all rows in a table.",,1,2013-10-21 02:44:14,2013-10-21 02:44:14,1
+8,4,1,"Use DISTINCT in the query, such as SELECT DISTINCT user_firstname FROM users; You can also ask for a number of distinct values by saying SELECT COUNT (DISTINCT user_firstname) FROM users;",,1,2013-10-11 12:00:00,2013-10-11 12:00:00,1
+9,5,1,,1/exercise1_answer.jpg,1,2013-10-11 12:00:00,2013-10-11 12:00:00,1
+10,6,1,rails c,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+266,79,1,WHERE clause.,,1,2013-10-21 02:44:54,2013-10-21 02:44:54,1
+14,7,1,rake route,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+270,80,1,SELECT ADD(Price) FROM Sales,,0,2013-10-21 02:45:41,2013-10-21 02:45:41,1
+18,8,1,rake db:migrate,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+274,81,1,SELECT AVG(OrderNumber) FROM Sales,,0,2013-10-21 02:48:03,2013-10-21 02:48:03,1
+277,82,1,"SELECT book_title FROM books LIMIT 25, 100. The first number in LIMIT is the offset, the second is the number.",,,2013-10-21 02:50:30,2013-10-21 02:50:30,1
+22,9,1,{:foo => 'bar'},,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+278,83,1,"SELECT SQL_CALC_FOUND_ROWS page_title FROM web_pages LIMIT 1,10; SELECT FOUND_ROWS(); The second query (not that COUNT() is never used) will tell you how many results there’re total, so you can display a phrase ""Found 13,450,600 results, displaying 1-10"". Note that FOUND_ROWS does not pay attention to the LIMITs you specified and always returns the total number of rows affected by query.",,,2013-10-21 02:51:09,2013-10-21 02:51:09,1
+279,84,1,"SELECT team_name FROM teams WHERE team_won IN (2, 4, 6, 8)",,,2013-10-21 02:53:12,2013-10-21 02:53:12,1
+280,85,1,SELECT user_name FROM users WHERE ISNULL(user_phonenumber);,,,2013-10-21 02:53:28,2013-10-21 02:53:28,1
+281,86,1,"It’s equivalent to saying SELECT user_name, user_isp FROM users LEFT JOIN isps WHERE users.user_id=isps.user_id",,,2013-10-21 02:53:43,2013-10-21 02:53:43,1
+26,10,1,"validates :title, :length, maximum: 20",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+282,87,1,"What it means is that so of the data that you’re trying to delete is still alive in another table. Like if you have a table for universities and a table for students, which contains the ID of the university they go to, running a delete on a university table will fail if the students table still contains people enrolled at that university. Proper way to do it would be to delete the offending data first, and then delete the university in question. Quick way would involve running SET foreign_key_checks=0 before the DELETE command, and setting the parameter back to 1 after the DELETE is done. If your foreign key was formulated with ON DELETE CASCADE, the data in dependent tables will be removed automatically.","",,2013-10-21 02:53:58,2013-10-21 02:59:35,1
+283,88,1,When you’re not deleting by row ID. Such as in DELETE FROM techpreparation_com_questions ORDER BY timestamp LIMIT 1. This will delete the most recently posted question in the table techpreparation_com_questions.,"",,2013-10-21 02:54:22,2013-10-21 02:59:20,1
+284,89,1,ALTER TABLE techpreparation_questions CHANGE techpreparation_content techpreparation_CONTENT VARCHAR(50).,"",,2013-10-21 02:54:36,2013-10-21 02:59:09,1
+285,90,1,ALTER TABLE techpreparation_answers DROP answer_user_id.,"",,2013-10-21 02:54:48,2013-10-21 02:58:56,1
+30,11,1,"validates :age, numericality: {greater_than_or_equal_to: 0, only_integer: true}",,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+286,91,1,"CONCAT (string1, string2, string3)","",,2013-10-21 02:55:00,2013-10-21 02:58:38,1
+287,92,1,"SELECT SUBSTR(title, 1, 10) from techpreparation_questions;","",,2013-10-21 02:55:11,2013-10-21 02:58:19,1
+288,93,1,"The first is, naturally, the character count. The second is byte count. For the Latin characters the numbers are the same, but they’re not the same for Unicode and other encodings.",,,2013-10-21 02:55:31,2013-10-21 02:55:31,1
+289,94,1,SELECT (techpreparation_question USING utf8);,,,2013-10-21 02:55:45,2013-10-21 02:55:45,1
+34,12,1,update_attributes! Khi validate lỗi thì trả về ngoại lệ,,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+290,95,1,"% corresponds to 0 or more characters, _ is exactly one character. ",,,2013-10-21 02:55:59,2013-10-21 02:55:59,1
+366,119,2,git destroy foo.txt,,0,2013-11-07 03:15:40,2013-11-07 03:15:40,1
+257,76,2,Determines if a value matches any of the values in a list or a sub-query.,,1,2013-10-21 02:35:16,2013-10-21 02:35:16,1
+2,1,2,NUMBER(),,0,2013-10-11 12:00:00,2013-10-11 12:00:00,1
+260,77,2,update more than one row at a time.,,1,2013-10-21 02:43:07,2013-10-21 02:43:07,1
+5,2,2,Specify search condition,,0,2013-10-11 12:00:00,2013-10-11 12:00:00,1
+264,78,2,"The DELETE clause deletes all rows in a database table, while the TRUNCATE clause can have a WHERE condition and might or might not delete all rows in a table.",,0,2013-10-21 02:44:14,2013-10-21 02:44:14,1
+11,6,2,rails,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+267,79,2,GROUP BY clause.,,0,2013-10-21 02:44:54,2013-10-21 02:44:54,1
+15,7,2,rake routings,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+271,80,2,SELECT SUM(Price) FROM Sales,,1,2013-10-21 02:45:41,2013-10-21 02:45:41,1
+19,8,2,rake db:add,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+275,81,2,SELECT COUNT(*) FROM Sales,,1,2013-10-21 02:48:03,2013-10-21 02:48:03,1
+23,9,2,{'foo' => 'hoge'},,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+27,10,2,"validates :title, maximum: 20",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+31,11,2,"validates :age, numericality: {greater_than_or_equal_to: 0}",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+35,12,2,update_attributes! Dù validate lỗi thì vẫn cập nhật record,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+39,13,2,"scope :administrators, :where => {:admin => true}",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+43,14,2,"has_many :employees, :dependent => :destroy",,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+47,15,2,"use_index :users, :name",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+51,16,2,root 'welcome#index',,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+55,17,2,namespace,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+59,18,2,before_filter :require_admin,,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+63,19,2,"redirect_to @book, :notice => ""Book was successfully created.""",,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+67,20,2,link_tag,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+71,21,2,<%= yield :partial => 'head' %>,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+75,22,2,/users/new,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+79,23,2,"default :from, 'no-reply@example.com'",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+83,24,2,rails project ittrain,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+87,25,2,ActiveModel,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+91,26,2,“person”,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+95,27,2,FALSE,,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+99,28,2,"User.where(:login => ""foo"")",,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+103,29,2,after_create,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+107,30,2,"delete_column :users, :email",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+111,31,2,deleted_at,,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+115,32,2,"show, entry, create, edit, update, delete",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+119,33,2,"session(:user_id, @user.id)",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+123,34,2,comments_url(@message_board),,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+127,35,2,request_to,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+131,39,2,MAX,,1,2013-10-17 09:57:41,2013-10-17 09:57:41,1
+141,42,2,SELECT,,0,2013-10-21 01:55:54,2013-10-21 01:55:54,1
+145,43,2,the DELETE and UPDATE clauses,,0,2013-10-21 01:58:20,2013-10-21 01:58:20,1
+149,44,2,Data Model Language,,0,2013-10-21 02:00:03,2013-10-21 02:00:03,1
+153,45,2,MAX,,1,2013-10-21 02:01:41,2013-10-21 02:01:41,1
+157,46,2,"SAVE INTO Projects (ProjectName, ProjectDescription) VALUES ('Content Development', 'Website content development project')",,0,2013-10-21 02:04:26,2013-10-21 02:04:26,1
+161,47,2,WRITE,,0,2013-10-21 02:05:20,2013-10-21 02:05:20,1
+165,48,2,REMOVE,,0,2013-10-21 02:07:00,2013-10-21 02:07:00,1
+169,49,2,"SELECT CustomerName, COUNT(CustomerName) FROM Orders GROUP BY CustomerName",,1,2013-10-21 02:08:41,2013-10-21 02:08:41,1
+172,50,2,Structured Query Language,,1,2013-10-21 02:09:21,2013-10-21 02:09:21,1
+175,51,2,GET,,0,2013-10-21 02:09:45,2013-10-21 02:09:45,1
+179,52,2,SAVE AS,,0,2013-10-21 02:10:16,2013-10-21 02:10:16,1
+183,53,2,SELECT FirstName FROM Persons,,1,2013-10-21 02:10:53,2013-10-21 02:10:53,1
+186,54,2,SELECT [all] FROM Persons,,0,2013-10-21 02:11:32,2013-10-21 02:11:32,1
+190,55,2,SELECT [all] FROM Persons WHERE FirstName LIKE 'Peter',,0,2013-10-21 02:12:05,2013-10-21 02:12:05,1
+194,56,2,SELECT * FROM Persons WHERE FirstName LIKE 'a%',,1,2013-10-21 02:25:26,2013-10-21 02:25:26,1
+198,57,2,True,,1,2013-10-21 02:25:53,2013-10-21 02:25:53,1
+200,58,2,"SELECT FirstName='Peter', LastName='Jackson' FROM Persons",,0,2013-10-21 02:26:19,2013-10-21 02:26:19,1
+203,59,2,SELECT * FROM Persons WHERE LastName>'Hansen' AND LastName,,0,2013-10-21 02:26:54,2013-10-21 02:26:54,1
+206,60,2,SELECT DIFFERENT,,0,2013-10-21 02:27:26,2013-10-21 02:27:26,1
+209,61,2,SORT,,0,2013-10-21 02:27:50,2013-10-21 02:27:50,1
+213,62,2,SELECT * FROM Persons ORDER FirstName DESC,,0,2013-10-21 02:28:23,2013-10-21 02:28:23,1
+217,63,2,"INSERT VALUES ('Jimmy', 'Jackson') INTO Persons",,0,2013-10-21 02:28:45,2013-10-21 02:28:45,1
+220,64,2,MODIFY Persons SET LastName='Nilsen' WHERE LastName='Hansen',,0,2013-10-21 02:29:09,2013-10-21 02:29:09,1
+224,65,2,DELETE ROW FirstName='Peter' FROM Persons,,0,2013-10-21 02:30:12,2013-10-21 02:30:12,1
+227,66,2,SELECT COLUMNS() FROM Persons,,0,2013-10-21 02:30:38,2013-10-21 02:30:38,1
+231,67,2,DESC,,0,2013-10-21 02:31:10,2013-10-21 02:31:10,1
+234,68,2,Yes,,0,2013-10-21 02:31:32,2013-10-21 02:31:32,1
+236,69,2,SELECT Username AND Password FROM Users,,0,2013-10-21 02:31:55,2013-10-21 02:31:55,1
+239,70,2,A cursor is SQL keyword specifying a retrieved data order.,,0,2013-10-21 02:32:36,2013-10-21 02:32:36,1
+242,71,2,A list of columns to be selected.,,0,2013-10-21 02:33:10,2013-10-21 02:33:10,1
+245,72,2,The SQL ALTER TABLE clause is used to insert data into database table.,,0,2013-10-21 02:33:36,2013-10-21 02:33:36,1
+249,73,2,The HAVING SQL clause condition(s) is applied to all rows in the result set before the WHERE clause is applied (if present). The WHERE clause is used only with SELECT SQL statements and specifies a search condition for an aggregate or a group.,,0,2013-10-21 02:34:05,2013-10-21 02:34:05,1
+252,74,2,The AS clause is used with the JOIN clause only.,,0,2013-10-21 02:34:30,2013-10-21 02:34:30,1
+255,75,2,No,,0,2013-10-21 02:34:49,2013-10-21 02:34:49,1
+298,102,2,git show,,0,2013-11-07 02:58:39,2013-11-07 02:58:39,1
+302,103,2,git config -c,,0,2013-11-07 02:59:25,2013-11-07 02:59:25,1
+306,104,2,git add foo.txt,,1,2013-11-07 03:00:12,2013-11-07 03:00:12,1
+310,105,2,git add -c,,0,2013-11-07 03:00:54,2013-11-07 03:00:54,1
+314,106,2,git reflog,,0,2013-11-07 03:02:36,2013-11-07 03:02:36,1
+318,107,2,git log --oneline,,1,2013-11-07 03:03:53,2013-11-07 03:03:53,1
+322,108,2,git oplog,,0,2013-11-07 03:04:33,2013-11-07 03:04:33,1
+326,109,2,git log -f foo.txt,,0,2013-11-07 03:05:12,2013-11-07 03:05:12,1
+330,110,2,git view,,0,2013-11-07 03:05:48,2013-11-07 03:05:48,1
+334,111,2,git diff --stage,,0,2013-11-07 03:06:54,2013-11-07 03:06:54,1
+338,112,2,git diff HEAD,,0,2013-11-07 03:09:42,2013-11-07 03:09:42,1
+342,113,2,git diff --stage,,0,2013-11-07 03:11:31,2013-11-07 03:11:31,1
+346,114,2,git diff a3fbde d6aeba,,1,2013-11-07 03:12:09,2013-11-07 03:12:09,1
+350,115,2,git view,,0,2013-11-07 03:12:48,2013-11-07 03:12:48,1
+354,116,2,git reset,,1,2013-11-07 03:13:22,2013-11-07 03:13:22,1
+358,117,2,git reset --normal,,0,2013-11-07 03:13:55,2013-11-07 03:13:55,1
+362,118,2,git rename foo.txt bar.txt,,0,2013-11-07 03:15:05,2013-11-07 03:15:05,1
+370,120,2,git delete foo.txt,,0,2013-11-07 03:16:30,2013-11-07 03:16:30,1
+374,121,2,git branch delete work1,,0,2013-11-07 03:17:02,2013-11-07 03:17:02,1
+378,122,2,git remote add repo1,,1,2013-11-07 03:18:28,2013-11-07 03:18:28,1
+382,123,2,git commit --amend,,1,2013-11-07 03:19:05,2013-11-07 03:19:05,1
+386,124,2,git branch br1,,0,2013-11-07 03:19:39,2013-11-07 03:19:39,1
+390,125,2,git branch --list,,0,2013-11-07 03:20:11,2013-11-07 03:20:11,1
+394,126,2,git branch br1,,0,2013-11-07 03:21:42,2013-11-07 03:21:42,1
+398,127,2,git merge develop,,0,2013-11-07 03:22:34,2013-11-07 03:22:34,1
+402,128,2,git push origin work1 develop,,0,2013-11-07 03:23:05,2013-11-07 03:23:05,1
+406,129,2,git pull origin develop:work1,,1,2013-11-07 03:23:41,2013-11-07 03:23:41,1
+410,130,2,git checkout git@github.com:framgia/proj.git,,0,2013-11-07 03:24:25,2013-11-07 03:24:25,1
+414,131,2,git rebase develop work1,,0,2013-11-07 03:24:56,2013-11-07 03:24:56,1
+221,64,3,MODIFY Persons SET LastName='Hansen' INTO LastName='Nilsen,,0,2013-10-21 02:29:09,2013-10-21 02:29:09,1
+228,66,3,SELECT COLUMNS(*) FROM Persons,,0,2013-10-21 02:30:38,2013-10-21 02:30:38,1
+232,67,3,There is no default value.,,0,2013-10-21 02:31:10,2013-10-21 02:31:10,1
+237,69,3,"SELECT Username, Password WHERE Username = 'user1'",,0,2013-10-21 02:31:55,2013-10-21 02:31:55,1
+240,70,3,A blinking vertical line that indicates the location of the next input on the display screen.,,0,2013-10-21 02:32:36,2013-10-21 02:32:36,1
+243,71,3,The name of the table we are selecting from.,,0,2013-10-21 02:33:10,2013-10-21 02:33:10,1
+246,72,3,THE SQL ALTER TABLE deletes data from database table.,,0,2013-10-21 02:33:36,2013-10-21 02:33:36,1
+250,73,3,The WHERE SQL clause condition(s) is applied to all rows in the result set before the HAVING clause is applied (if present). The HAVING clause is used only with SELECT SQL statements and specifies a search condition for an aggregate or a group.,,1,2013-10-21 02:34:05,2013-10-21 02:34:05,1
+253,74,3,The AS clause defines a search condition.,,0,2013-10-21 02:34:30,2013-10-21 02:34:30,1
+311,105,3,git add --commit,,0,2013-11-07 03:00:54,2013-11-07 03:00:54,1
+88,25,3,ActionContrller,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+268,79,3,ORDER BY clause.,,0,2013-10-21 02:44:54,2013-10-21 02:44:54,1
+315,106,3,git log,,1,2013-11-07 03:02:36,2013-11-07 03:02:36,1
+84,24,3,rails new ittrain,,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+319,107,3,git log -l 1,,0,2013-11-07 03:03:53,2013-11-07 03:03:53,1
+80,23,3,from 'no-reply@example.com',,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+395,126,3,git checkout br1,,1,2013-11-07 03:21:42,2013-11-07 03:21:42,1
+323,108,3,git log --operation,,0,2013-11-07 03:04:33,2013-11-07 03:04:33,1
+76,22,3,/users,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+327,109,3,git log foo.txt,,1,2013-11-07 03:05:12,2013-11-07 03:05:12,1
+72,21,3,<%= render :head  %>,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+12,6,3,rails a,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+331,110,3,git summary,,0,2013-11-07 03:05:48,2013-11-07 03:05:48,1
+68,20,3,link_to,,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+3,1,3,SUM(),,0,2013-10-11 12:00:00,2013-10-11 12:00:00,1
+335,111,3,git diff HEAD,,0,2013-11-07 03:06:54,2013-11-07 03:06:54,1
+64,19,3,"redirect @book, :notice => ""Book was successfully created.""",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+399,127,3,git merge develop br1,,0,2013-11-07 03:22:34,2013-11-07 03:22:34,1
+339,112,3,git diff --stage,,1,2013-11-07 03:09:42,2013-11-07 03:09:42,1
 60,18,3,"after_filter :require_admin
-",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-343,113,3,git diff,,0,2013-11-07 03:11:31 UTC,2013-11-07 03:11:31 UTC,1
-56,17,3,member,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-265,78,3,The TRUNCATE clause is identical to the DELETE clause,,0,2013-10-21 02:44:14 UTC,2013-10-21 02:44:14 UTC,1
-347,114,3,git diff --commit a3fbde d6aeba,,0,2013-11-07 03:12:09 UTC,2013-11-07 03:12:09 UTC,1
-52,16,3,match :root => 'welcome#index',,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-258,76,3,Defines the tables we are selecting or deleting data from,,0,2013-10-21 02:35:16 UTC,2013-10-21 02:35:16 UTC,1
-351,115,3,git summary,,0,2013-11-07 03:12:48 UTC,2013-11-07 03:12:48 UTC,1
-48,15,3,"index :users, :name",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-403,128,3,git push origin work1:develop,,1,2013-11-07 03:23:05 UTC,2013-11-07 03:23:05 UTC,1
-355,116,3,git reset --normal,,0,2013-11-07 03:13:22 UTC,2013-11-07 03:13:22 UTC,1
-44,14,3,"has_many :employees, :autodestroy => :true",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-359,117,3,git reset --hard,,1,2013-11-07 03:13:55 UTC,2013-11-07 03:13:55 UTC,1
-40,13,3,"scope :administrators, where(:admin => true)",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-6,2,3,Specify what table we are selecting or deleting data from,,1,2013-10-11 12:00:00 UTC,2013-10-11 12:00:00 UTC,1
-363,118,3,git change foo.txt bar.txt,,0,2013-11-07 03:15:05 UTC,2013-11-07 03:15:05 UTC,1
-36,12,3,update_attributes Khi validate lỗi thì trả về ngoại lệ,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-32,11,3,"validates :age, integer: {greater_than_or_equal_to: 0}",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-367,119,3,git rm foo.txt,,1,2013-11-07 03:15:40 UTC,2013-11-07 03:15:40 UTC,1
-28,10,3,"validates :title, length: {maximum: 20}",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-415,131,3,git rebase develop,,1,2013-11-07 03:24:56 UTC,2013-11-07 03:24:56 UTC,1
-371,120,3,git delete --cached foo.txt,,0,2013-11-07 03:16:30 UTC,2013-11-07 03:16:30 UTC,1
-24,9,3,"{'foo' => 'bar', :foo => 'hoge'}",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-407,129,3,git pull origin work1 develop,,0,2013-11-07 03:23:41 UTC,2013-11-07 03:23:41 UTC,1
-375,121,3,git branch destroy work1,,0,2013-11-07 03:17:02 UTC,2013-11-07 03:17:02 UTC,1
-276,81,3,SELECT SUM(OrderNumber) FROM Sales ,,0,2013-10-21 02:48:03 UTC,2013-10-21 02:48:03 UTC,1
-379,122,3,git remote repo repo1,,0,2013-11-07 03:18:28 UTC,2013-11-07 03:18:28 UTC,1
-20,8,3,rake db:schema:load,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-261,77,3,delete more than one row at a time.,,0,2013-10-21 02:43:07 UTC,2013-10-21 02:43:07 UTC,1
-383,123,3,git commit --append,,0,2013-11-07 03:19:05 UTC,2013-11-07 03:19:05 UTC,1
-272,80,3,SELECT TOTAL(Price) FROM Sales,,0,2013-10-21 02:45:41 UTC,2013-10-21 02:45:41 UTC,1
-387,124,3,git branch -c br1,,0,2013-11-07 03:19:39 UTC,2013-11-07 03:19:39 UTC,1
-108,30,3,"remove :users, :email",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-112,31,3,login,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-116,32,3,"index, show, new, create, edit, update, destroy",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-120,33,3,"session.set(:user_id, @user.id)",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-124,34,3,"message_board_comment_url(@message_board, @comment)",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-128,35,3,respond_from,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-132,39,3,TOP,,0,2013-10-17 09:57:41 UTC,2013-10-17 09:57:41 UTC,1
-142,42,3,UPDATE,,0,2013-10-21 01:55:54 UTC,2013-10-21 01:55:54 UTC,1
-146,43,3,the UPDATE clause only,,0,2013-10-21 01:58:20 UTC,2013-10-21 01:58:20 UTC,1
-150,44,3,Data Mode Lane,,0,2013-10-21 02:00:03 UTC,2013-10-21 02:00:03 UTC,1
-154,45,3,TOP,,0,2013-10-21 02:01:41 UTC,2013-10-21 02:01:41 UTC,1
-158,46,3,"INSERT Projects VALUES ('Content Development', 'Website content development project')",,0,2013-10-21 02:04:26 UTC,2013-10-21 02:04:26 UTC,1
-162,47,3,SELECT,,0,2013-10-21 02:05:20 UTC,2013-10-21 02:05:20 UTC,1
-166,48,3,DROP DATA,,0,2013-10-21 02:07:00 UTC,2013-10-21 02:07:00 UTC,1
-170,49,3,"SELECT CustomerName, COUNT(CustomerName) FROM Orders ORDER BY CustomerName",,0,2013-10-21 02:08:41 UTC,2013-10-21 02:08:41 UTC,1
-173,50,3,Structured Question Language,,0,2013-10-21 02:09:21 UTC,2013-10-21 02:09:21 UTC,1
-176,51,3,OPEN,,0,2013-10-21 02:09:45 UTC,2013-10-21 02:09:45 UTC,1
-180,52,3,MODIFY,,0,2013-10-21 02:10:16 UTC,2013-10-21 02:10:16 UTC,1
-184,53,3,EXTRACT FirstName FROM Persons,,0,2013-10-21 02:10:53 UTC,2013-10-21 02:10:53 UTC,1
-187,54,3,SELECT * FROM Persons,,1,2013-10-21 02:11:32 UTC,2013-10-21 02:11:32 UTC,1
-191,55,3,SELECT * FROM Persons WHERE FirstName='Peter',,1,2013-10-21 02:12:05 UTC,2013-10-21 02:12:05 UTC,1
-195,56,3,SELECT * FROM Persons WHERE FirstName LIKE '%a',,0,2013-10-21 02:25:26 UTC,2013-10-21 02:25:26 UTC,1
-201,58,3,SELECT * FROM Persons WHERE FirstName'Peter' AND LastName'Jackson',,0,2013-10-21 02:26:19 UTC,2013-10-21 02:26:19 UTC,1
-204,59,3,SELECT LastName>'Hansen' AND LastName,,0,2013-10-21 02:26:54 UTC,2013-10-21 02:26:54 UTC,1
-207,60,3,SELECT UNIQUE,,0,2013-10-21 02:27:26 UTC,2013-10-21 02:27:26 UTC,1
-210,61,3,ORDER,,0,2013-10-21 02:27:50 UTC,2013-10-21 02:27:50 UTC,1
-214,62,3,SELECT * FROM Persons SORT 'FirstName' DESC,,0,2013-10-21 02:28:23 UTC,2013-10-21 02:28:23 UTC,1
-218,63,3,"INSERT ('Jimmy', 'Jackson') INTO Persons",,0,2013-10-21 02:28:45 UTC,2013-10-21 02:28:45 UTC,1
-225,65,3,DELETE FirstName='Peter' FROM Persons,,0,2013-10-21 02:30:12 UTC,2013-10-21 02:30:12 UTC,1
-104,29,3,after_update,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-16,7,3,rake routes,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-299,102,3,git log,,0,2013-11-07 02:58:39 UTC,2013-11-07 02:58:39 UTC,1
-100,28,3,"User.select(:login => ""foo"")",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-411,130,3,git pull git@github.com:framgia/proj.git,,0,2013-11-07 03:24:25 UTC,2013-11-07 03:24:25 UTC,1
-303,103,3,git config -s,,0,2013-11-07 02:59:25 UTC,2013-11-07 02:59:25 UTC,1
-96,27,3,nil,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-391,125,3,git branches,,0,2013-11-07 03:20:11 UTC,2013-11-07 03:20:11 UTC,1
-307,104,3,git add foo.txt .,,0,2013-11-07 03:00:12 UTC,2013-11-07 03:00:12 UTC,1
-92,26,3,“People”,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-262,77,4,delete only one row at a time..,,0,2013-10-21 02:43:07 UTC,2013-10-21 02:43:07 UTC,1
-13,6,4,rails s,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-269,79,4,JOIN clause.,,0,2013-10-21 02:44:54 UTC,2013-10-21 02:44:54 UTC,1
-17,7,4,rake routing,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-273,80,4,SELECT SUM(Price) WHERE Sales,,0,2013-10-21 02:45:41 UTC,2013-10-21 02:45:41 UTC,1
-21,8,4,rake db:create,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-25,9,4,{:foo => 'hoge'},,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
+",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+343,113,3,git diff,,0,2013-11-07 03:11:31,2013-11-07 03:11:31,1
+56,17,3,member,,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+265,78,3,The TRUNCATE clause is identical to the DELETE clause,,0,2013-10-21 02:44:14,2013-10-21 02:44:14,1
+347,114,3,git diff --commit a3fbde d6aeba,,0,2013-11-07 03:12:09,2013-11-07 03:12:09,1
+52,16,3,match :root => 'welcome#index',,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+258,76,3,Defines the tables we are selecting or deleting data from,,0,2013-10-21 02:35:16,2013-10-21 02:35:16,1
+351,115,3,git summary,,0,2013-11-07 03:12:48,2013-11-07 03:12:48,1
+48,15,3,"index :users, :name",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+403,128,3,git push origin work1:develop,,1,2013-11-07 03:23:05,2013-11-07 03:23:05,1
+355,116,3,git reset --normal,,0,2013-11-07 03:13:22,2013-11-07 03:13:22,1
+44,14,3,"has_many :employees, :autodestroy => :true",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+359,117,3,git reset --hard,,1,2013-11-07 03:13:55,2013-11-07 03:13:55,1
+40,13,3,"scope :administrators, where(:admin => true)",,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+6,2,3,Specify what table we are selecting or deleting data from,,1,2013-10-11 12:00:00,2013-10-11 12:00:00,1
+363,118,3,git change foo.txt bar.txt,,0,2013-11-07 03:15:05,2013-11-07 03:15:05,1
+36,12,3,update_attributes Khi validate lỗi thì trả về ngoại lệ,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+32,11,3,"validates :age, integer: {greater_than_or_equal_to: 0}",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+367,119,3,git rm foo.txt,,1,2013-11-07 03:15:40,2013-11-07 03:15:40,1
+28,10,3,"validates :title, length: {maximum: 20}",,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+415,131,3,git rebase develop,,1,2013-11-07 03:24:56,2013-11-07 03:24:56,1
+371,120,3,git delete --cached foo.txt,,0,2013-11-07 03:16:30,2013-11-07 03:16:30,1
+24,9,3,"{'foo' => 'bar', :foo => 'hoge'}",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+407,129,3,git pull origin work1 develop,,0,2013-11-07 03:23:41,2013-11-07 03:23:41,1
+375,121,3,git branch destroy work1,,0,2013-11-07 03:17:02,2013-11-07 03:17:02,1
+276,81,3,SELECT SUM(OrderNumber) FROM Sales ,,0,2013-10-21 02:48:03,2013-10-21 02:48:03,1
+379,122,3,git remote repo repo1,,0,2013-11-07 03:18:28,2013-11-07 03:18:28,1
+20,8,3,rake db:schema:load,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+261,77,3,delete more than one row at a time.,,0,2013-10-21 02:43:07,2013-10-21 02:43:07,1
+383,123,3,git commit --append,,0,2013-11-07 03:19:05,2013-11-07 03:19:05,1
+272,80,3,SELECT TOTAL(Price) FROM Sales,,0,2013-10-21 02:45:41,2013-10-21 02:45:41,1
+387,124,3,git branch -c br1,,0,2013-11-07 03:19:39,2013-11-07 03:19:39,1
+108,30,3,"remove :users, :email",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+112,31,3,login,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+116,32,3,"index, show, new, create, edit, update, destroy",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+120,33,3,"session.set(:user_id, @user.id)",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+124,34,3,"message_board_comment_url(@message_board, @comment)",,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+128,35,3,respond_from,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+132,39,3,TOP,,0,2013-10-17 09:57:41,2013-10-17 09:57:41,1
+142,42,3,UPDATE,,0,2013-10-21 01:55:54,2013-10-21 01:55:54,1
+146,43,3,the UPDATE clause only,,0,2013-10-21 01:58:20,2013-10-21 01:58:20,1
+150,44,3,Data Mode Lane,,0,2013-10-21 02:00:03,2013-10-21 02:00:03,1
+154,45,3,TOP,,0,2013-10-21 02:01:41,2013-10-21 02:01:41,1
+158,46,3,"INSERT Projects VALUES ('Content Development', 'Website content development project')",,0,2013-10-21 02:04:26,2013-10-21 02:04:26,1
+162,47,3,SELECT,,0,2013-10-21 02:05:20,2013-10-21 02:05:20,1
+166,48,3,DROP DATA,,0,2013-10-21 02:07:00,2013-10-21 02:07:00,1
+170,49,3,"SELECT CustomerName, COUNT(CustomerName) FROM Orders ORDER BY CustomerName",,0,2013-10-21 02:08:41,2013-10-21 02:08:41,1
+173,50,3,Structured Question Language,,0,2013-10-21 02:09:21,2013-10-21 02:09:21,1
+176,51,3,OPEN,,0,2013-10-21 02:09:45,2013-10-21 02:09:45,1
+180,52,3,MODIFY,,0,2013-10-21 02:10:16,2013-10-21 02:10:16,1
+184,53,3,EXTRACT FirstName FROM Persons,,0,2013-10-21 02:10:53,2013-10-21 02:10:53,1
+187,54,3,SELECT * FROM Persons,,1,2013-10-21 02:11:32,2013-10-21 02:11:32,1
+191,55,3,SELECT * FROM Persons WHERE FirstName='Peter',,1,2013-10-21 02:12:05,2013-10-21 02:12:05,1
+195,56,3,SELECT * FROM Persons WHERE FirstName LIKE '%a',,0,2013-10-21 02:25:26,2013-10-21 02:25:26,1
+201,58,3,SELECT * FROM Persons WHERE FirstName'Peter' AND LastName'Jackson',,0,2013-10-21 02:26:19,2013-10-21 02:26:19,1
+204,59,3,SELECT LastName>'Hansen' AND LastName,,0,2013-10-21 02:26:54,2013-10-21 02:26:54,1
+207,60,3,SELECT UNIQUE,,0,2013-10-21 02:27:26,2013-10-21 02:27:26,1
+210,61,3,ORDER,,0,2013-10-21 02:27:50,2013-10-21 02:27:50,1
+214,62,3,SELECT * FROM Persons SORT 'FirstName' DESC,,0,2013-10-21 02:28:23,2013-10-21 02:28:23,1
+218,63,3,"INSERT ('Jimmy', 'Jackson') INTO Persons",,0,2013-10-21 02:28:45,2013-10-21 02:28:45,1
+225,65,3,DELETE FirstName='Peter' FROM Persons,,0,2013-10-21 02:30:12,2013-10-21 02:30:12,1
+104,29,3,after_update,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+16,7,3,rake routes,,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+299,102,3,git log,,0,2013-11-07 02:58:39,2013-11-07 02:58:39,1
+100,28,3,"User.select(:login => ""foo"")",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+411,130,3,git pull git@github.com:framgia/proj.git,,0,2013-11-07 03:24:25,2013-11-07 03:24:25,1
+303,103,3,git config -s,,0,2013-11-07 02:59:25,2013-11-07 02:59:25,1
+96,27,3,nil,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+391,125,3,git branches,,0,2013-11-07 03:20:11,2013-11-07 03:20:11,1
+307,104,3,git add foo.txt .,,0,2013-11-07 03:00:12,2013-11-07 03:00:12,1
+92,26,3,“People”,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+262,77,4,delete only one row at a time..,,0,2013-10-21 02:43:07,2013-10-21 02:43:07,1
+13,6,4,rails s,,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+269,79,4,JOIN clause.,,0,2013-10-21 02:44:54,2013-10-21 02:44:54,1
+17,7,4,rake routing,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+273,80,4,SELECT SUM(Price) WHERE Sales,,0,2013-10-21 02:45:41,2013-10-21 02:45:41,1
+21,8,4,rake db:create,,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+25,9,4,{:foo => 'hoge'},,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
 29,10,4,"validates :title, length: true, maximum: 20
-",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-33,11,4,"validates :age, only_integer: {greater_than_or_equal_to: 0}",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-37,12,4,update_attributes Dù validate lỗi thì vẫn cập nhật record,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-41,13,4,"scope :administrators, :admin => true",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-45,14,4,"has_many :employees, :autonullify => true",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-49,15,4,"add_index :users, :name",,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-53,16,4,get :root => 'welcome#index',,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-57,17,4,match,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-61,18,4,after :require_admin,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-65,19,4,"redirect @book, :message => ""Book was successfully created.""",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-69,20,4,link,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-73,21,4,<%= render :partial => 'head' %>,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-77,22,4,/users/1,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-81,23,4,send_from 'no-reply@example.com',,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-85,24,4,rails ittrain,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-89,25,4,ActionWebService,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-93,26,4,“Person”,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-97,27,4,Trả về ngoại lệ,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-101,28,4,"User.select(:login , ""foo"")",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-105,29,4,after_destroy,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-109,30,4,"delete :users, :email",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-113,31,4,id,,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-117,32,4,"index, show, entry, create, edit, update, delete",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-121,33,4,"set_session(:user_id, @user_id)",,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-125,34,4,message_board_comments_url(@message_board),,0,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-129,35,4,respond_to,,1,2013-10-14 12:00:00 UTC,2013-10-14 12:00:00 UTC,1
-133,39,4,UPPER,,0,2013-10-17 09:57:41 UTC,2013-10-17 09:57:41 UTC,1
-143,42,4,INVERT,,1,2013-10-21 01:55:54 UTC,2013-10-21 01:55:54 UTC,1
-147,43,4,none of the other three,,0,2013-10-21 01:58:20 UTC,2013-10-21 01:58:20 UTC,1
-151,44,4,Data Manipulation language,,1,2013-10-21 02:00:03 UTC,2013-10-21 02:00:03 UTC,1
-155,45,4,UPPER,,0,2013-10-21 02:01:41 UTC,2013-10-21 02:01:41 UTC,1
-159,46,4,"INSERT Projects ('Content Development', 'Website content development project')",,0,2013-10-21 02:04:26 UTC,2013-10-21 02:04:26 UTC,1
-163,47,4,ENTER,,0,2013-10-21 02:05:20 UTC,2013-10-21 02:05:20 UTC,1
-167,48,4,CLEAR,,0,2013-10-21 02:07:00 UTC,2013-10-21 02:07:00 UTC,1
-177,51,4,EXTRACT,,0,2013-10-21 02:09:45 UTC,2013-10-21 02:09:45 UTC,1
-181,52,4,UPDATE,,1,2013-10-21 02:10:16 UTC,2013-10-21 02:10:16 UTC,1
-188,54,4,SELECT Persons,,0,2013-10-21 02:11:32 UTC,2013-10-21 02:11:32 UTC,1
-192,55,4,SELECT [all] FROM Persons WHERE FirstName='Peter',,0,2013-10-21 02:12:05 UTC,2013-10-21 02:12:05 UTC,1
-196,56,4,SELECT * FROM Persons WHERE FirstName='%a%',,0,2013-10-21 02:25:26 UTC,2013-10-21 02:25:26 UTC,1
-211,61,4,SORT BY,,0,2013-10-21 02:27:50 UTC,2013-10-21 02:27:50 UTC,1
-215,62,4,SELECT * FROM Persons ORDER BY FirstName DESC,,1,2013-10-21 02:28:23 UTC,2013-10-21 02:28:23 UTC,1
-222,64,4,UPDATE Persons SET LastName='Nilsen' WHERE LastName='Hansen',,1,2013-10-21 02:29:09 UTC,2013-10-21 02:29:09 UTC,1
-229,66,4,SELECT COUNT(*) FROM Persons,,1,2013-10-21 02:30:38 UTC,2013-10-21 02:30:38 UTC,1
-247,72,4,The SQL ALTER TABLE clause is used to delete a database table.,,0,2013-10-21 02:33:36 UTC,2013-10-21 02:33:36 UTC,1
-388,124,4,git checkout -b br1,,1,2013-11-07 03:19:39 UTC,2013-11-07 03:19:39 UTC,1
-328,109,4,git log --only-file foo.txt,,0,2013-11-07 03:05:13 UTC,2013-11-07 03:05:13 UTC,1
-348,114,4,git diff a3fbde --with d6aeba,,0,2013-11-07 03:12:09 UTC,2013-11-07 03:12:09 UTC,1
-300,102,4,git reflog,,0,2013-11-07 02:58:39 UTC,2013-11-07 02:58:39 UTC,1
-408,129,4,git pull origin develop work1,,0,2013-11-07 03:23:41 UTC,2013-11-07 03:23:41 UTC,1
-372,120,4,git rm --cached foo.txt,,1,2013-11-07 03:16:30 UTC,2013-11-07 03:16:30 UTC,1
-332,110,4,git status,,1,2013-11-07 03:05:48 UTC,2013-11-07 03:05:48 UTC,1
-304,103,4,git config,,1,2013-11-07 02:59:25 UTC,2013-11-07 02:59:25 UTC,1
-364,118,4,git chname foo.txt bar.txt,,0,2013-11-07 03:15:05 UTC,2013-11-07 03:15:05 UTC,1
-352,115,4,git status,,1,2013-11-07 03:12:48 UTC,2013-11-07 03:12:48 UTC,1
-416,131,4,git rebase work1,,0,2013-11-07 03:24:56 UTC,2013-11-07 03:24:56 UTC,1
-308,104,4,git add --only-file foo.txt,,0,2013-11-07 03:00:12 UTC,2013-11-07 03:00:12 UTC,1
-336,111,4,git diff STAGE,,0,2013-11-07 03:06:54 UTC,2013-11-07 03:06:54 UTC,1
-392,125,4,git branch,,1,2013-11-07 03:20:11 UTC,2013-11-07 03:20:11 UTC,1
-380,122,4,git remote register repo1,,0,2013-11-07 03:18:28 UTC,2013-11-07 03:18:28 UTC,1
-312,105,4,git commit --staged,,0,2013-11-07 03:00:54 UTC,2013-11-07 03:00:54 UTC,1
-384,123,4,git commit --prepend,,0,2013-11-07 03:19:05 UTC,2013-11-07 03:19:05 UTC,1
-356,116,4,git reset --hard,,0,2013-11-07 03:13:22 UTC,2013-11-07 03:13:22 UTC,1
-340,112,4,git diff STAGE,,0,2013-11-07 03:09:42 UTC,2013-11-07 03:09:42 UTC,1
-316,106,4,git filelog,,0,2013-11-07 03:02:36 UTC,2013-11-07 03:02:36 UTC,1
-368,119,4,git drop foo.txt,,0,2013-11-07 03:15:40 UTC,2013-11-07 03:15:40 UTC,1
-412,130,4,git fork git@github.com:framgia/proj.git,,0,2013-11-07 03:24:25 UTC,2013-11-07 03:24:25 UTC,1
-400,127,4,git merge br1 develop,,0,2013-11-07 03:22:34 UTC,2013-11-07 03:22:34 UTC,1
-320,107,4,git log --line 1,,0,2013-11-07 03:03:53 UTC,2013-11-07 03:03:53 UTC,1
-404,128,4,git push origin develop work1,,0,2013-11-07 03:23:05 UTC,2013-11-07 03:23:05 UTC,1
-344,113,4,git diff TREE,,0,2013-11-07 03:11:31 UTC,2013-11-07 03:11:31 UTC,1
-376,121,4,git branch drop work1,,0,2013-11-07 03:17:02 UTC,2013-11-07 03:17:02 UTC,1
-324,108,4,git reflog,,1,2013-11-07 03:04:33 UTC,2013-11-07 03:04:33 UTC,1
-360,117,4,git reset,,0,2013-11-07 03:13:55 UTC,2013-11-07 03:13:55 UTC,1
-396,126,4,git branch -c br1,,0,2013-11-07 03:21:42 UTC,2013-11-07 03:21:42 UTC,1
+",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+33,11,4,"validates :age, only_integer: {greater_than_or_equal_to: 0}",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+37,12,4,update_attributes Dù validate lỗi thì vẫn cập nhật record,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+41,13,4,"scope :administrators, :admin => true",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+45,14,4,"has_many :employees, :autonullify => true",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+49,15,4,"add_index :users, :name",,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+53,16,4,get :root => 'welcome#index',,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+57,17,4,match,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+61,18,4,after :require_admin,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+65,19,4,"redirect @book, :message => ""Book was successfully created.""",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+69,20,4,link,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+73,21,4,<%= render :partial => 'head' %>,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+77,22,4,/users/1,,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+81,23,4,send_from 'no-reply@example.com',,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+85,24,4,rails ittrain,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+89,25,4,ActionWebService,,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+93,26,4,“Person”,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+97,27,4,Trả về ngoại lệ,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+101,28,4,"User.select(:login , ""foo"")",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+105,29,4,after_destroy,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+109,30,4,"delete :users, :email",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+113,31,4,id,,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+117,32,4,"index, show, entry, create, edit, update, delete",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+121,33,4,"set_session(:user_id, @user_id)",,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+125,34,4,message_board_comments_url(@message_board),,0,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+129,35,4,respond_to,,1,2013-10-14 12:00:00,2013-10-14 12:00:00,1
+133,39,4,UPPER,,0,2013-10-17 09:57:41,2013-10-17 09:57:41,1
+143,42,4,INVERT,,1,2013-10-21 01:55:54,2013-10-21 01:55:54,1
+147,43,4,none of the other three,,0,2013-10-21 01:58:20,2013-10-21 01:58:20,1
+151,44,4,Data Manipulation language,,1,2013-10-21 02:00:03,2013-10-21 02:00:03,1
+155,45,4,UPPER,,0,2013-10-21 02:01:41,2013-10-21 02:01:41,1
+159,46,4,"INSERT Projects ('Content Development', 'Website content development project')",,0,2013-10-21 02:04:26,2013-10-21 02:04:26,1
+163,47,4,ENTER,,0,2013-10-21 02:05:20,2013-10-21 02:05:20,1
+167,48,4,CLEAR,,0,2013-10-21 02:07:00,2013-10-21 02:07:00,1
+177,51,4,EXTRACT,,0,2013-10-21 02:09:45,2013-10-21 02:09:45,1
+181,52,4,UPDATE,,1,2013-10-21 02:10:16,2013-10-21 02:10:16,1
+188,54,4,SELECT Persons,,0,2013-10-21 02:11:32,2013-10-21 02:11:32,1
+192,55,4,SELECT [all] FROM Persons WHERE FirstName='Peter',,0,2013-10-21 02:12:05,2013-10-21 02:12:05,1
+196,56,4,SELECT * FROM Persons WHERE FirstName='%a%',,0,2013-10-21 02:25:26,2013-10-21 02:25:26,1
+211,61,4,SORT BY,,0,2013-10-21 02:27:50,2013-10-21 02:27:50,1
+215,62,4,SELECT * FROM Persons ORDER BY FirstName DESC,,1,2013-10-21 02:28:23,2013-10-21 02:28:23,1
+222,64,4,UPDATE Persons SET LastName='Nilsen' WHERE LastName='Hansen',,1,2013-10-21 02:29:09,2013-10-21 02:29:09,1
+229,66,4,SELECT COUNT(*) FROM Persons,,1,2013-10-21 02:30:38,2013-10-21 02:30:38,1
+247,72,4,The SQL ALTER TABLE clause is used to delete a database table.,,0,2013-10-21 02:33:36,2013-10-21 02:33:36,1
+388,124,4,git checkout -b br1,,1,2013-11-07 03:19:39,2013-11-07 03:19:39,1
+328,109,4,git log --only-file foo.txt,,0,2013-11-07 03:05:13,2013-11-07 03:05:13,1
+348,114,4,git diff a3fbde --with d6aeba,,0,2013-11-07 03:12:09,2013-11-07 03:12:09,1
+300,102,4,git reflog,,0,2013-11-07 02:58:39,2013-11-07 02:58:39,1
+408,129,4,git pull origin develop work1,,0,2013-11-07 03:23:41,2013-11-07 03:23:41,1
+372,120,4,git rm --cached foo.txt,,1,2013-11-07 03:16:30,2013-11-07 03:16:30,1
+332,110,4,git status,,1,2013-11-07 03:05:48,2013-11-07 03:05:48,1
+304,103,4,git config,,1,2013-11-07 02:59:25,2013-11-07 02:59:25,1
+364,118,4,git chname foo.txt bar.txt,,0,2013-11-07 03:15:05,2013-11-07 03:15:05,1
+352,115,4,git status,,1,2013-11-07 03:12:48,2013-11-07 03:12:48,1
+416,131,4,git rebase work1,,0,2013-11-07 03:24:56,2013-11-07 03:24:56,1
+308,104,4,git add --only-file foo.txt,,0,2013-11-07 03:00:12,2013-11-07 03:00:12,1
+336,111,4,git diff STAGE,,0,2013-11-07 03:06:54,2013-11-07 03:06:54,1
+392,125,4,git branch,,1,2013-11-07 03:20:11,2013-11-07 03:20:11,1
+380,122,4,git remote register repo1,,0,2013-11-07 03:18:28,2013-11-07 03:18:28,1
+312,105,4,git commit --staged,,0,2013-11-07 03:00:54,2013-11-07 03:00:54,1
+384,123,4,git commit --prepend,,0,2013-11-07 03:19:05,2013-11-07 03:19:05,1
+356,116,4,git reset --hard,,0,2013-11-07 03:13:22,2013-11-07 03:13:22,1
+340,112,4,git diff STAGE,,0,2013-11-07 03:09:42,2013-11-07 03:09:42,1
+316,106,4,git filelog,,0,2013-11-07 03:02:36,2013-11-07 03:02:36,1
+368,119,4,git drop foo.txt,,0,2013-11-07 03:15:40,2013-11-07 03:15:40,1
+412,130,4,git fork git@github.com:framgia/proj.git,,0,2013-11-07 03:24:25,2013-11-07 03:24:25,1
+400,127,4,git merge br1 develop,,0,2013-11-07 03:22:34,2013-11-07 03:22:34,1
+320,107,4,git log --line 1,,0,2013-11-07 03:03:53,2013-11-07 03:03:53,1
+404,128,4,git push origin develop work1,,0,2013-11-07 03:23:05,2013-11-07 03:23:05,1
+344,113,4,git diff TREE,,0,2013-11-07 03:11:31,2013-11-07 03:11:31,1
+376,121,4,git branch drop work1,,0,2013-11-07 03:17:02,2013-11-07 03:17:02,1
+324,108,4,git reflog,,1,2013-11-07 03:04:33,2013-11-07 03:04:33,1
+360,117,4,git reset,,0,2013-11-07 03:13:55,2013-11-07 03:13:55,1
+396,126,4,git branch -c br1,,0,2013-11-07 03:21:42,2013-11-07 03:21:42,1
