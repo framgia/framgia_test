@@ -14,7 +14,7 @@ class ImportsController < ApplicationController
   end
 
   def import(file)
-    CSV.foreach('db/20140630' + file + ".csv", headers: true) do |row|
+    CSV.foreach('db/20140630/' + file + ".csv", headers: true) do |row|
       if file == "Answer"
         #Answer.create! row.to_hash
         ActiveRecord::Base.connection().execute(make_sql(Answer, row.to_hash))
